@@ -1,0 +1,17 @@
+{
+  "files.watcherExclude": {
+    "**/target/**": true
+  },
+  "java.project.referencedLibraries": [
+    "TheParadigmFacility/lib/javafx-sdk-27/lib/*.jar"
+  ],
+ "java.debug.settings.vmArgs": "--module-path ${workspaceFolder}/TheParadigmFacility/lib/javafx-sdk-27/lib --add-modules javafx.controls,javafx.media,javafx.swing --enable-native-access=javafx.graphics,javafx.media -Xmx2g",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-25",
+      "path": "C:/Program Files/Java/jdk-25",
+      "default": true
+    }
+  ],
+  "java.jdt.ls.java.home": "C:/Program Files/Java/jdk-25"
+}

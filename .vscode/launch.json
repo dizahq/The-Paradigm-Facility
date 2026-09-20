@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Game",
+      "request": "launch",
+      "mainClass": "TheParadigmFacility",
+      "vmArgs": "--module-path ${workspaceFolder}/TheParadigmFacility/lib/javafx-sdk-27/lib --add-modules javafx.controls,javafx.media,javafx.swing --enable-native-access=javafx.graphics,javafx.media -Xmx2g"
+    }
+  ]
+}
