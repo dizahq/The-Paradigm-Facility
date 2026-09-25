@@ -8,15 +8,15 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Image;
+import java.awt.Insets;
 import java.awt.RenderingHints;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 
 import javax.imageio.ImageIO;
 import javax.swing.Box;
@@ -26,7 +26,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-/** Title screen: PNG title, subtitle, and a play button. Pure AWT/Swing. */
+/** Title screen: PNG title and a play button. Pure AWT/Swing. */
 public class TitlePanel extends JPanel {
 
     private static final String TITLE_PATH =
