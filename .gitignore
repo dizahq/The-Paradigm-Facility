@@ -1,5 +1,6 @@
 .metals/
 target/
 bin/
+!TheParadigmFacility/lib/javafx-sdk-27/bin/
 hs_err_pid*.log
 replay_pid*.log
