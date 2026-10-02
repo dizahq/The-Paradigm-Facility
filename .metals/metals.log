@@ -4511,6 +4511,7 @@ WARNING: Unmatched cancel notification for request id 9
 2026.10.02 16:11:38 INFO  time: initialize in 0.18s
 2026.10.02 16:11:40 INFO  Memory monitor started
 2026.10.02 16:11:43 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.10.02 16:11:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
 2026.10.02 16:11:46 WARN  no build tool detected in workspace 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2026.10.02 16:11:46 WARN  Build server is not auto-connectable.
 2026.10.02 16:11:46 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
