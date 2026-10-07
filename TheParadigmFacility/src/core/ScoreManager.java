@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class ScoreManager {
 
-    private static final String SCORES_FILE = "TheParadigmFacility/src/fileio/scoreboard.csv";
+    private static final String SCORES_FILE = "TheParadigmFacility/data/scoreboard.csv";
 
     private final Map<String, Integer> scores = new LinkedHashMap<>();
 

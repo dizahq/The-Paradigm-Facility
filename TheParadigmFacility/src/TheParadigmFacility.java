@@ -1,12 +1,10 @@
+import core.ScoreManager;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-
-import core.ScoreManager;
 import ui.MainMenuPanel;
 import ui.NamePanel;
 import ui.ScreenManager;
