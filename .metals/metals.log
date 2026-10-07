@@ -8088,3 +8088,502 @@ WARNING: Unmatched cancel notification for request id 5411
 2026.10.07 11:41:51 INFO  Memory monitor stopped
 2026.10.07 11:41:51 INFO  shutting down Metals
 2026.10.07 11:41:51 INFO  Exiting server
+2026.10.07 11:44:36 INFO  Started: Metals version 1.6.9 in folders 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility' for client Visual Studio Code 1.140.0.
+2026.10.07 11:44:36 INFO  time: initialize in 0.11s
+2026.10.07 11:44:36 INFO  Memory monitor started
+2026.10.07 11:44:41 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.10.07 11:44:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:44:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.10.07 11:44:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:44:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:44:44 WARN  no build tool detected in workspace 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.10.07 11:44:44 WARN  Build server is not auto-connectable.
+2026.10.07 11:44:44 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\NamePanel.java
+2026.10.07 11:44:44 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:44:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:44:49 INFO  time: code lens generation in 4.68s
+2026.10.07 11:44:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:44:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:44:56 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:36 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:45:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:45:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 34
+2026.10.07 11:45:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:45:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 38
+2026.10.07 11:45:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:45 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:45 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:45:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:45:47 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:47:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:47:12 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+Oct 07, 2026 11:47:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 58
+2026.10.07 11:47:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:47:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:02 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+Oct 07, 2026 11:49:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 65
+2026.10.07 11:49:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:03 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:49:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 72
+2026.10.07 11:49:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:49:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 75
+Oct 07, 2026 11:49:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 76
+2026.10.07 11:49:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:06 INFO  time: code lens generation in 1.44s
+2026.10.07 11:49:06 INFO  time: code lens generation in 2.02s
+2026.10.07 11:49:09 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:09 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:25 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:25 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:25 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:49:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:50:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:50:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:50:04 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:50:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:50:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:50:20 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:50:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:50:20 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 212
+2026.10.07 11:50:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:50:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:51:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:51:20 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.10.07 11:51:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Oct 07, 2026 11:51:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 254
+Oct 07, 2026 11:51:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 256
+2026.10.07 11:51:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:51:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Oct 07, 2026 11:51:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 258
+2026.10.07 11:51:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:51:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Oct 07, 2026 11:51:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 262
+2026.10.07 11:51:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:51:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:51:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:51:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:51:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:51:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:51:25 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.10.07 11:51:25 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:52:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:52:58 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+Oct 07, 2026 11:52:58 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 282
+2026.10.07 11:52:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Oct 07, 2026 11:52:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 283
+2026.10.07 11:52:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:52:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:52:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:52:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 291
+Oct 07, 2026 11:53:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 288
+2026.10.07 11:52:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 292
+2026.10.07 11:53:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 293
+Oct 07, 2026 11:53:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 287
+2026.10.07 11:53:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:53:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:53:00 INFO  Created report: Optional[file:///C:/Users/dizah/Documents/GitHub/The-Paradigm-Facility/TheParadigmFacility/src/TheParadigmFacility.java]
+2026.10.07 11:53:00 INFO  empty definition using pc, found symbol in pc: java/lang/System# (full report at: "C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\.metals\.reports\metals-full\2026-10-07\r_empty-definition_11-53-00-627.md")
+Oct 07, 2026 11:53:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 295
+Oct 07, 2026 11:53:01 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 297
+2026.10.07 11:53:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:53:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:53:01 INFO  time: code lens generation in 1.16s
+2026.10.07 11:53:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:53:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 11:53:02 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.10.07 11:53:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:02 WARN  Running javac-semanticdb failed for file:///C:/Users/dizah/Documents/GitHub/The-Paradigm-Facility/TheParadigmFacility/src/TheParadigmFacility.java. Output:
+
+2026.10.07 11:53:02 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+Oct 07, 2026 11:53:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 305
+2026.10.07 11:53:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 307
+2026.10.07 11:53:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:03 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 321
+2026.10.07 11:53:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:09 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:53:09 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:09 WARN  Running javac-semanticdb failed for file:///C:/Users/dizah/Documents/GitHub/The-Paradigm-Facility/TheParadigmFacility/src/core/ScoreManager.java. Output:
+
+2026.10.07 11:53:09 INFO  time: code lens generation in 1.13s
+2026.10.07 11:53:45 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:45 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:53:45 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 336
+2026.10.07 11:53:45 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:47 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:49 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:49 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:51 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 351
+2026.10.07 11:53:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 365
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 370
+Oct 07, 2026 11:53:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 371
+2026.10.07 11:53:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:53:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 372
+Oct 07, 2026 11:53:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 374
+Oct 07, 2026 11:53:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 375
+2026.10.07 11:53:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:56 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:53:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:54:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 385
+2026.10.07 11:54:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:54:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 388
+2026.10.07 11:54:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:09 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:09 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:09 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:54:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 539
+2026.10.07 11:54:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:54:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 553
+2026.10.07 11:54:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:54:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 570
+2026.10.07 11:54:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:25 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:25 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:25 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:29 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:54:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:47 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:54:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:47 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:54:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 598
+2026.10.07 11:54:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:54:49 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:00 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java
+2026.10.07 11:55:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+Oct 07, 2026 11:55:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 638
+2026.10.07 11:55:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 11:55:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 11:55:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:04 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:55:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 11:55:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 673
+2026.10.07 11:55:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:09 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:09 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\NamePanel.java. Using fallback presentation compiler.
+2026.10.07 11:55:18 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\NamePanel.java
+2026.10.07 11:55:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\NamePanel.java. Using fallback presentation compiler.
+2026.10.07 11:55:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\NamePanel.java. Using fallback presentation compiler.
+2026.10.07 11:55:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:19 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:55:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 11:55:20 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java
+2026.10.07 11:55:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+Oct 07, 2026 11:55:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 750
+2026.10.07 11:55:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+Oct 07, 2026 11:55:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 753
+2026.10.07 11:55:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 11:55:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 11:55:21 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java
+2026.10.07 11:55:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+Oct 07, 2026 11:55:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 755
+Oct 07, 2026 11:55:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 763
+2026.10.07 11:55:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+Oct 07, 2026 11:55:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 766
+Oct 07, 2026 11:55:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 768
+Oct 07, 2026 11:55:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 771
+Oct 07, 2026 11:55:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 772
+2026.10.07 11:55:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:23 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:55:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:27 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 11:55:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 11:55:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 11:55:50 INFO  Shutting down server
+2026.10.07 11:55:50 INFO  Memory monitor stopped
+2026.10.07 11:55:50 INFO  shutting down Metals
+2026.10.07 11:55:50 INFO  Exiting server

@@ -6,17 +6,17 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
+import core.ScoreManager;
 import ui.MainMenuPanel;
 import ui.NamePanel;
 import ui.ScreenManager;
-import ui.SettingsPanel;
 import ui.TitlePanel;
-// import ui.GamePanel;
 
 public class TheParadigmFacility {
 
     private static JFrame frame;
     private static ScreenManager screens;
+    private static ScoreManager scoreManager;
     private static String playerName;
 
     public static void main(String[] args) {
@@ -24,9 +24,11 @@ public class TheParadigmFacility {
     }
 
     private static void start() {
+        scoreManager = new ScoreManager();
+
         frame = new JFrame("The Paradigm Facility");
         frame.getContentPane().setBackground(Color.BLACK);
-        frame.setUndecorated(true); 
+        frame.setUndecorated(true);
 
         screens = new ScreenManager();
         screens.setPreferredSize(new Dimension(1280, 720));
@@ -46,10 +48,10 @@ public class TheParadigmFacility {
         goTo(Screen.TITLE);
     }
 
-    /** Every screen in the game. Add one entry per new panel. */
-    private enum Screen { TITLE, MAIN_MENU, OPTIONS, GAME }
+    private enum Screen {
+        TITLE, MAIN_MENU, OPTIONS, GAME
+    }
 
-    /** Single place that decides what each screen shows and swaps to it. */
     private static void goTo(Screen screen) {
         switch (screen) {
             case TITLE ->
@@ -61,6 +63,7 @@ public class TheParadigmFacility {
                                 name -> {
                                     screens.hideOverlay();
                                     playerName = name;
+                                    scoreManager.recordPlayer(name); // <-- this is the key fix
                                     goTo(Screen.GAME);
                                 },
                                 screens::hideOverlay)),
@@ -68,12 +71,10 @@ public class TheParadigmFacility {
                         TheParadigmFacility::quit));
 
             case OPTIONS -> {
-                // screens.show(new OptionsPanel(() -> goTo(Screen.MAIN_MENU)));
                 System.out.println("Options screen not built yet");
             }
 
             case GAME -> {
-                // screens.show(new GamePanel(playerName, ...));
                 System.out.println("Game screen not built yet, player name: " + playerName);
             }
         }

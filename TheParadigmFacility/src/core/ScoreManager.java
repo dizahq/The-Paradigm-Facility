@@ -1,28 +1,26 @@
 package core;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
-/**
- * Manages player scores persisted in a file.
- * Format: CSV with name,score per line
- */
 public class ScoreManager {
-    
-    private static final String SCORES_FILE = "TheParadigmFacility/scores.csv";
-    private Map<String, Integer> scores = new LinkedHashMap<>();
-    
+
+    private static final String SCORES_FILE = "TheParadigmFacility/src/fileio/scoreboard.csv";
+
+    private final Map<String, Integer> scores = new LinkedHashMap<>();
+
     public ScoreManager() {
         loadScores();
     }
-    
-    /**
-     * Load all scores from file.
-     * Creates file if it doesn't exist.
-     */
+
     private void loadScores() {
         File file = new File(SCORES_FILE);
-        
         if (!file.exists()) {
             try {
                 file.createNewFile();
@@ -31,18 +29,15 @@ public class ScoreManager {
             }
             return;
         }
-        
+
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts.length == 2) {
                     try {
-                        String name = parts[0].trim();
-                        int score = Integer.parseInt(parts[1].trim());
-                        scores.put(name, score);
-                    } catch (NumberFormatException e) {
-                        System.err.println("Invalid score format: " + line);
+                        scores.put(parts[0].trim(), Integer.parseInt(parts[1].trim()));
+                    } catch (NumberFormatException ignored) {
                     }
                 }
             }
@@ -50,10 +45,19 @@ public class ScoreManager {
             System.err.println("Error reading scores file: " + e.getMessage());
         }
     }
-    
-    /**
-     * Save all scores to file.
-     */
+
+    public void recordPlayer(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            return;
+        }
+
+        String cleanName = name.trim();
+        if (!scores.containsKey(cleanName)) {
+            scores.put(cleanName, 0);
+            saveScores();
+        }
+    }
+
     private void saveScores() {
         try (PrintWriter writer = new PrintWriter(new FileWriter(SCORES_FILE))) {
             for (Map.Entry<String, Integer> entry : scores.entrySet()) {
@@ -63,46 +67,13 @@ public class ScoreManager {
             System.err.println("Error writing scores file: " + e.getMessage());
         }
     }
-    
-    /**
-     * Record a new player with initial score of 0.
-     * If player exists, does nothing.
-     */
-    public void recordPlayer(String name) {
-        if (!scores.containsKey(name)) {
-            scores.put(name, 0);
-            saveScores();
-        }
-    }
-    
-    /**
-     * Update a player's score.
-     */
-    public void setScore(String name, int score) {
-        scores.put(name, score);
-        saveScores();
-    }
-    
-    /**
-     * Get a player's score, or 0 if not found.
-     */
+
     public int getScore(String name) {
         return scores.getOrDefault(name, 0);
     }
-    
-    /**
-     * Get all scores sorted by name.
-     */
-    public Map<String, Integer> getAllScores() {
-        return new LinkedHashMap<>(scores);
-    }
-    
-    /**
-     * Get scores sorted by score descending (leaderboard).
-     */
-    public List<Map.Entry<String, Integer>> getLeaderboard() {
-        return scores.entrySet().stream()
-                .sorted((a, b) -> b.getValue() - a.getValue())
-                .toList();
+
+    public void setScore(String name, int score) {
+        scores.put(name, score);
+        saveScores();
     }
 }
