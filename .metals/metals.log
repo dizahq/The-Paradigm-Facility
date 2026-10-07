@@ -8600,3 +8600,63 @@ Oct 07, 2026 4:02:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellat
 WARNING: Unmatched cancel notification for request id 3
 Oct 07, 2026 4:02:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 8
+2026.10.07 16:02:02 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:02:03 WARN  no build tool detected in workspace 'C:\CMSC 13\The-Paradigm-Facility'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.10.07 16:02:03 WARN  Build server is not auto-connectable.
+2026.10.07 16:02:03 WARN  no build target for: C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.10.07 16:02:03 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:02:05 WARN  Running javac-semanticdb failed for file:///C:/CMSC%2013/The-Paradigm-Facility/TheParadigmFacility/src/TheParadigmFacility.java. Output:
+
+2026.10.07 16:02:06 INFO  time: code lens generation in 1.87s
+2026.10.07 16:02:06 INFO  time: code lens generation in 2.77s
+2026.10.07 16:02:10 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:02:13 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:02:29 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:02:31 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:02:48 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:50:00 WARN  no build target for: C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\ui\SettingsPanel.java
+2026.10.07 16:50:00 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\ui\SettingsPanel.java. Using fallback presentation compiler.
+2026.10.07 16:50:00 WARN  Running javac-semanticdb failed for file:///C:/CMSC%2013/The-Paradigm-Facility/TheParadigmFacility/src/ui/SettingsPanel.java. Output:
+
+Oct 07, 2026 4:50:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 27
+2026.10.07 16:50:00 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\ui\SettingsPanel.java. Using fallback presentation compiler.
+2026.10.07 16:50:00 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\ui\SettingsPanel.java. Using fallback presentation compiler.
+2026.10.07 16:50:02 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\ui\SettingsPanel.java. Using fallback presentation compiler.
+2026.10.07 16:50:05 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\ui\SettingsPanel.java. Using fallback presentation compiler.
+2026.10.07 16:50:08 WARN  no build target for: C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java
+2026.10.07 16:50:08 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 16:50:08 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+Oct 07, 2026 4:50:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 34
+2026.10.07 16:50:08 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 16:50:08 WARN  Running javac-semanticdb failed for file:///C:/CMSC%2013/The-Paradigm-Facility/TheParadigmFacility/src/core/ScoreManager.java. Output:
+
+2026.10.07 16:50:11 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 16:50:12 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 16:50:14 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\core\ScoreManager.java. Using fallback presentation compiler.
+2026.10.07 16:50:14 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:50:15 WARN  no build target for: C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+Oct 07, 2026 4:50:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 43
+2026.10.07 16:50:14 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:50:14 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:50:15 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 16:50:18 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Oct 07, 2026 4:50:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.10.07 17:04:06 WARN  no build target for: C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.10.07 17:04:06 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 17:04:06 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 17:04:06 WARN  Running javac-semanticdb failed for file:///C:/CMSC%2013/The-Paradigm-Facility/TheParadigmFacility/src/TheParadigmFacility.java. Output:
+
+2026.10.07 17:04:08 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 17:04:24 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 17:11:24 WARN  no build target for: C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.10.07 17:11:24 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 17:11:24 WARN  Running javac-semanticdb failed for file:///C:/CMSC%2013/The-Paradigm-Facility/TheParadigmFacility/src/TheParadigmFacility.java. Output:
+
+2026.10.07 17:11:24 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 17:11:24 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 17:12:42 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 17:13:08 INFO  no build target found for C:\CMSC 13\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
