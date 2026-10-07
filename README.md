@@ -2,23 +2,20 @@
 
 At the Paradigm Facility, bad code creates "spaghetti code monsters" that corrupt codebases. Quarantined in packages, you must defeat them daily with paradigm quizzes to pass onboarding and fix the bugs.
 
-## Quick start
+## 🚀 Quick Start
 
-This project is built with plain Swing/AWT. It does not use JavaFX.
+This is a **pure Swing/AWT** project. **No JavaFX required.**
 
 ### Requirements
 
-- Java 17+ is enough
-- Java 21 is recommended
-- Make sure `java` is in your PATH
+- **Java 11+** (Java 17+ recommended)
+- `java` command available in PATH
 
-### Run the project
+### Run the Game
 
 #### Windows
 
-Double-click `run.bat`, or run from PowerShell:
-
-```powershell
+```bash
 ./run.bat
 ```
 
@@ -31,42 +28,106 @@ chmod +x run.sh
 
 #### VS Code
 
-1. Open the repo root.
-2. Press `Ctrl+Shift+D`.
-3. Select `Launch Game`.
-4. Press `F5`.
+1. Open the project root folder
+2. Press `Ctrl+Shift+D` (Run and Debug)
+3. Select **"Launch Game"**
+4. Press `F5`
 
 #### IntelliJ IDEA
 
-1. Open the repo root.
-2. Make sure the project SDK is Java 17+.
-3. Create an Application run configuration with:
-   - Main class: `TheParadigmFacility`
-4. Run it.
+1. Open the project root folder
+2. Set project JDK to Java 11+
+3. Create a new Application run configuration:
+   - **Main class**: `TheParadigmFacility`
+4. Click Run
 
-### Notes
-
-- The project uses Swing and AWT for the UI and the animated background.
-- No JavaFX modules are required.
-- The JavaFX SDK folder can remain in the repo, but it is no longer used.
-- If you want a smooth animated background, use an image/GIF-based loop instead of MP4 playback in Swing.
-
-## Troubleshooting
-
-### `Unsupported major.minor version 69.0`
-
-This is a Java version mismatch. Use Java 17 or 21, not Java 25.
+#### Manual Compilation & Run
 
 ```bash
-java -version
+# Compile
+mkdir -p out
+javac -d out $(find TheParadigmFacility/src -name "*.java")
+
+# Run
+java -cp out TheParadigmFacility
 ```
 
-### `ClassNotFoundException`
+## 📁 Project Structure
 
-Run the project from the repo root and compile before launching, or use the provided launcher scripts.
+```
+The-Paradigm-Facility/
+├── TheParadigmFacility/
+│   ├── src/                          # Java source code
+│   │   ├── TheParadigmFacility.java  # Main entry point
+│   │   └── ui/                       # UI panels and components
+│   └── assets/                       # Game assets (images, background)
+├── .vscode/                          # VS Code configuration
+├── run.bat                           # Windows launcher
+├── run.sh                            # Mac/Linux launcher
+└── README.md                         # This file
+```
+
+## ⚠️ Important Notes
+
+- This project uses **Swing/AWT for the UI and background animation**
+- **No external dependencies** - uses only Java standard library
+- The background loop expects image files (PNG/JPG/GIF), not MP4 videos
+- Place background assets in: `TheParadigmFacility/assets/background/`
+
+## 🛠️ Development
+
+### Compiling
+
+```bash
+javac -d out $(find TheParadigmFacility/src -name "*.java")
+```
+
+### Running
+
+```bash
+java -cp out TheParadigmFacility
+```
+
+### Clean Build
+
+```bash
+rm -rf out
+mkdir out
+javac -d out $(find TheParadigmFacility/src -name "*.java")
+java -cp out TheParadigmFacility
+```
+
+## 🤝 Team Workflow
+
+1. Clone the repository
+2. Run `./run.bat` (Windows) or `./run.sh` (Mac/Linux)
+3. Develop and test locally
+4. Commit and push changes
+
+## ❓ Troubleshooting
+
+### "java: command not found"
+
+Install Java:
+- [OpenJDK 17](https://jdk.java.net/17/)
+- [Eclipse Temurin](https://adoptium.net/)
+
+### "Cannot find symbol" errors
+
+Make sure you're compiling all Java files:
+
+```bash
+javac -d out $(find TheParadigmFacility/src -name "*.java")
+```
 
 ### The background is black
 
-This means the background asset path is not being read correctly. The Swing implementation falls back to black if the media file is not a supported image type.
+This is expected if the background asset is not a recognized image format. Replace the background file with a PNG/JPG/GIF:
 
-Use a PNG/JPG/GIF asset instead of MP4 for the background loop.
+```
+TheParadigmFacility/assets/background/background.mp4 → background.png
+```
+
+---
+
+**Made with pure Java Swing/AWT. No external frameworks required.**
