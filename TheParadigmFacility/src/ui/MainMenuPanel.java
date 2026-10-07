@@ -20,15 +20,15 @@ import javax.swing.JPanel;
 public class MainMenuPanel extends JPanel {
 
     private static final String ASSETS = "TheParadigmFacility/assets/interface/";
-    private static final String TITLE_PATH   = ASSETS + "title2.png";
-    private static final String START_PATH   = ASSETS + "startbtn.png";
+    private static final String TITLE_PATH = ASSETS + "title2.png";
+    private static final String START_PATH = ASSETS + "startbtn.png";
     private static final String OPTIONS_PATH = ASSETS + "settingsbtn.png";
-    private static final String QUIT_PATH    = ASSETS + "exitbtn.png";
+    private static final String QUIT_PATH = ASSETS + "exitbtn.png";
 
-    private static final int TITLE_WIDTH = 1000;   // title size
-    private static final int BUTTON_WIDTH = 400;  // width of every button
-    private static final int TITLE_GAP = 80;      // space between title and first button
-    private static final int BUTTON_GAP = 10;     // space between buttons
+    private static final int TITLE_WIDTH = 1000; // title size
+    private static final int BUTTON_WIDTH = 400; // width of every button
+    private static final int TITLE_GAP = 80; // space between title and first button
+    private static final int BUTTON_GAP = 10; // space between buttons
 
     public MainMenuPanel(Runnable onStart, Runnable onOptions, Runnable onQuit) {
         setOpaque(false);
@@ -63,7 +63,8 @@ public class MainMenuPanel extends JPanel {
         File file = new File(TITLE_PATH);
         try {
             BufferedImage img = ImageIO.read(file);
-            if (img == null) throw new java.io.IOException("Unsupported image");
+            if (img == null)
+                throw new java.io.IOException("Unsupported image");
 
             int w = TITLE_WIDTH;
             int h = img.getHeight() * w / img.getWidth();

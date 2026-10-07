@@ -1,21 +1,10 @@
 {
   "files.watcherExclude": {
-    "**/target/**": true
+    "**/target/**": true,
+    "**/out/**": true
   },
-  "java.project.referencedLibraries": [
-    "TheParadigmFacility/lib/javafx-sdk-27/lib/*.jar"
-  ],
-  "java.debug.settings.vmArgs": "--module-path ${workspaceFolder}/TheParadigmFacility/lib/javafx-sdk-27/lib --add-modules javafx.controls,javafx.media,javafx.swing --enable-native-access=javafx.graphics,javafx.media,javafx.swing",
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-21",
-      "path": "C:\\Program Files\\Java\\jdk-21.0.12.1",
-      "default": true
-    },
-    {
-      "name": "JavaSE-23",
-      "path": "C:\\Program Files\\Java\\jdk-23"
-    }
-  ],
-  "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-21.0.12.1"
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.formatOnSave": true
+  }
 }

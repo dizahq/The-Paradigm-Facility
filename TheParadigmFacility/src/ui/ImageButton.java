@@ -14,15 +14,16 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.JComponent;
 
-/** A button drawn from a picture. Dim normally, bright and slightly larger on hover. */
+/**
+ * A button drawn from a picture. Dim normally, bright and slightly larger on
+ * hover.
+ */
 public class ImageButton extends JComponent {
 
     private BufferedImage image;
-    private final String missingLabel;
     private boolean hover;
 
     public ImageButton(String path, int width, Runnable onClick) {
-        this.missingLabel = path;
         File file = new File(path);
         try {
             image = ImageIO.read(file);
@@ -40,18 +41,33 @@ public class ImageButton extends JComponent {
         setPreferredSize(size);
         setMaximumSize(size);
         setMinimumSize(size);
+        setOpaque(false);
 
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         addMouseListener(new MouseAdapter() {
-            @Override public void mouseEntered(MouseEvent e) { hover = true; repaint(); }
-            @Override public void mouseExited(MouseEvent e)  { hover = false; repaint(); }
-            @Override public void mouseClicked(MouseEvent e) { onClick.run(); }
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                hover = true;
+                repaint();
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                hover = false;
+                repaint();
+            }
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                onClick.run();
+            }
         });
     }
 
     @Override
     protected void paintComponent(Graphics g) {
-        if (image == null) return;
+        if (image == null)
+            return;
 
         Graphics2D g2 = (Graphics2D) g.create();
         g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION,

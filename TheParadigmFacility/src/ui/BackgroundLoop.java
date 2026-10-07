@@ -11,106 +11,88 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-/**
- * Swing/AWT background loop. This replaces the JavaFX video background and works
- * with plain Java Swing without any special module configuration.
- */
 public class BackgroundLoop extends JPanel {
 
-    private static final String DEFAULT_BACKGROUND_PATH =
-            "TheParadigmFacility/assets/background/background.mp4";
+    private static final String DEFAULT_BACKGROUND_PATH = "TheParadigmFacility/assets/background/background.png";
+    private static final int FRAME_WIDTH = 480;
+    private static final int FRAME_HEIGHT = 270;
+    private static final int COLUMNS = 10;
+    private static final int ROWS = 9;
+    private static final int TOTAL_FRAMES = COLUMNS * ROWS;
+    private static final int PLAYBACK_SPEED = 30; // milliseconds per frame
 
-    private BufferedImage background;
-    private BufferedImage scaledBackground;
-    private int offsetX;
-    private int offsetY;
-    private final Timer timer;
+    private final BufferedImage[] frames = new BufferedImage[TOTAL_FRAMES];
+    private boolean loaded;
+    private int currentFrameIndex;
+    private Timer timer;
 
     public BackgroundLoop() {
-        this(DEFAULT_BACKGROUND_PATH);
-    }
-
-    public BackgroundLoop(String imagePath) {
         setOpaque(false);
         setPreferredSize(new Dimension(1280, 720));
-        loadBackground(imagePath);
+        loadFrames(DEFAULT_BACKGROUND_PATH);
 
-        timer = new Timer(30, e -> {
-            offsetX = (offsetX + 1) % 25;
-            offsetY = (offsetY + 1) % 25;
-            repaint();
-        });
-        timer.start();
+        if (loaded) {
+            timer = new Timer(PLAYBACK_SPEED, e -> {
+                currentFrameIndex = (currentFrameIndex + 1) % TOTAL_FRAMES;
+                repaint();
+            });
+
+            timer.start();
+        }
     }
 
-    private void loadBackground(String path) {
-        try {
-            File file = new File(path);
-            if (!file.exists()) {
-                System.err.println("Background asset not found at: " + file.getAbsolutePath());
-                return;
-            }
+    private void loadFrames(String path) {
+        File file = new File(path);
 
-            if (path.toLowerCase().endsWith(".mp4") || path.toLowerCase().endsWith(".mov")) {
-                System.err.println("Video file detected. Swing background loop does not play MP4 directly. " +
-                        "Falling back to a solid black background. Place a still image or GIF instead.");
-                background = new BufferedImage(1280, 720, BufferedImage.TYPE_INT_ARGB);
-                Graphics2D g2 = background.createGraphics();
-                g2.setColor(Color.BLACK);
-                g2.fillRect(0, 0, 1280, 720);
-                g2.dispose();
-                return;
-            }
-
-            background = ImageIO.read(file);
-        } catch (Exception e) {
-            e.printStackTrace();
-            background = new BufferedImage(1280, 720, BufferedImage.TYPE_INT_ARGB);
-            Graphics2D g2 = background.createGraphics();
-            g2.setColor(Color.BLACK);
-            g2.fillRect(0, 0, 1280, 720);
-            g2.dispose();
+        if (!file.exists()) {
+            System.err.println("Background image not found: " + path);
+            loaded = false;
+            return;
         }
+
+        BufferedImage spriteSheet;
+
+        try {
+
+            spriteSheet = ImageIO.read(file);
+        } catch (Exception e) {
+            System.err.println("Error loading background image: " + e.getMessage());
+            loaded = false;
+            return;
+        }
+
+        for (int i = 0; i < TOTAL_FRAMES; i++) {
+            int col = i % COLUMNS;
+            int row = i / COLUMNS;
+            frames[i] = spriteSheet.getSubimage(col * FRAME_WIDTH, row * FRAME_HEIGHT, FRAME_WIDTH, FRAME_HEIGHT);
+        }
+
+        loaded = true;
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        if (!loaded)
+            return;
 
-        Graphics2D g2 = (Graphics2D) g.create();
-        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        Graphics2D g2d = (Graphics2D) g.create();
+        g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
 
-        if (background != null) {
-            int w = getWidth();
-            int h = getHeight();
-
-            if (scaledBackground == null || scaledBackground.getWidth() != w || scaledBackground.getHeight() != h) {
-                scaledBackground = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
-                Graphics2D bg2 = scaledBackground.createGraphics();
-                bg2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-                bg2.drawImage(background, 0, 0, w, h, null);
-                bg2.dispose();
-            }
-
-            int x = offsetX;
-            int y = offsetY;
-
-            g2.drawImage(scaledBackground, x, y, null);
-            if (x > 0) {
-                g2.drawImage(scaledBackground, x - w, y, null);
-            }
-            if (y > 0) {
-                g2.drawImage(scaledBackground, x, y - h, null);
-            }
+        if (loaded) {
+            BufferedImage currentFrame = frames[currentFrameIndex];
+            g2d.drawImage(currentFrame, 0, 0, getWidth(), getHeight(), null);
         } else {
-            g2.setColor(Color.BLACK);
-            g2.fillRect(0, 0, getWidth(), getHeight());
+            g2d.setColor(Color.BLACK);
+            g2d.fillRect(0, 0, getWidth(), getHeight());
         }
 
-        g2.dispose();
+        g2d.dispose();
     }
 
     public void dispose() {
-        timer.stop();
+        if (timer != null) {
+            timer.stop();
+        }
     }
 }

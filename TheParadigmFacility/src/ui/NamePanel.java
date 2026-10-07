@@ -23,12 +23,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 
-/**
- * Overlay asking the player to type their name.
- * onSubmit receives the name once they confirm. onClose is called if they press X.
- */
 public class NamePanel extends JPanel {
 
     private static final Color BACKDROP = new Color(0, 0, 0, 160);
@@ -134,9 +129,22 @@ public class NamePanel extends JPanel {
             setMaximumSize(size);
             setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             addMouseListener(new MouseAdapter() {
-                @Override public void mouseEntered(MouseEvent e) { hover = true; repaint(); }
-                @Override public void mouseExited(MouseEvent e)  { hover = false; repaint(); }
-                @Override public void mouseClicked(MouseEvent e) { onClick.run(); }
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    hover = true;
+                    repaint();
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    hover = false;
+                    repaint();
+                }
+
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    onClick.run();
+                }
             });
         }
 

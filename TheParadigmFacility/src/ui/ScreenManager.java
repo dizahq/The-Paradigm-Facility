@@ -1,13 +1,11 @@
 package ui;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseWheelEvent;
 import javax.swing.JComponent;
 import javax.swing.JLayeredPane;
 
-/**
- * Holds the one shared BackgroundLoop at the bottom, shows one main
- * screen on top of it, and can layer an overlay (settings, name entry,
- * pause menu, ...) above that without removing the main screen.
- */
 public class ScreenManager extends JLayeredPane {
 
     private final BackgroundLoop background = new BackgroundLoop();
@@ -18,7 +16,6 @@ public class ScreenManager extends JLayeredPane {
         add(background, DEFAULT_LAYER);
     }
 
-    /** Replace the main screen (title, menu, gameplay, ...). */
     public void show(JComponent panel) {
         if (current != null) {
             remove(current);
@@ -36,6 +33,27 @@ public class ScreenManager extends JLayeredPane {
         }
         overlay = panel;
         add(panel, MODAL_LAYER);
+
+        // Block input events from reaching components behind the overlay
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                e.consume();
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                e.consume();
+            }
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                e.consume();
+            }
+        });
+
+        panel.addMouseWheelListener((MouseWheelEvent e) -> e.consume());
+
         refresh();
     }
 
