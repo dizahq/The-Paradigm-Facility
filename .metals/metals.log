@@ -4591,3 +4591,139 @@ WARNING: Unmatched cancel notification for request id 99
 2026.10.02 16:40:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
 2026.10.02 16:41:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
 2026.10.02 16:41:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.06 21:42:57 INFO  Started: Metals version 1.6.9 in folders 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility' for client Visual Studio Code 1.140.0.
+2026.10.06 21:42:57 INFO  Memory monitor started
+2026.10.06 21:43:01 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.10.06 21:43:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java. Using fallback presentation compiler.
+2026.10.06 21:43:03 WARN  no build tool detected in workspace 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.10.06 21:43:03 WARN  Build server is not auto-connectable.
+2026.10.06 21:43:03 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java
+2026.10.06 21:43:03 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java. Using fallback presentation compiler.
+2026.10.06 21:43:06 INFO  time: code lens generation in 3.12s
+2026.10.06 21:43:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java. Using fallback presentation compiler.
+2026.10.06 21:43:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java. Using fallback presentation compiler.
+2026.10.06 21:43:22 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java
+2026.10.06 21:43:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+Oct 06, 2026 9:43:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 14
+2026.10.06 21:43:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:26 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:32 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:56 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:43:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:56:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:56:34 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java
+Oct 06, 2026 9:56:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 37
+2026.10.06 21:56:35 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:56:35 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.06 21:56:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+Oct 06, 2026 9:57:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.10.06 21:57:18 INFO  Shutting down server
+2026.10.06 21:57:18 INFO  Memory monitor stopped
+2026.10.06 21:57:18 INFO  shutting down Metals
+2026.10.06 21:57:18 INFO  Exiting server
+2026.10.06 21:57:54 INFO  Started: Metals version 1.6.9 in folders 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility' for client Visual Studio Code 1.140.0.
+2026.10.06 21:57:54 INFO  Memory monitor started
+2026.10.06 21:57:57 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.10.06 21:57:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Oct 06, 2026 9:57:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.10.06 21:57:58 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.06 21:57:58 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.06 21:57:58 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.06 21:57:59 WARN  no build tool detected in workspace 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.10.06 21:57:58 WARN  Build server is not auto-connectable.
+2026.10.06 21:57:59 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.10.06 21:57:58 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.06 21:58:01 INFO  time: code lens generation in 1.91s
+2026.10.06 21:58:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.06 21:58:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.06 21:58:09 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.06 21:58:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.06 22:00:26 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.10.07 10:38:47 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java
+2026.10.07 10:38:47 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java. Using fallback presentation compiler.
+2026.10.07 10:38:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java. Using fallback presentation compiler.
+Oct 07, 2026 10:38:50 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 26
+2026.10.07 10:38:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java. Using fallback presentation compiler.
+2026.10.07 10:38:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java. Using fallback presentation compiler.
+Oct 07, 2026 10:38:51 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 32
+Oct 07, 2026 10:38:51 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 31
+Oct 07, 2026 10:38:51 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 27
+2026.10.07 10:38:51 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java
+2026.10.07 10:38:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+Oct 07, 2026 10:38:52 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 34
+2026.10.07 10:38:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:38:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:38:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+Oct 07, 2026 10:38:52 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 38
+2026.10.07 10:38:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\TitlePanel.java. Using fallback presentation compiler.
+2026.10.07 10:38:53 INFO  time: code lens generation in 2.05s
+2026.10.07 10:38:54 INFO  time: code lens generation in 2.06s
+2026.10.07 10:38:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:38:55 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java
+Oct 07, 2026 10:38:55 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 43
+2026.10.07 10:38:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:38:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:38:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+Oct 07, 2026 10:38:55 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 47
+2026.10.07 10:38:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:38:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:40:37 INFO  Shutting down server
+2026.10.07 10:40:37 INFO  Memory monitor stopped
+2026.10.07 10:40:37 INFO  shutting down Metals
+2026.10.07 10:40:38 INFO  Exiting server
+2026.10.07 10:43:58 INFO  Started: Metals version 1.6.9 in folders 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility' for client Visual Studio Code 1.140.0.
+2026.10.07 10:43:58 INFO  time: initialize in 0.2s
+2026.10.07 10:43:58 INFO  Memory monitor started
+2026.10.07 10:44:02 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.10.07 10:44:03 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:06 WARN  no build tool detected in workspace 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.10.07 10:44:06 WARN  Build server is not auto-connectable.
+2026.10.07 10:44:06 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java
+2026.10.07 10:44:06 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java
+2026.10.07 10:44:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:44:11 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java
+2026.10.07 10:44:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:44:12 INFO  time: code lens generation in 5.55s
+2026.10.07 10:44:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:44:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:44:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\ImageButton.java. Using fallback presentation compiler.
+2026.10.07 10:44:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:19 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java
+Oct 07, 2026 10:44:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 31
+2026.10.07 10:44:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:44:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\BackgroundLoop.java. Using fallback presentation compiler.
+2026.10.07 10:45:08 INFO  Shutting down server
+2026.10.07 10:45:08 INFO  Memory monitor stopped
+2026.10.07 10:45:08 INFO  shutting down Metals
+2026.10.07 10:45:09 INFO  Exiting server
