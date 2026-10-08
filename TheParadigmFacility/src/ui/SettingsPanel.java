@@ -21,8 +21,9 @@ import javax.swing.JPanel;
 // Settings screen: A sound switch + Help, Admin, About
 
 public class SettingsPanel extends JPanel {
-    private static final String RETURN_BTN = "interface/mainMenubtn.png";
-    private static final int RETURN_BTN_WIDTH = 190;
+    private static final String MAIN_MENU_BTN = "interface/mainMenubtn.png";
+    private static final String RETURN_BTN = "interface/returnBtn.png";
+    private static final int BACK_BTN_WIDTH = 190;
 
     private static final int SIDE_PADDING = 105;
     private static final int TOP_PADDING = 120;
@@ -31,7 +32,7 @@ public class SettingsPanel extends JPanel {
     private static final int DIVIDER_GAP = 24; // space between a row's text and its divider line
 
     public SettingsPanel(boolean soundOn, Consumer<Boolean> onSoundToggle, Runnable onHelp, Runnable onAdmin,
-            Runnable onAbout, Runnable onBack) {
+            Runnable onAbout, Runnable onBack, boolean fromGame) {
         setOpaque(false);
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createEmptyBorder(TOP_PADDING, SIDE_PADDING, BOTTOM_PADDING, SIDE_PADDING));
@@ -52,7 +53,7 @@ public class SettingsPanel extends JPanel {
 
         JPanel bottom = new JPanel(new FlowLayout(FlowLayout.RIGHT, 0, 0));
         bottom.setOpaque(false);
-        bottom.add(new ImageButton(RETURN_BTN, RETURN_BTN_WIDTH, onBack));
+        bottom.add(new ImageButton(fromGame ? RETURN_BTN : MAIN_MENU_BTN, BACK_BTN_WIDTH, onBack));
         add(bottom, BorderLayout.SOUTH);
     }
 
