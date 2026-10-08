@@ -25,6 +25,9 @@ public abstract class PopupWindow extends JPanel {
     // Dark area inside the box. Subclasses add their components here.
     protected final JPanel content = new JPanel();
 
+    private JPanel titleBar;
+    private CloseX closeX;
+
     // No title text, dark green background (used by NamePanel)
     protected PopupWindow(int width, int height, Runnable onClose) {
         this("", width, height, Theme.PANEL, onClose);
@@ -49,25 +52,32 @@ public abstract class PopupWindow extends JPanel {
         add(box);
     }
 
+    // White title Bar for PausePanel.
+    protected void useLightTitleBar() {
+        titleBar.setBackground(Color.WHITE);
+        closeX.setHoverColor(Theme.HOVER_RED);
+    }
+
     private JComponent buildTitleBar(String title, int width, Runnable onClose) {
-        JPanel bar = new JPanel(new BorderLayout());
-        bar.setBackground(Theme.TITLEBAR);
-        bar.setPreferredSize(new Dimension(width, TITLEBAR_HEIGHT));
+        titleBar = new JPanel(new BorderLayout());
+        titleBar.setBackground(Theme.TITLEBAR);
+        titleBar.setPreferredSize(new Dimension(width, TITLEBAR_HEIGHT));
 
         if (!title.isEmpty()) {
             JLabel label = new JLabel(title);
             label.setFont(Theme.bold(18));
             label.setForeground(Color.WHITE);
             label.setBorder(BorderFactory.createEmptyBorder(0, 14, 0, 0));
-            bar.add(label, BorderLayout.WEST);
+            titleBar.add(label, BorderLayout.WEST);
         }
 
+        closeX = new CloseX(onClose);
         JPanel closeWrap = new JPanel();
         closeWrap.setOpaque(false);
-        closeWrap.add(new CloseX(onClose));
+        closeWrap.add(closeX);
 
-        bar.add(closeWrap, BorderLayout.EAST);
-        return bar;
+        titleBar.add(closeWrap, BorderLayout.EAST);
+        return titleBar;
     }
 
     // Dim everything behind the box
@@ -81,6 +91,7 @@ public abstract class PopupWindow extends JPanel {
     // Red "X" close button, top right of the title bar
     private static class CloseX extends JComponent {
         private boolean hover;
+        private Color hoverColor = Color.WHITE;
 
         CloseX(Runnable onClick) {
             Dimension size = new Dimension(36, 36);
@@ -105,6 +116,10 @@ public abstract class PopupWindow extends JPanel {
                     onClick.run();
                 }
             });
+        }
+
+        void setHoverColor(Color color) {
+            hoverColor = color;
         }
 
         @Override
