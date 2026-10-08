@@ -2,6 +2,7 @@ package ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import javax.swing.BorderFactory;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -66,6 +67,8 @@ public class InfoPanel extends PopupWindow {
                 JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         scroll.setBorder(BorderFactory.createEmptyBorder());
         scroll.getViewport().setBackground(Color.BLACK);
+        scroll.getVerticalScrollBar().setUI(new GameScrollBarUI());
+        scroll.getVerticalScrollBar().setPreferredSize(new Dimension(GameScrollBarUI.WIDTH, 0));
 
         content.add(scroll, BorderLayout.CENTER);
     }
