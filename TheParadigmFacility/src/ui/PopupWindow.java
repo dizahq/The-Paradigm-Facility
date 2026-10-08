@@ -13,6 +13,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JComponent;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 // Base class for every popup: NamePanel, PausePanel, InfoPanel. Dimmed backdrop, centered box, title bar w a red X.
@@ -24,11 +25,16 @@ public abstract class PopupWindow extends JPanel {
     // Dark area inside the box. Subclasses add their components here.
     protected final JPanel content = new JPanel();
 
+    // No title text, dark green background (used by NamePanel)
     protected PopupWindow(int width, int height, Runnable onClose) {
+        this("", width, height, Theme.PANEL, onClose);
+    }
+
+    protected PopupWindow(String title, int width, int height, Color background, Runnable onClose) {
         setOpaque(false);
         setLayout(new GridBagLayout()); // centers the box
 
-        content.setBackground(Theme.PANEL);
+        content.setBackground(background);
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         content.setBorder(BorderFactory.createEmptyBorder(40, 50, 40, 50));
 
@@ -37,16 +43,24 @@ public abstract class PopupWindow extends JPanel {
         box.setPreferredSize(size);
         box.setMaximumSize(size);
         box.setBorder(BorderFactory.createLineBorder(Color.WHITE, 1));
-        box.add(buildTitleBar(width, onClose), BorderLayout.NORTH);
+        box.add(buildTitleBar(title, width, onClose), BorderLayout.NORTH);
         box.add(content, BorderLayout.CENTER);
 
         add(box);
     }
 
-    private JComponent buildTitleBar(int width, Runnable onClose) {
+    private JComponent buildTitleBar(String title, int width, Runnable onClose) {
         JPanel bar = new JPanel(new BorderLayout());
         bar.setBackground(Theme.TITLEBAR);
         bar.setPreferredSize(new Dimension(width, TITLEBAR_HEIGHT));
+
+        if (!title.isEmpty()) {
+            JLabel label = new JLabel(title);
+            label.setFont(Theme.bold(18));
+            label.setForeground(Color.WHITE);
+            label.setBorder(BorderFactory.createEmptyBorder(0, 14, 0, 0));
+            bar.add(label, BorderLayout.WEST);
+        }
 
         JPanel closeWrap = new JPanel();
         closeWrap.setOpaque(false);

@@ -5,6 +5,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import ui.InfoPanel;
 import ui.MainMenuPanel;
 import ui.NamePanel;
 import ui.ScreenManager;
@@ -74,9 +75,9 @@ public class TheParadigmFacility {
                 screens.show(new SettingsPanel(
                         soundOn,
                         on -> soundOn = on,
-                        () -> System.out.println("Help popup not built yet"),
-                        () -> System.out.println("Admin popup not built yet"),
-                        () -> System.out.println("About popup not built yet"),
+                        () -> screens.showOverlay(InfoPanel.help(screens::hideOverlay)),
+                        () -> screens.showOverlay(InfoPanel.credits(screens::hideOverlay)),
+                        () -> screens.showOverlay(InfoPanel.about(screens::hideOverlay)),
                         () -> goTo(Screen.MAIN_MENU)));
             }
 
