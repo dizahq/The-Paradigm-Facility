@@ -10,7 +10,6 @@ import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.function.Consumer;
-
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -24,7 +23,7 @@ public class SettingsPanel extends JPanel {
     private static final Color LINE_COLOR = new Color(255, 255, 255, 60);
     private static final Color ACCENT_COLOR = new Color(0x4ADE80);
 
-    private static final String ASSET = "TheParadigmFacility/assets/interface/mainMenubtn.png";
+    private static final String ASSET = "interface/mainMenubtn.png";
     private static final int MAIN_MENU_BTN_WIDTH = 220;
 
     private static final int SIDE_PADDING = 70;

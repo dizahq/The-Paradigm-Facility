@@ -1,25 +1,21 @@
 package ui;
 
-import java.awt.Component;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
-import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
-import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
-import java.io.File;
-
-import javax.imageio.ImageIO;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import util.Assets;
 
 /** Main menu: title on top, three picture buttons centered below. */
 public class MainMenuPanel extends JPanel {
 
-    private static final String ASSETS = "TheParadigmFacility/assets/interface/";
+    private static final String ASSETS = "interface/";
     private static final String TITLE_PATH = ASSETS + "title2.png";
     private static final String START_PATH = ASSETS + "startbtn.png";
     private static final String OPTIONS_PATH = ASSETS + "settingsbtn.png";
@@ -60,27 +56,13 @@ public class MainMenuPanel extends JPanel {
     }
 
     private JLabel buildTitle() {
-        File file = new File(TITLE_PATH);
-        try {
-            BufferedImage img = ImageIO.read(file);
-            if (img == null)
-                throw new java.io.IOException("Unsupported image");
-
-            int w = TITLE_WIDTH;
-            int h = img.getHeight() * w / img.getWidth();
-            BufferedImage scaled = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
-            Graphics2D g2 = scaled.createGraphics();
-            g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
-                    RenderingHints.VALUE_INTERPOLATION_BICUBIC);
-            g2.drawImage(img, 0, 0, w, h, null);
-            g2.dispose();
-            return new JLabel(new ImageIcon(scaled));
-        } catch (Exception e) {
-            System.err.println("Title not found at: " + file.getAbsolutePath());
-            JLabel fallback = new JLabel("PARADIGM FACILITY");
-            fallback.setFont(new Font("Consolas", Font.BOLD, 56));
-            fallback.setForeground(Color.WHITE);
-            return fallback;
+        BufferedImage img = Assets.scaled(TITLE_PATH, TITLE_WIDTH);
+        if (img != null) {
+            return new JLabel(new ImageIcon(img));
         }
+        JLabel fallback = new JLabel("PARADIGM FACILITY");
+        fallback.setFont(new Font("Consolas", Font.BOLD, 56));
+        fallback.setForeground(Color.WHITE);
+        return fallback;
     }
 }

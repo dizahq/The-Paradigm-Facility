@@ -10,28 +10,24 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.Image;
 import java.awt.Insets;
 import java.awt.RenderingHints;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
-import java.io.File;
-
-import javax.imageio.ImageIO;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import util.Assets;
 
 /** Title screen: PNG title and a play button. Pure AWT/Swing. */
 public class TitlePanel extends JPanel {
 
-    private static final String TITLE_PATH =
-            "TheParadigmFacility/assets/interface/title.png"; // <- your PNG path
-    private static final int TITLE_WIDTH = 1100;               // <- title size
+    private static final String TITLE_PATH = "interface/title.png"; // <- your PNG path
+    private static final int TITLE_WIDTH = 1100; // <- title size
     private static final int TOP_OFFSET = 170; // space above the title; smaller = title higher
 
     public TitlePanel(Runnable onStart) {
@@ -60,7 +56,7 @@ public class TitlePanel extends JPanel {
         column.add(pressToStart);
 
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.anchor = GridBagConstraints.NORTH;  // stick to the top instead of the center
+        gbc.anchor = GridBagConstraints.NORTH; // stick to the top instead of the center
         gbc.weightx = 1;
         gbc.weighty = 1;
         gbc.insets = new Insets(TOP_OFFSET, 0, 0, 0);
@@ -68,20 +64,14 @@ public class TitlePanel extends JPanel {
     }
 
     private JLabel buildTitle() {
-        File file = new File(TITLE_PATH);
-        try {
-            BufferedImage img = ImageIO.read(file);
-            if (img == null) throw new java.io.IOException("Unsupported image");
-            int h = img.getHeight() * TITLE_WIDTH / img.getWidth();
-            Image scaled = img.getScaledInstance(TITLE_WIDTH, h, Image.SCALE_SMOOTH);
-            return new JLabel(new ImageIcon(scaled));
-        } catch (Exception e) {
-            System.err.println("Title not found at: " + file.getAbsolutePath());
-            JLabel fallback = new JLabel("PARADIGM FACILITY");
-            fallback.setFont(new Font("Consolas", Font.BOLD, 56));
-            fallback.setForeground(Color.WHITE);
-            return fallback;
+        BufferedImage img = Assets.scaled(TITLE_PATH, TITLE_WIDTH);
+        if (img != null) {
+            return new JLabel(new ImageIcon(img));
         }
+        JLabel fallback = new JLabel("PARADIGM FACILITY");
+        fallback.setFont(new Font("Consolas", Font.BOLD, 56));
+        fallback.setForeground(Color.WHITE);
+        return fallback;
     }
 
     /** Circular play button drawn with Graphics2D, with a hover color. */
@@ -95,9 +85,22 @@ public class TitlePanel extends JPanel {
             setMaximumSize(new Dimension(80, 80));
             setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             addMouseListener(new MouseAdapter() {
-                @Override public void mouseEntered(MouseEvent e) { hover = true; repaint(); }
-                @Override public void mouseExited(MouseEvent e)  { hover = false; repaint(); }
-                @Override public void mouseClicked(MouseEvent e) { onClick.run(); }
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    hover = true;
+                    repaint();
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    hover = false;
+                    repaint();
+                }
+
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    onClick.run();
+                }
             });
         }
 
@@ -108,7 +111,7 @@ public class TitlePanel extends JPanel {
             g2.setColor(hover ? HOVER : NORMAL);
             g2.setStroke(new BasicStroke(4f));
             g2.drawOval(4, 4, 72, 72);
-            g2.fillPolygon(new int[]{32, 32, 58}, new int[]{24, 56, 40}, 3);
+            g2.fillPolygon(new int[] { 32, 32, 58 }, new int[] { 24, 56, 40 }, 3);
             g2.dispose();
         }
     }

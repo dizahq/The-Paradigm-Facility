@@ -8,10 +8,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import util.Assets;
 
 public class ScoreManager {
 
-    private static final String SCORES_FILE = "TheParadigmFacility/data/scoreboard.csv";
+    private static final File SCORES_FILE = Assets.dataFile("scoreboard.csv");
 
     private final Map<String, Integer> scores = new LinkedHashMap<>();
 
@@ -20,7 +21,7 @@ public class ScoreManager {
     }
 
     private void loadScores() {
-        File file = new File(SCORES_FILE);
+        File file = SCORES_FILE;
         if (!file.exists()) {
             try {
                 file.createNewFile();

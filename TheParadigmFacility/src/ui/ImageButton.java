@@ -9,10 +9,8 @@ import java.awt.RenderingHints;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
-import java.io.File;
-
-import javax.imageio.ImageIO;
 import javax.swing.JComponent;
+import util.Assets;
 
 /**
  * A button drawn from a picture. Dim normally, bright and slightly larger on
@@ -24,12 +22,7 @@ public class ImageButton extends JComponent {
     private boolean hover;
 
     public ImageButton(String path, int width, Runnable onClick) {
-        File file = new File(path);
-        try {
-            image = ImageIO.read(file);
-        } catch (Exception e) {
-            System.err.println("Button image not found at: " + file.getAbsolutePath());
-        }
+        image = Assets.image(path);
 
         int w = width;
         int h = 60; // fallback height if the image is missing

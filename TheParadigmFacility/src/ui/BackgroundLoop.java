@@ -6,14 +6,13 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import util.Assets;
 
 public class BackgroundLoop extends JPanel {
 
-    private static final String DEFAULT_BACKGROUND_PATH = "TheParadigmFacility/assets/background/background.png";
+    private static final String DEFAULT_BACKGROUND_PATH = "background/background.png";
     private static final int FRAME_WIDTH = 480;
     private static final int FRAME_HEIGHT = 270;
     private static final int COLUMNS = 10;
@@ -42,21 +41,8 @@ public class BackgroundLoop extends JPanel {
     }
 
     private void loadFrames(String path) {
-        File file = new File(path);
-
-        if (!file.exists()) {
-            System.err.println("Background image not found: " + path);
-            loaded = false;
-            return;
-        }
-
-        BufferedImage spriteSheet;
-
-        try {
-
-            spriteSheet = ImageIO.read(file);
-        } catch (Exception e) {
-            System.err.println("Error loading background image: " + e.getMessage());
+        BufferedImage spriteSheet = Assets.image(path);
+        if (spriteSheet == null) {
             loaded = false;
             return;
         }
