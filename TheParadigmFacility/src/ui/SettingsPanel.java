@@ -70,9 +70,9 @@ public class SettingsPanel extends JPanel {
         titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         JLabel subtitleLabel = new JLabel(subtitle);
-        titleLabel.setFont(Theme.plain(13));
-        titleLabel.setForeground(Color.WHITE);
-        titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        subtitleLabel.setFont(Theme.plain(13));
+        subtitleLabel.setForeground(Theme.MUTED);
+        subtitleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         textBlock.add(titleLabel);
         textBlock.add(Box.createVerticalStrut(4));
