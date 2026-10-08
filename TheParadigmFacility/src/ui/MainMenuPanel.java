@@ -2,7 +2,6 @@ package ui;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Font;
 import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 import javax.swing.Box;
@@ -61,7 +60,7 @@ public class MainMenuPanel extends JPanel {
             return new JLabel(new ImageIcon(img));
         }
         JLabel fallback = new JLabel("PARADIGM FACILITY");
-        fallback.setFont(new Font("Consolas", Font.BOLD, 56));
+        fallback.setFont(Theme.bold(56));
         fallback.setForeground(Color.WHITE);
         return fallback;
     }

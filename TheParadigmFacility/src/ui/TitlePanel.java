@@ -5,7 +5,6 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GridBagConstraints;
@@ -45,8 +44,8 @@ public class TitlePanel extends JPanel {
         play.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel pressToStart = new JLabel("PRESS TO START");
-        pressToStart.setFont(new Font("Consolas", Font.PLAIN, 12));
-        pressToStart.setForeground(new Color(0x8A938A));
+        pressToStart.setFont(Theme.plain(12));
+        pressToStart.setForeground(Theme.MUTED);
         pressToStart.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         column.add(title);
@@ -69,15 +68,13 @@ public class TitlePanel extends JPanel {
             return new JLabel(new ImageIcon(img));
         }
         JLabel fallback = new JLabel("PARADIGM FACILITY");
-        fallback.setFont(new Font("Consolas", Font.BOLD, 56));
+        fallback.setFont(Theme.bold(56));
         fallback.setForeground(Color.WHITE);
         return fallback;
     }
 
     /** Circular play button drawn with Graphics2D, with a hover color. */
     private static class PlayButton extends JComponent {
-        private static final Color NORMAL = new Color(0x6B746B);
-        private static final Color HOVER = new Color(0xFF4D4D);
         private boolean hover;
 
         PlayButton(Runnable onClick) {
@@ -108,7 +105,7 @@ public class TitlePanel extends JPanel {
         protected void paintComponent(Graphics g) {
             Graphics2D g2 = (Graphics2D) g.create();
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(hover ? HOVER : NORMAL);
+            g2.setColor(hover ? Theme.HOVER_RED : Theme.IDLE);
             g2.setStroke(new BasicStroke(4f));
             g2.drawOval(4, 4, 72, 72);
             g2.fillPolygon(new int[] { 32, 32, 58 }, new int[] { 24, 56, 40 }, 3);

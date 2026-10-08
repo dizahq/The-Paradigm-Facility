@@ -6,7 +6,6 @@ import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.function.Consumer;
@@ -18,11 +17,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class SettingsPanel extends JPanel {
-    private static final Color TITLE_COLOR = Color.white;
-    private static final Color SUBTITLE_COLOR = new Color(0x8FA096);
-    private static final Color LINE_COLOR = new Color(255, 255, 255, 60);
-    private static final Color ACCENT_COLOR = new Color(0x4ADE80);
-
     private static final String ASSET = "interface/mainMenubtn.png";
     private static final int MAIN_MENU_BTN_WIDTH = 220;
 
@@ -71,13 +65,13 @@ public class SettingsPanel extends JPanel {
         textBlock.setLayout(new BoxLayout(textBlock, BoxLayout.Y_AXIS));
 
         JLabel titleLabel = new JLabel(title);
-        titleLabel.setFont(new Font("Consolas", Font.BOLD, 22));
-        titleLabel.setForeground(TITLE_COLOR);
+        titleLabel.setFont(Theme.bold(22));
+        titleLabel.setForeground(Color.WHITE);
         titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         JLabel subtitleLabel = new JLabel(subtitle);
-        titleLabel.setFont(new Font("Consolas", Font.PLAIN, 13));
-        titleLabel.setForeground(TITLE_COLOR);
+        titleLabel.setFont(Theme.plain(13));
+        titleLabel.setForeground(Color.WHITE);
         titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         textBlock.add(titleLabel);
@@ -111,7 +105,7 @@ public class SettingsPanel extends JPanel {
         @Override
         protected void paintComponent(java.awt.Graphics g) {
             super.paintComponent(g);
-            g.setColor(LINE_COLOR);
+            g.setColor(Theme.LINE);
             g.drawLine(0, 0, getWidth(), 0);
         }
     }
@@ -122,7 +116,7 @@ public class SettingsPanel extends JPanel {
 
         CodeLink(String text, Runnable onClick) {
             this.text = text;
-            setFont(new Font("Consolas", Font.PLAIN, 15));
+            setFont(Theme.plain(16));
             Dimension size = new Dimension(getFontMetrics(getFont()).stringWidth(text) + 4, 22);
             setPreferredSize(size);
             setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -150,8 +144,8 @@ public class SettingsPanel extends JPanel {
         @Override
         protected void paintComponent(java.awt.Graphics g) {
             super.paintComponent(g);
-            g.setFont(new Font("Consolas", Font.PLAIN, 16));
-            g.setColor(hover ? ACCENT_COLOR : SUBTITLE_COLOR);
+            g.setFont(Theme.plain(16));
+            g.setColor(hover ? Theme.ACCENT : Theme.MUTED);
             g.drawString(text, 0, getHeight() - 4);
         }
     }
@@ -182,7 +176,7 @@ public class SettingsPanel extends JPanel {
         @Override
         protected void paintComponent(java.awt.Graphics g) {
             super.paintComponent(g);
-            g.setColor(on ? ACCENT_COLOR : LINE_COLOR);
+            g.setColor(on ? Theme.ACCENT : Theme.LINE);
             g.fillRoundRect(0, 0, getWidth(), getHeight(), 25, 25);
             g.setColor(Color.WHITE);
             int knobX = on ? getWidth() - 22 : 2;

@@ -6,7 +6,6 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
@@ -15,7 +14,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.function.Consumer;
-
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -25,13 +23,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class NamePanel extends JPanel {
-
-    private static final Color BACKDROP = new Color(0, 0, 0, 160);
-    private static final Color TITLEBAR_BG = new Color(0x4A4A4A);
-    private static final Color PANEL_BG = new Color(0x0C2119);
-    private static final Color FIELD_BG = new Color(0x6B7C72);
-    private static final Color ACCENT = new Color(0xB22222);
-
     private static final int BOX_WIDTH = 620;
     private static final int BOX_HEIGHT = 340;
 
@@ -52,7 +43,7 @@ public class NamePanel extends JPanel {
 
     private JComponent buildTitleBar(Runnable onClose) {
         JPanel bar = new JPanel(new BorderLayout());
-        bar.setBackground(TITLEBAR_BG);
+        bar.setBackground(Theme.TITLEBAR);
         bar.setPreferredSize(new Dimension(BOX_WIDTH, 40));
 
         CloseX close = new CloseX(onClose);
@@ -66,23 +57,23 @@ public class NamePanel extends JPanel {
 
     private JComponent buildContent(Consumer<String> onSubmit) {
         JPanel content = new JPanel();
-        content.setBackground(PANEL_BG);
+        content.setBackground(Theme.PANEL);
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         content.setBorder(BorderFactory.createEmptyBorder(40, 50, 40, 50));
 
         JLabel heading = new JLabel("Welcome to Paradigm Facility");
-        heading.setFont(new Font("Consolas", Font.BOLD, 26));
+        heading.setFont(Theme.bold(26));
         heading.setForeground(Color.WHITE);
         heading.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         JLabel subtitle = new JLabel("\u2022 /* Enter your name to start */");
-        subtitle.setFont(new Font("Consolas", Font.PLAIN, 18));
-        subtitle.setForeground(new Color(0x8FA096));
+        subtitle.setFont(Theme.plain(18));
+        subtitle.setForeground(Theme.MUTED);
         subtitle.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         JTextField field = new JTextField();
-        field.setFont(new Font("Consolas", Font.PLAIN, 16));
-        field.setBackground(FIELD_BG);
+        field.setFont(Theme.plain(16));
+        field.setBackground(Theme.FIELD);
         field.setForeground(Color.WHITE);
         field.setCaretColor(Color.WHITE);
         field.setBorder(BorderFactory.createEmptyBorder(10, 12, 10, 12));
@@ -109,7 +100,7 @@ public class NamePanel extends JPanel {
     /** Dim everything behind the window box. */
     @Override
     protected void paintComponent(Graphics g) {
-        g.setColor(BACKDROP);
+        g.setColor(Theme.BACKDROP);
         g.fillRect(0, 0, getWidth(), getHeight());
         super.paintComponent(g);
     }
@@ -152,8 +143,8 @@ public class NamePanel extends JPanel {
         protected void paintComponent(Graphics g) {
             Graphics2D g2 = (Graphics2D) g.create();
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(hover ? Color.WHITE : ACCENT);
-            g2.setFont(new Font("Consolas", Font.BOLD, 20));
+            g2.setColor(hover ? Color.WHITE : Theme.DANGER);
+            g2.setFont(Theme.bold(20));
             g2.setStroke(new BasicStroke(2f));
 
             String text = "X";
