@@ -65,7 +65,6 @@ public class TheParadigmFacility {
 
             case MAIN_MENU ->
                 screens.show(new MainMenuPanel(
-                        () -> goTo(Screen.LEADERBOARD),
                         () -> screens.showOverlay(new NamePanel(
                                 name -> {
                                     screens.hideOverlay();
@@ -75,6 +74,7 @@ public class TheParadigmFacility {
                                 },
                                 screens::hideOverlay)),
                         () -> goTo(Screen.OPTIONS),
+                        // () -> goTo(Screen.LEADERBOARD),
                         TheParadigmFacility::quit));
 
             case OPTIONS -> showSettings(false);
