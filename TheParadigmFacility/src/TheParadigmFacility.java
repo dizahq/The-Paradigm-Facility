@@ -3,6 +3,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -15,6 +17,7 @@ import ui.PausePanel;
 import ui.ScreenManager;
 import ui.SettingsPanel;
 import ui.TitlePanel;
+import ui.WorkdaySelectPanel;
 
 public class TheParadigmFacility {
 
@@ -55,7 +58,7 @@ public class TheParadigmFacility {
     }
 
     private enum Screen {
-        TITLE, MAIN_MENU, OPTIONS, GAME, LEADERBOARD;
+        TITLE, MAIN_MENU, OPTIONS, GAME, WORKDAYS, LEADERBOARD;
     }
 
     private static void goTo(Screen screen) {
@@ -70,7 +73,7 @@ public class TheParadigmFacility {
                                     screens.hideOverlay();
                                     playerName = name;
                                     scoreManager.recordPlayer(name); // <-- this is the key fix
-                                    goTo(Screen.GAME);
+                                    goTo(Screen.WORKDAYS);
                                 },
                                 screens::hideOverlay)),
                         () -> goTo(Screen.OPTIONS),
@@ -85,11 +88,17 @@ public class TheParadigmFacility {
                 showPause();
             }
 
-            // for testing
+            case WORKDAYS ->
+                screens.show(new WorkdaySelectPanel(
+                        workdayItems(),
+                        day -> goTo(Screen.GAME), // day is 0 to 6; GamePanel will use it later
+                        () -> goTo(Screen.MAIN_MENU),
+                        () -> goTo(Screen.LEADERBOARD)));
+
             case LEADERBOARD ->
                 screens.show(new LeaderBoard(
                         scoreManager.getTop(5),
-                        () -> goTo(Screen.MAIN_MENU)));
+                        () -> goTo(Screen.WORKDAYS)));
         }
     }
 
@@ -128,6 +137,31 @@ public class TheParadigmFacility {
                     showSettings(true);
                 }, // settings
                 TheParadigmFacility::quit)); // exit
+    }
+
+    // TEMPORARY
+    private static List<WorkdaySelectPanel.Item> workdayItems() {
+        String[] titles = {
+                "Introduction to Programming Paradigm",
+                "Procedural Programming",
+                "Functional Programming",
+                "Object-Oriented Programming",
+                "Imperative vs Declarative Programming",
+                "Event-Driven Programming",
+                "Component Mappings Between Programming Paradigms" };
+        String[] subtitles = {
+                "What a \u201cparadigm\u201d even is",
+                "Step-by-step, top to bottom",
+                "Pure functions, no side effects",
+                "Classes, objects, inheritance, etc.",
+                "", "", "" };
+        int[] totals = { 15, 34, 39, 34, 49, 29, 15 };
+
+        List<WorkdaySelectPanel.Item> items = new ArrayList<>();
+        for (int i = 0; i < titles.length; i++) {
+            items.add(new WorkdaySelectPanel.Item(titles[i], subtitles[i], 0, totals[i], i == 0));
+        }
+        return items;
     }
 
     private static void quit() {
