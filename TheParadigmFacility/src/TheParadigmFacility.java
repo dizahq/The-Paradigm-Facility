@@ -105,16 +105,21 @@ public class TheParadigmFacility {
 
     private static void showPause() {
         screens.showOverlay(new PausePanel(
-                screens::hideOverlay,
+                // Temporary: continue goes to the main menu until GamePanel exists
+                // screens::hideOverlay,
                 () -> {
                     screens.hideOverlay();
                     goTo(Screen.MAIN_MENU);
                 },
                 () -> {
                     screens.hideOverlay();
+                    goTo(Screen.MAIN_MENU);
+                }, // main menu
+                () -> {
+                    screens.hideOverlay();
                     showSettings(true);
-                },
-                TheParadigmFacility::quit));
+                }, // settings
+                TheParadigmFacility::quit)); // exit
     }
 
     private static void quit() {
