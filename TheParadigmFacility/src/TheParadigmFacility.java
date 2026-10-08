@@ -106,7 +106,7 @@ public class TheParadigmFacility {
     private static void showPause() {
         screens.showOverlay(new PausePanel(
                 // Temporary: continue goes to the main menu until GamePanel exists
-                // screens::hideOverlay,
+                // screens::hideOverlay, // for continue if gamePanel exists
                 () -> {
                     screens.hideOverlay();
                     goTo(Screen.MAIN_MENU);
