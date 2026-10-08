@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import ui.InfoPanel;
+import ui.LeaderBoard;
 import ui.MainMenuPanel;
 import ui.NamePanel;
 import ui.PausePanel;
@@ -54,7 +55,7 @@ public class TheParadigmFacility {
     }
 
     private enum Screen {
-        TITLE, MAIN_MENU, OPTIONS, GAME
+        TITLE, MAIN_MENU, OPTIONS, GAME, LEADERBOARD;
     }
 
     private static void goTo(Screen screen) {
@@ -64,6 +65,7 @@ public class TheParadigmFacility {
 
             case MAIN_MENU ->
                 screens.show(new MainMenuPanel(
+                        () -> goTo(Screen.LEADERBOARD),
                         () -> screens.showOverlay(new NamePanel(
                                 name -> {
                                     screens.hideOverlay();
@@ -82,6 +84,12 @@ public class TheParadigmFacility {
                 screens.show(gameScreen);
                 showPause();
             }
+
+            // for testing
+            case LEADERBOARD ->
+                screens.show(new LeaderBoard(
+                        scoreManager.getTop(5),
+                        () -> goTo(Screen.MAIN_MENU)));
         }
     }
 

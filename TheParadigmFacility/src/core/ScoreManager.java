@@ -6,7 +6,9 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import util.Assets;
 
@@ -76,5 +78,11 @@ public class ScoreManager {
     public void setScore(String name, int score) {
         scores.put(name, score);
         saveScores();
+    }
+
+    public List<Map.Entry<String, Integer>> getTop(int n) {
+        List<Map.Entry<String, Integer>> sorted = new ArrayList<>(scores.entrySet());
+        sorted.sort(Map.Entry.<String, Integer>comparingByValue().reversed());
+        return new ArrayList<>(sorted.subList(0, Math.min(n, sorted.size())));
     }
 }
