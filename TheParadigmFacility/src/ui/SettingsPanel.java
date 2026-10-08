@@ -6,9 +6,12 @@ import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridBagLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.function.Consumer;
+
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -16,172 +19,122 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+// Settings screen: A sound switch + Help, Admin, About
+
 public class SettingsPanel extends JPanel {
-    private static final String ASSET = "interface/mainMenubtn.png";
-    private static final int MAIN_MENU_BTN_WIDTH = 220;
+    private static final String RETURN_BTN = "interface/mainMenubtn.png";
+    private static final int RETURN_BTN_WIDTH = 190;
 
-    private static final int SIDE_PADDING = 70;
-    private static final int TOP_PADDING = 60;
-    private static final int ROW_GAP = 26;
+    private static final int SIDE_PADDING = 105;
+    private static final int TOP_PADDING = 120;
+    private static final int BOTTOM_PADDING = 50;
+    private static final int ROW_GAP = 36; // space between rows
+    private static final int DIVIDER_GAP = 24; // space between a row's text and its divider line
 
-    public SettingsPanel(Runnable onBack, Consumer<Boolean> onMusicToggle, Runnable onHelp, Runnable onAdmin,
-            Runnable onAbout) {
-
+    public SettingsPanel(boolean soundOn, Consumer<Boolean> onSoundToggle, Runnable onHelp, Runnable onAdmin,
+            Runnable onAbout, Runnable onBack) {
         setOpaque(false);
         setLayout(new BorderLayout());
-        setBorder(BorderFactory.createEmptyBorder(TOP_PADDING, SIDE_PADDING, TOP_PADDING, SIDE_PADDING));
+        setBorder(BorderFactory.createEmptyBorder(TOP_PADDING, SIDE_PADDING, BOTTOM_PADDING, SIDE_PADDING));
 
         JPanel rows = new JPanel();
         rows.setOpaque(false);
         rows.setLayout(new BoxLayout(rows, BoxLayout.Y_AXIS));
 
-        rows.add(buildRow("Music", "facility's background  noise", new ToggleSwitch(true, onMusicToggle)));
+        rows.add(buildRow("Sound", "facility's background noise", new ToggleSwitch(soundOn, onSoundToggle)));
         rows.add(Box.createVerticalStrut(ROW_GAP));
-
-        rows.add(buildRow("Help", "helps you navigate your onboarding process", new CodeLink("print[help]", onHelp)));
+        rows.add(buildLinkRow("Help", "helps you navigate your onboarding process", "print(help)", onHelp));
         rows.add(Box.createVerticalStrut(ROW_GAP));
-
-        rows.add(buildRow("Admin", "people that controls the facility", new CodeLink("print[admin]", onAdmin)));
+        rows.add(buildLinkRow("Admin", "people that controls the facility", "print(admin)", onAdmin));
         rows.add(Box.createVerticalStrut(ROW_GAP));
-
-        rows.add(buildRow("About", "the facility's purpose and history", new CodeLink("print[about]", onAbout)));
-        rows.add(Box.createVerticalStrut(ROW_GAP));
+        rows.add(buildLinkRow("About", "history of the facility", "print(about)", onAbout));
 
         add(rows, BorderLayout.CENTER);
 
-        JPanel bottom = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
+        JPanel bottom = new JPanel(new FlowLayout(FlowLayout.RIGHT, 0, 0));
         bottom.setOpaque(false);
-        bottom.setBorder(BorderFactory.createEmptyBorder(30, 0, 0, 0));
-        bottom.add(new ImageButton(ASSET, MAIN_MENU_BTN_WIDTH, onBack));
+        bottom.add(new ImageButton(RETURN_BTN, RETURN_BTN_WIDTH, onBack));
         add(bottom, BorderLayout.SOUTH);
     }
 
+    // A row with a control on the right (like sound switch)
     private JPanel buildRow(String title, String subtitle, JComponent action) {
-        JPanel row = new JPanel(new BorderLayout());
-        row.setOpaque(false);
+        return withDivider(buildHeader(title, subtitle, action));
+    }
 
-        JPanel textBlock = new JPanel();
-        textBlock.setOpaque(false);
-        textBlock.setLayout(new BoxLayout(textBlock, BoxLayout.Y_AXIS));
+    // A row where the whole text area is clickable, with a green link on the right
+    private JPanel buildLinkRow(String title, String subtitle, String linkText, Runnable onClick) {
+        JLabel link = label(linkText, Theme.plain(16), Theme.ACCENT);
+        JPanel header = buildHeader(title, subtitle, link);
 
-        JLabel titleLabel = new JLabel(title);
-        titleLabel.setFont(Theme.bold(22));
-        titleLabel.setForeground(Color.WHITE);
-        titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        header.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        header.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                link.setForeground(Color.WHITE);
+            }
 
-        JLabel subtitleLabel = new JLabel(subtitle);
-        subtitleLabel.setFont(Theme.plain(13));
-        subtitleLabel.setForeground(Theme.MUTED);
-        subtitleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+            @Override
+            public void mouseExited(MouseEvent e) {
+                link.setForeground(Theme.ACCENT);
+            }
 
-        textBlock.add(titleLabel);
-        textBlock.add(Box.createVerticalStrut(4));
-        textBlock.add(subtitleLabel);
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                onClick.run();
+            }
+        });
 
-        JPanel actionWrap = new JPanel(new FlowLayout(FlowLayout.RIGHT, 0, 0));
+        return withDivider(header);
+    }
+
+    // Title and subtitle on the left, the action centered vertically on the right
+    private JPanel buildHeader(String title, String subtitle, JComponent action) {
+        JPanel text = new JPanel();
+        text.setOpaque(false);
+        text.setLayout(new BoxLayout(text, BoxLayout.Y_AXIS));
+        text.add(label(title, Theme.bold(28), Color.WHITE));
+        text.add(Box.createVerticalStrut(4));
+        text.add(label(subtitle, Theme.plain(14), Theme.MUTED));
+
+        JPanel actionWrap = new JPanel(new GridBagLayout()); // centers the action vertically
         actionWrap.setOpaque(false);
         actionWrap.add(action);
 
-        row.add(textBlock, BorderLayout.WEST);
-        row.add(actionWrap, BorderLayout.EAST);
+        JPanel header = new JPanel(new BorderLayout());
+        header.setOpaque(false);
+        header.add(text, BorderLayout.WEST);
+        header.add(actionWrap, BorderLayout.EAST);
+        return header;
+    }
 
-        JPanel withLine = new JPanel();
-        withLine.setOpaque(false);
-        withLine.setLayout(new BoxLayout(withLine, BoxLayout.Y_AXIS));
+    // Puts a divider line under header
+    private JPanel withDivider(JPanel header) {
+        JPanel line = new JPanel();
+        line.setBackground(Theme.MUTED);
+        line.setPreferredSize(new Dimension(1, 2));
+        line.setMaximumSize(new Dimension(Integer.MAX_VALUE, 2));
+
+        JPanel row = new JPanel();
+        row.setOpaque(false);
+        row.setLayout(new BoxLayout(row, BoxLayout.Y_AXIS));
+        header.setAlignmentX(Component.LEFT_ALIGNMENT);
+        line.setAlignmentX(Component.LEFT_ALIGNMENT);
         row.setAlignmentX(Component.LEFT_ALIGNMENT);
-        withLine.add(row);
-        withLine.add(Box.createVerticalStrut(14));
-        withLine.add(new Divider());
+        row.add(header);
+        row.add(Box.createVerticalStrut(DIVIDER_GAP));
+        row.add(line);
 
-        return withLine;
+        // keep the row at its natural height so the layout doesnt stretch it
+        row.setMaximumSize(new Dimension(Integer.MAX_VALUE, row.getPreferredSize().height));
+        return row;
     }
 
-    private static class Divider extends JComponent {
-        public Divider() {
-            setPreferredSize(new java.awt.Dimension(10, 1));
-            setMaximumSize(new java.awt.Dimension(Integer.MAX_VALUE, 1));
-        }
-
-        @Override
-        protected void paintComponent(java.awt.Graphics g) {
-            super.paintComponent(g);
-            g.setColor(Theme.LINE);
-            g.drawLine(0, 0, getWidth(), 0);
-        }
+    private static JLabel label(String text, Font font, Color color) {
+        JLabel label = new JLabel(text);
+        label.setFont(font);
+        label.setForeground(color);
+        label.setAlignmentX(Component.LEFT_ALIGNMENT);
+        return label;
     }
-
-    private static class CodeLink extends JComponent {
-        private final String text;
-        private boolean hover;
-
-        CodeLink(String text, Runnable onClick) {
-            this.text = text;
-            setFont(Theme.plain(16));
-            Dimension size = new Dimension(getFontMetrics(getFont()).stringWidth(text) + 4, 22);
-            setPreferredSize(size);
-            setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-
-            addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(java.awt.event.MouseEvent e) {
-                    onClick.run();
-                }
-
-                @Override
-                public void mouseEntered(java.awt.event.MouseEvent e) {
-                    hover = true;
-                    repaint();
-                }
-
-                @Override
-                public void mouseExited(java.awt.event.MouseEvent e) {
-                    hover = false;
-                    repaint();
-                }
-            });
-        }
-
-        @Override
-        protected void paintComponent(java.awt.Graphics g) {
-            super.paintComponent(g);
-            g.setFont(Theme.plain(16));
-            g.setColor(hover ? Theme.ACCENT : Theme.MUTED);
-            g.drawString(text, 0, getHeight() - 4);
-        }
-    }
-
-    private static class ToggleSwitch extends JComponent {
-        private static final int W = 46, H = 24;
-        private boolean on;
-        private final Consumer<Boolean> onToggle;
-
-        ToggleSwitch(boolean initial, Consumer<Boolean> onToggle) {
-            this.on = initial;
-            this.onToggle = onToggle;
-
-            setPreferredSize(new Dimension(W, H));
-            setMaximumSize(new Dimension(W, H));
-            setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-
-            addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
-                    on = !on;
-                    onToggle.accept(on);
-                    repaint();
-                }
-            });
-        }
-
-        @Override
-        protected void paintComponent(java.awt.Graphics g) {
-            super.paintComponent(g);
-            g.setColor(on ? Theme.ACCENT : Theme.LINE);
-            g.fillRoundRect(0, 0, getWidth(), getHeight(), 25, 25);
-            g.setColor(Color.WHITE);
-            int knobX = on ? getWidth() - 22 : 2;
-            g.fillOval(knobX, 2, 21, 21);
-        }
-    }
-
 }

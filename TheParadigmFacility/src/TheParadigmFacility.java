@@ -8,6 +8,7 @@ import javax.swing.SwingUtilities;
 import ui.MainMenuPanel;
 import ui.NamePanel;
 import ui.ScreenManager;
+import ui.SettingsPanel;
 import ui.TitlePanel;
 
 public class TheParadigmFacility {
@@ -16,6 +17,7 @@ public class TheParadigmFacility {
     private static ScreenManager screens;
     private static ScoreManager scoreManager;
     private static String playerName;
+    private static boolean soundOn = true;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(TheParadigmFacility::start);
@@ -65,11 +67,17 @@ public class TheParadigmFacility {
                                     goTo(Screen.GAME);
                                 },
                                 screens::hideOverlay)),
-                        () -> System.out.println("Options not built yet"),
+                        () -> goTo(Screen.OPTIONS),
                         TheParadigmFacility::quit));
 
             case OPTIONS -> {
-                System.out.println("Options screen not built yet");
+                screens.show(new SettingsPanel(
+                        soundOn,
+                        on -> soundOn = on,
+                        () -> System.out.println("Help popup not built yet"),
+                        () -> System.out.println("Admin popup not built yet"),
+                        () -> System.out.println("About popup not built yet"),
+                        () -> goTo(Screen.MAIN_MENU)));
             }
 
             case GAME -> {
