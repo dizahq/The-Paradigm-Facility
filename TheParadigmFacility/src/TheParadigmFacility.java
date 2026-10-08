@@ -139,7 +139,7 @@ public class TheParadigmFacility {
                 TheParadigmFacility::quit)); // exit
     }
 
-    // TEMPORARY
+    // TEMPORARY: will transfer to Workday later
     private static List<WorkdaySelectPanel.Item> workdayItems() {
         String[] titles = {
                 "Introduction to Programming Paradigm",
