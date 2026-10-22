@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import ui.InfoPanel;
 import ui.LeaderBoard;
@@ -58,7 +57,7 @@ public class TheParadigmFacility {
     }
 
     private enum Screen {
-        TITLE, MAIN_MENU, OPTIONS, GAME, WORKDAYS, LEADERBOARD;
+        TITLE, MAIN_MENU, OPTIONS, GAME, WORKDAYS, LEADERBOARD
     }
 
     private static void goTo(Screen screen) {

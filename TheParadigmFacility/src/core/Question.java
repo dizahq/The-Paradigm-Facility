@@ -1,16 +1,18 @@
 package core;
 
+import java.util.ArrayList;
+
 public class Question {
     private String question;
-    private Answer[] answer = new Answer[4];
+    private ArrayList<Answer> answers = new ArrayList<>();
     private int level;
     private int layout;
     public Question(String question, String a, String b, String c, String d, int level, int layout){
         this.question = question;
-        this.answer[0] = new Answer(a, true);
-        this.answer[1] = new Answer(b, false);
-        this.answer[2] = new Answer(c, false);
-        this.answer[3] = new Answer(d, false);
+        answers.add(new Answer(a, true));
+        answers.add(new Answer(b, false));
+        answers.add(new Answer(c, false));
+        answers.add(new Answer(d, false));
         this.level = level;
         this.layout = layout;
     }
@@ -19,8 +21,8 @@ public class Question {
         return question;
     }
 
-    public Answer[] getAnswer() {
-        return answer;
+    public ArrayList<Answer> getAnswer() {
+        return answers;
     }
 
     public int getLevel() {

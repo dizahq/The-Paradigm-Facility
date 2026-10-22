@@ -3,25 +3,27 @@ package core;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class QuestionBank {
-    private Question[] questions = new Question[10];
-    private int size = 0;
-    public void storeQuestions(String questionFile){
-        try(BufferedReader br = new BufferedReader(new FileReader("SampleQ"))){
+    private final String QUESTION_FILE = "TheParadigmFacility/data/SampleQ.csv";
+    private ArrayList<Question> questions = new ArrayList<>();
+    public QuestionBank(){
+        storeQuestions();
+    }
+    public void storeQuestions(){
+        try(BufferedReader br = new BufferedReader(new FileReader(QUESTION_FILE))){
             String line;
-            while(br.readLine() != null){
-                line = br.readLine();
-                String lines[] = line.split(",");
-                questions[size] = new Question(lines[0], lines[1], lines[2], lines[3], lines[4], 0, 0);
-                size++;
+            while((line = br.readLine()) != null){
+                String[] lines = line.split(",");
+                questions.add(new Question(lines[0], lines[1], lines[2], lines[3], lines[4], 0, 0));
             }
         }catch(IOException e){
-            e.printStackTrace();
+            System.out.println("Error while reading file");
         }
     }
 
-    public Question[] getQuestions() {
+    public ArrayList<Question> getQuestions() {
         return questions;
     }
 }
