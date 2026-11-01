@@ -16,9 +16,9 @@ public class MainMenuPanel extends JPanel {
 
     private static final String ASSETS = "interface/";
     private static final String TITLE_PATH = ASSETS + "title2.png";
-    private static final String START_PATH = ASSETS + "startbtn.png";
-    private static final String OPTIONS_PATH = ASSETS + "settingsbtn.png";
-    private static final String QUIT_PATH = ASSETS + "exitbtn.png";
+    private static final String START_PATH = ASSETS + "startBtn.png";
+    private static final String OPTIONS_PATH = ASSETS + "settingsBtn.png";
+    private static final String QUIT_PATH = ASSETS + "exitBtn.png";
 
     // // temp leaderboard button for testing
     // private static final String LEADERBOARD_PATH = ASSETS + "leaderboardBtn.png";

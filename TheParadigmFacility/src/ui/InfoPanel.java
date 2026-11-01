@@ -19,7 +19,7 @@ public class InfoPanel extends PopupWindow {
             + "The game spans for 7 days. Each day introduces a new programming paradigm "
             + "and scales up the points per question.\n\n"
             + "Correct answers earn full points and add to a streak.\n"
-            + "Wrong answers cost half the question\u2019s points, gains 1 bug, and resets the streak."
+            + "Wrong answers cost half the question\u2019s points, gains 1 bug, and resets the streak. "
             + "The game ends when 3 bugs is earned.";
 
     // About Popup

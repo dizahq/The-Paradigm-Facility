@@ -126,7 +126,7 @@ public abstract class PopupWindow extends JPanel {
         protected void paintComponent(Graphics g) {
             Graphics2D g2 = (Graphics2D) g.create();
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(hover ? Color.WHITE : Theme.DANGER);
+            g2.setColor(hover ? hoverColor : Theme.DANGER);
             g2.setFont(Theme.bold(20));
 
             String text = "X";
