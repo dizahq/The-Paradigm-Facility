@@ -8,15 +8,8 @@ import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import ui.InfoPanel;
-import ui.LeaderBoard;
-import ui.MainMenuPanel;
-import ui.NamePanel;
-import ui.PausePanel;
-import ui.ScreenManager;
-import ui.SettingsPanel;
-import ui.TitlePanel;
-import ui.WorkdaySelectPanel;
+
+import ui.*;
 
 public class TheParadigmFacility {
 
@@ -82,9 +75,8 @@ public class TheParadigmFacility {
             case OPTIONS -> showSettings(false);
 
             case GAME -> {
-                gameScreen = new JPanel(); // Temporary stand-in until GamePanel exists
+                gameScreen = new GamePanel(); // Temporary stand-in until GamePanel exists
                 screens.show(gameScreen);
-                showPause();
             }
 
             case WORKDAYS ->
