@@ -9,6 +9,8 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+
+import ui.FailedPanel;
 import ui.InfoPanel;
 import ui.LeaderBoard;
 import ui.MainMenuPanel;
@@ -18,6 +20,7 @@ import ui.ScreenManager;
 import ui.SettingsPanel;
 import ui.TitlePanel;
 import ui.WorkdaySelectPanel;
+import ui.FailedPanel;
 
 public class TheParadigmFacility {
 
@@ -58,7 +61,7 @@ public class TheParadigmFacility {
     }
 
     private enum Screen {
-        TITLE, MAIN_MENU, OPTIONS, GAME, WORKDAYS, LEADERBOARD;
+        TITLE, MAIN_MENU, OPTIONS, GAME, FAILED, WORKDAYS, LEADERBOARD;
     }
 
     private static void goTo(Screen screen) {
@@ -99,6 +102,12 @@ public class TheParadigmFacility {
                 screens.show(new LeaderBoard(
                         scoreManager.getTop(5),
                         () -> goTo(Screen.WORKDAYS)));
+
+            case FAILED ->
+                screens.show(new FailedPanel(
+                        () -> goTo(Screen.MAIN_MENU),
+                        TheParadigmFacility::quit,
+                        () -> goTo(Screen.OPTIONS)));
         }
     }
 

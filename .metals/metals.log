@@ -8629,3 +8629,580 @@ WARNING: Unmatched cancel notification for request id 7
 2026.10.23 12:21:34 INFO  Shutting down server
 2026.10.23 12:21:34 INFO  Memory monitor stopped
 2026.10.23 12:21:34 INFO  shutting down Metals
+2026.11.03 14:03:28 INFO  Started: Metals version 1.6.9 in folders 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility' for client Visual Studio Code 1.144.0.
+2026.11.03 14:03:28 INFO  Memory monitor started
+2026.11.03 14:03:33 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.11.03 14:03:34 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java
+2026.11.03 14:03:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 14:03:34 WARN  no build tool detected in workspace 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.11.03 14:03:34 WARN  Build server is not auto-connectable.
+2026.11.03 14:03:34 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java
+2026.11.03 14:03:34 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.11.03 14:03:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 14:03:35 WARN  Running javac-semanticdb failed for file:///C:/Users/dizah/Documents/GitHub/The-Paradigm-Facility/TheParadigmFacility/src/ui/FailedPanel.java. Output:
+
+2026.11.03 14:03:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 14:03:40 INFO  time: code lens generation in 3.97s
+2026.11.03 14:03:45 INFO  Shutting down server
+2026.11.03 14:03:45 INFO  Memory monitor stopped
+2026.11.03 14:03:45 INFO  shutting down Metals
+Nov 03, 2026 2:03:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5
+2026.11.03 14:46:45 INFO  Started: Metals version 1.6.9 in folders 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility' for client Visual Studio Code 1.144.0.
+2026.11.03 14:46:46 INFO  time: initialize in 0.57s
+2026.11.03 14:46:47 INFO  Memory monitor started
+2026.11.03 14:46:55 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.11.03 14:46:56 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 14:47:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 2:47:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.11.03 14:47:03 WARN  no build tool detected in workspace 'C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.11.03 14:47:03 WARN  Build server is not auto-connectable.
+2026.11.03 14:47:03 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java
+2026.11.03 14:47:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 14:47:06 INFO  time: code lens generation in 1.5s
+2026.11.03 14:47:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 14:47:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 14:47:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 14:47:26 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 14:50:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:09:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:09:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 24
+2026.11.03 15:10:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:06 INFO  time: code lens generation in 1.53s
+2026.11.03 15:10:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 45
+2026.11.03 15:10:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 48
+2026.11.03 15:10:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:24 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:26 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:26 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:26 INFO  time: code lens generation in 1.36s
+2026.11.03 15:10:26 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 70
+2026.11.03 15:10:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 72
+2026.11.03 15:10:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 76
+Nov 03, 2026 3:10:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 77
+2026.11.03 15:10:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 90
+2026.11.03 15:10:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:42 INFO  time: code lens generation in 1.88s
+2026.11.03 15:10:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:44 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 99
+Nov 03, 2026 3:10:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 100
+2026.11.03 15:10:45 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:45 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:45 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 111
+2026.11.03 15:10:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:46 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:47 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:47 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:47 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:47 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:48 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:48 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:48 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:48 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:49 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 133
+2026.11.03 15:10:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 151
+2026.11.03 15:10:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:52 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:52 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:52 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:52 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 3:10:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 162
+2026.11.03 15:10:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:10:56 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:11:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:11:00 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java
+2026.11.03 15:11:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:11:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 15:11:14 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.11.03 15:11:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:26 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:11:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 230
+Nov 03, 2026 3:11:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 232
+2026.11.03 15:11:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:11:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 236
+2026.11.03 15:11:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:42 INFO  time: code lens generation in 2.14s
+2026.11.03 15:11:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:43 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:43 INFO  time: code lens generation in 2.74s
+2026.11.03 15:11:44 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:44 INFO  time: code lens generation in 1.2s
+2026.11.03 15:11:44 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:48 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:50 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:11:56 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:11:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 257
+2026.11.03 15:12:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:52 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:53 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:53 INFO  time: code lens generation in 1.09s
+2026.11.03 15:12:52 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:54 INFO  time: code lens generation in 1.44s
+2026.11.03 15:12:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:55 INFO  time: code lens generation in 1.15s
+2026.11.03 15:12:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:55 INFO  time: code lens generation in 1.07s
+2026.11.03 15:12:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:58 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:58 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:12:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:03 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:03 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:03 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:13:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 388
+2026.11.03 15:13:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:13:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 424
+2026.11.03 15:13:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:23 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:32 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:35 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:35 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:35 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:36 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:13:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 547
+2026.11.03 15:13:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:44 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:56 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:13:57 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:05 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:14:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 718
+2026.11.03 15:14:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:28 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:14:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 729
+2026.11.03 15:14:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:30 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:14:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 736
+2026.11.03 15:14:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:14:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 738
+2026.11.03 15:14:32 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:32 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:31 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 3:14:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 753
+2026.11.03 15:14:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:35 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:35 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:37 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:39 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:42 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:44 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.11.03 15:14:44 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:14:45 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:27:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:27:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:27:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 15:27:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:05:38 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:05:39 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.11.03 16:05:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 4:05:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 819
+Nov 03, 2026 4:05:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 821
+2026.11.03 16:05:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:05:40 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:05:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:05:41 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:06:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:06:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:06:54 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java
+2026.11.03 16:06:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+Nov 03, 2026 4:06:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 831
+2026.11.03 16:06:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:06:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:06:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\TheParadigmFacility.java. Using fallback presentation compiler.
+2026.11.03 16:13:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:11 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java
+Nov 03, 2026 4:13:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 840
+2026.11.03 16:13:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:18 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:21 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:21 INFO  time: code lens generation in 1.84s
+2026.11.03 16:13:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:27 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:13:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 904
+2026.11.03 16:13:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:29 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:32 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:32 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:32 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:32 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:13:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 937
+2026.11.03 16:13:54 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:55 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:58 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:13:59 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:00 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:01 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:02 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:03 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:03 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:04 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:14:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 970
+2026.11.03 16:14:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:14:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 974
+2026.11.03 16:14:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:14:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 977
+2026.11.03 16:14:06 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:07 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:14:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 986
+2026.11.03 16:14:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:08 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:10 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:11 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:12 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:13 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:14 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:14:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1026
+2026.11.03 16:14:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:15 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:16 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:17 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:19 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:20 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:14:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1047
+2026.11.03 16:14:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:14:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1049
+2026.11.03 16:14:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:14:22 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:16:51 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:16:52 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:16:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1061
+2026.11.03 16:16:52 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:32:47 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+Nov 03, 2026 4:32:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1065
+2026.11.03 16:33:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:33:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:33:33 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
+2026.11.03 16:33:34 WARN  no build target for: C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java
+2026.11.03 16:33:34 INFO  no build target found for C:\Users\dizah\Documents\GitHub\The-Paradigm-Facility\TheParadigmFacility\src\ui\FailedPanel.java. Using fallback presentation compiler.
