@@ -1,7 +1,16 @@
-.metals/
-target/
+#Java / build output
+*.class
+/out/
 bin/
-!TheParadigmFacility/lib/javafx-sdk-27/bin/
+target/
+
+# IDE files
+.metals/
+
+# Logs and crash reports
 hs_err_pid*.log
 replay_pid*.log
-/out/
+
+# Preserve Java SDK binaries if needed
+!TheParadigmFacility/lib/javafx-sdk-27/bin/
+

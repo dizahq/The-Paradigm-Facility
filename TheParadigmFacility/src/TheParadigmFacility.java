@@ -1,6 +1,5 @@
 import core.ScoreManager;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
@@ -8,7 +7,6 @@ import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-
 import ui.*;
 
 public class TheParadigmFacility {
@@ -32,7 +30,8 @@ public class TheParadigmFacility {
         frame.setUndecorated(true);
 
         screens = new ScreenManager();
-        screens.setPreferredSize(new Dimension(1280, 720));
+        screens.setOpaque(true);
+        screens.setBackground(Color.BLACK);
 
         frame.setContentPane(screens);
         frame.pack();
