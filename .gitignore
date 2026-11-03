@@ -14,3 +14,8 @@ replay_pid*.log
 # Preserve Java SDK binaries if needed
 !TheParadigmFacility/lib/javafx-sdk-27/bin/
 
+out/
+.idea/
+*.iml
+.metals/
+bin/
