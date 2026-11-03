@@ -4,99 +4,105 @@ import core.Answer;
 import core.AnswerButton;
 import core.Question;
 import core.QuestionBank;
-
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.Timer;
-import java.awt.Dimension;
 import java.awt.Color;
-import java.awt.GridBagLayout;
+import java.awt.Dimension;
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.Timer;
 
 public class GamePanel extends JPanel {
-    GridBagConstraints c = new GridBagConstraints();
-    QuestionBank questionBank = new QuestionBank();
-    ArrayList<Question> selectedQuestions;
-    Random random = new Random();
-    JLabel questionLabel = new JLabel();
-    AnswerButton answerA = new AnswerButton();
-    AnswerButton answerB = new AnswerButton();
-    AnswerButton answerC = new AnswerButton();
-    AnswerButton answerD = new AnswerButton();
-    AnswerButton[] answerButtons = {answerA, answerB, answerC, answerD};
-    Timer nextQuestionTimer = new Timer(1000, _ -> getRandomQuestion());
-    public GamePanel(){
+    private final ArrayList<Question> remaining;
+    private final Random random = new Random();
+    private final JLabel questionLabel = new JLabel("", SwingConstants.CENTER);
+    private final AnswerButton[] answerButtons = {
+            new AnswerButton(), new AnswerButton(), new AnswerButton(), new AnswerButton() };
+    private final Timer nextQuestionTimer;
+    private final Runnable onFinish;
+    private boolean locked; // true while the result of an answer is showing
+
+    // onFinish runs when every question has been answered
+    public GamePanel(Runnable onFinish) {
+        this.onFinish = onFinish;
         setLayout(new GridBagLayout());
+        buildLayout();
 
-        startGame();
+        remaining = new ArrayList<>(new QuestionBank().getQuestions()); // copy, so the bank stays intact
 
-        for(AnswerButton button : answerButtons){
-            button.addActionListener(_ -> {
-                if(selectedQuestions.isEmpty()){
-                    // level clear
-                    System.exit(0); // for now
-                }else {
-                    if(button.getAnswer().isCorrect()){
-                        button.setBackground(Color.GREEN);
-                    }else button.setBackground(Color.RED);
+        nextQuestionTimer = new Timer(1000, e -> showNextQuestion());
+        nextQuestionTimer.setRepeats(false);
 
-                    nextQuestionTimer.start();
-                }
-            });
+        for (AnswerButton button : answerButtons) {
+            button.addActionListener(e -> onAnswer(button));
+        }
+
+        if (remaining.isEmpty()) {
+            questionLabel.setText("No questions found (check data/SampleQ.csv)");
+            return;
+        }
+        showNextQuestion();
+    }
+
+    private void buildLayout() {
+        GridBagConstraints c = new GridBagConstraints();
+
+        questionLabel.setPreferredSize(new Dimension(600, 100));
+        questionLabel.setForeground(Color.WHITE);
+        c.gridx = 0;
+        c.gridy = 0;
+        c.gridwidth = 2;
+        add(questionLabel, c);
+
+        c.gridwidth = 1;
+        for (int i = 0; i < answerButtons.length; i++) {
+            c.gridx = i % 2;
+            c.gridy = 1 + i / 2;
+            answerButtons[i].setPreferredSize(new Dimension(300, 200));
+            add(answerButtons[i], c);
         }
     }
-    public void startGame(){
-        System.out.println("Starting game...");
-        selectedQuestions = questionBank.getQuestions();
 
-        getRandomQuestion();
-    }
-    public void getRandomQuestion(){
-        resetStates();
-
-        int listSize = selectedQuestions.size();
-        int randomIndex = random.nextInt(listSize);
-        Question currentQuestion = selectedQuestions.get(randomIndex);
-
-        displayQuestion(currentQuestion);
-        selectedQuestions.remove(randomIndex);
-    }
-    public void resetStates(){
-        nextQuestionTimer.stop();
-        for(AnswerButton buttons : answerButtons){
-            buttons.setBackground(null);
+    private void showNextQuestion() {
+        if (remaining.isEmpty()) {
+            onFinish.run(); // level clear
+            return;
         }
-    }
-    public void displayQuestion(Question question){
-        ArrayList<Answer> answers = question.getAnswer();
+        locked = false;
+        for (AnswerButton button : answerButtons) {
+            button.setBackground(null);
+        }
+
+        Question question = remaining.remove(random.nextInt(remaining.size()));
+        ArrayList<Answer> answers = new ArrayList<>(question.getAnswer());
         Collections.shuffle(answers);
 
         questionLabel.setText(question.getQuestion());
-        questionLabel.setPreferredSize(new Dimension(600, 100));
-        c.gridx = 0; c.gridy = 0; c.gridwidth = 2;
-        add(questionLabel,c);
-        c.gridwidth = 1; c.gridy = 1;
+        for (int i = 0; i < answerButtons.length; i++) {
+            answerButtons[i].setAnswer(answers.get(i));
+        }
+    }
 
-        answerA.setAnswer(answers.getFirst());
-        answerA.setPreferredSize(new Dimension(300, 200));
-        add(answerA,c);
-        c.gridx = 1;
+    private void onAnswer(AnswerButton clicked) {
+        if (locked) {
+            return; // ignore clicks while the result is showing
+        }
+        locked = true;
 
-        answerB.setAnswer(answers.get(1));
-        answerB.setPreferredSize(new Dimension(300, 200));
-        add(answerB,c);
-        c.gridy = 2; c.gridx = 0;
-
-        answerC.setAnswer(answers.get(2));
-        answerC.setPreferredSize(new Dimension(300, 200));
-        add(answerC,c);
-        c.gridx = 1;
-
-        answerD.setAnswer(answers.get(3));
-        answerD.setPreferredSize(new Dimension(300, 200));
-        add(answerD,c);
+        if (clicked.getAnswer().isCorrect()) {
+            clicked.setBackground(Color.GREEN);
+        } else {
+            clicked.setBackground(Color.RED);
+            for (AnswerButton button : answerButtons) { // also show the right one
+                if (button.getAnswer().isCorrect()) {
+                    button.setBackground(Color.GREEN);
+                }
+            }
+        }
+        nextQuestionTimer.start();
     }
 }

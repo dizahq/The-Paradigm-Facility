@@ -1,5 +1,6 @@
 import core.ScoreManager;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class TheParadigmFacility {
         frame.setUndecorated(true);
 
         screens = new ScreenManager();
+        screens.setPreferredSize(new Dimension(1280, 720));
         screens.setOpaque(true);
         screens.setBackground(Color.BLACK);
 
@@ -74,7 +76,7 @@ public class TheParadigmFacility {
             case OPTIONS -> showSettings(false);
 
             case GAME -> {
-                gameScreen = new GamePanel(); // Temporary stand-in until GamePanel exists
+                gameScreen = new GamePanel(() -> goTo(Screen.WORKDAYS));
                 screens.show(gameScreen);
             }
 

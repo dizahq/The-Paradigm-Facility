@@ -1,8 +1,5 @@
 package util;
 
-// Only class that knows where the game's files live: TheParadigmFacility/assets/
-// Important for JAR/exe packaging
-
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
@@ -14,14 +11,25 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.imageio.ImageIO;
 
+// Only class that knows where the game's files live: TheParadigmFacility/assets/ and /data/
 public class Assets {
-    private static final String PROJECT_DIR = "TheParadigmFacility/";
-    private static final String ASSETS_DIR = PROJECT_DIR + "assets/";
-    private static final String DATA_DIR = PROJECT_DIR + "data/";
+    // Tried in order, so it works from the repo root, from TheParadigmFacility/, or
+    // from src/
+    private static final String[] ROOTS = { "TheParadigmFacility/", "", "../", "../TheParadigmFacility/" };
 
     private static final Map<String, BufferedImage> cache = new HashMap<>();
 
     private Assets() {
+    }
+
+    private static File findDir(String sub) {
+        for (String root : ROOTS) {
+            File dir = new File(root + sub);
+            if (dir.isDirectory()) {
+                return dir;
+            }
+        }
+        return new File(ROOTS[0] + sub); // default, so dataFile() can still create it
     }
 
     // Opens a file under assets/, null if not found
@@ -31,7 +39,7 @@ public class Assets {
             return in;
         }
         try {
-            return new FileInputStream(ASSETS_DIR + path);
+            return new FileInputStream(new File(findDir("assets"), path));
         } catch (IOException e) {
             return null;
         }
@@ -48,9 +56,11 @@ public class Assets {
                 img = ImageIO.read(in);
             }
         } catch (Exception e) {
+            System.err.println("Failed reading " + path + ": " + e);
         }
         if (img == null) {
-            System.err.println("Image not found: " + path);
+            System.err.println("Image not found: " + path
+                    + " (working dir: " + new File("").getAbsolutePath() + ")");
         }
         cache.put(path, img);
         return img;
@@ -78,7 +88,7 @@ public class Assets {
 
     // A file inside data/, e.g. "scoreboard.csv". Folder is created if missing.
     public static File dataFile(String name) {
-        File file = new File(DATA_DIR + name);
+        File file = new File(findDir("data"), name);
         File dir = file.getParentFile();
         if (dir != null) {
             dir.mkdirs();
