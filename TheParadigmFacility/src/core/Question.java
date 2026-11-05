@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package core;
 
 import java.util.ArrayList;
@@ -49,4 +47,3 @@ public class Question {
         return answers;
     }
 }
->>>>>>> b2dcba9edb52465a74fbcae6e64fecf9d962717e

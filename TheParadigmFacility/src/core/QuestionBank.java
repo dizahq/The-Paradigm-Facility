@@ -1,10 +1,5 @@
 package core;
 
-<<<<<<< HEAD
-public class QuestionBank {
-
-}
-=======
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -119,4 +114,3 @@ public class QuestionBank {
         return rows;
     }
 }
->>>>>>> b2dcba9edb52465a74fbcae6e64fecf9d962717e

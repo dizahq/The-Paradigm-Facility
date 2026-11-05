@@ -66,7 +66,7 @@ final class ChoiceButton extends JComponent {
     }
 
     /** Shows a new answer: normal look, clickable. */
-    public void show(Answer newAnswer) {
+    void show(Answer newAnswer) {
         answer = newAnswer;
         state = State.NORMAL;
         fit = TextFit.fit(this, newAnswer.getAnswer(), false, 28, 14, 1.3,

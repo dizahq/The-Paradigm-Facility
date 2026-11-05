@@ -1,10 +1,5 @@
 package ui;
 
-<<<<<<< HEAD
-public class GamePanel {
-
-}
-=======
 import core.Answer;
 import core.GameState;
 import core.Question;
@@ -361,4 +356,3 @@ public class GamePanel extends JPanel {
         }
     }
 }
->>>>>>> b2dcba9edb52465a74fbcae6e64fecf9d962717e

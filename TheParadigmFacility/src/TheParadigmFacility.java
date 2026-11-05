@@ -8,22 +8,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-
-import ui.FailedPanel;
-import ui.InfoPanel;
-import ui.LeaderBoard;
-import ui.MainMenuPanel;
-import ui.NamePanel;
-import ui.PausePanel;
-import ui.ScreenManager;
-import ui.SettingsPanel;
-import ui.TitlePanel;
-import ui.WorkdaySelectPanel;
-import ui.FailedPanel;
+import ui.*;
 
 public class TheParadigmFacility {
 
@@ -31,10 +18,9 @@ public class TheParadigmFacility {
     private static ScreenManager screens;
     private static ScoreManager scoreManager;
     private static QuestionBank questionBank;
-    private static GameState game;
+    private static GameState game; // the current playthrough, created when the player enters a name
     private static GamePanel gamePanel;
     private static boolean soundOn = true;
-    private static JComponent gameScreen;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(TheParadigmFacility::start);
@@ -51,6 +37,8 @@ public class TheParadigmFacility {
 
         screens = new ScreenManager();
         screens.setPreferredSize(new Dimension(1280, 720));
+        screens.setOpaque(true);
+        screens.setBackground(Color.BLACK);
 
         frame.setContentPane(screens);
         frame.pack();
@@ -68,7 +56,7 @@ public class TheParadigmFacility {
     }
 
     private enum Screen {
-        TITLE, MAIN_MENU, OPTIONS, GAME, FAILED, WORKDAYS, LEADERBOARD;
+        TITLE, MAIN_MENU, OPTIONS, GAME, WORKDAYS, LEADERBOARD
     }
 
     private static void goTo(Screen screen) {
@@ -87,20 +75,13 @@ public class TheParadigmFacility {
                                 },
                                 screens::hideOverlay)),
                         () -> goTo(Screen.OPTIONS),
-                        // () -> goTo(Screen.LEADERBOARD),
                         TheParadigmFacility::quit));
 
             case OPTIONS -> showSettings(false);
 
             case GAME -> {
-<<<<<<< HEAD
-                gameScreen = new JPanel(); // Temporary stand-in until GamePanel exists
-                screens.show(gameScreen);
-                showPause();
-=======
                 gamePanel = new GamePanel(game, TheParadigmFacility::showPause, TheParadigmFacility::endOfDay);
                 screens.show(gamePanel);
->>>>>>> b2dcba9edb52465a74fbcae6e64fecf9d962717e
             }
 
             case WORKDAYS ->
@@ -114,16 +95,12 @@ public class TheParadigmFacility {
                 screens.show(new LeaderBoard(
                         scoreManager.getTop(5),
                         () -> goTo(Screen.WORKDAYS)));
-
-            case FAILED ->
-                screens.show(new FailedPanel(
-                        () -> goTo(Screen.MAIN_MENU),
-                        TheParadigmFacility::quit,
-                        () -> goTo(Screen.OPTIONS)));
         }
     }
 
-    /** Workdays and the game **/
+    // ---- workdays and the game ----
+
+    /** One card per workday, from the current playthrough. */
     private static List<WorkdaySelectPanel.Item> workdayItems() {
         List<WorkdaySelectPanel.Item> items = new ArrayList<>();
         for (Workday day : Workday.ALL) {
@@ -152,8 +129,10 @@ public class TheParadigmFacility {
         goTo(Screen.GAME);
     }
 
-    // The last answer of the workday was shown; the day is cleared or the game is
-    // over.
+    /**
+     * The last answer of the workday was shown: the day is cleared or the game is
+     * over.
+     */
     private static void endOfDay() {
         gamePanel.dispose();
 
@@ -169,19 +148,21 @@ public class TheParadigmFacility {
         }
     }
 
-    // Warns abt workdays whose question count in Questions.csv is not the planned
-    // one
+    /**
+     * Warns about workdays whose question count in Questions.csv is not the planned
+     * one.
+     */
     private static void checkQuestionCounts() {
         for (Workday day : Workday.ALL) {
             int found = questionBank.getQuestions(day.number()).size();
             if (found != day.questionTotal()) {
                 System.err.println("Workday " + day.number() + " should have " + day.questionTotal()
-                        + " qustions but Question.csv has " + found);
+                        + " questions but Questions.csv has " + found);
             }
         }
     }
 
-    /** Settigs and pause **/
+    // ---- settings and pause ----
 
     private static void showSettings(boolean fromGame) {
         screens.show(new SettingsPanel(
@@ -201,7 +182,7 @@ public class TheParadigmFacility {
                 fromGame));
     }
 
-    // The game screen has alr paused its timer when this is called
+    /** The game screen has already paused its timer when this is called. */
     private static void showPause() {
         screens.showOverlay(new PausePanel(
                 () -> { // continue
