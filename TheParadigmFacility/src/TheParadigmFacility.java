@@ -56,7 +56,7 @@ public class TheParadigmFacility {
     }
 
     private enum Screen {
-        TITLE, MAIN_MENU, OPTIONS, GAME, WORKDAYS, LEADERBOARD
+        TITLE, MAIN_MENU, OPTIONS, GAME, WORKDAYS, LEADERBOARD, FAILED, WIN
     }
 
     private static void goTo(Screen screen) {
@@ -94,6 +94,18 @@ public class TheParadigmFacility {
             case LEADERBOARD ->
                 screens.show(new LeaderBoard(
                         scoreManager.getTop(5),
+                        () -> goTo(Screen.WORKDAYS)));
+
+            case FAILED ->
+                screens.show(new FailedPanel(
+                        () -> goTo(Screen.MAIN_MENU),
+                        TheParadigmFacility::quit,
+                        () -> goTo(Screen.WORKDAYS)));
+
+            case WIN ->
+                screens.show(new WinPanel(
+                        () -> goTo(Screen.MAIN_MENU),
+                        TheParadigmFacility::quit,
                         () -> goTo(Screen.WORKDAYS)));
         }
     }
@@ -138,11 +150,9 @@ public class TheParadigmFacility {
 
         // TEMPORARY until the Day Cleared, Game Over and Victory screens exist
         if (game.isGameOver()) {
-            System.out.println("GAME OVER. Score: " + game.score());
-            goTo(Screen.MAIN_MENU);
+            goTo(Screen.FAILED);
         } else if (game.isVictory()) {
-            System.out.println("VICTORY. Score: " + game.score());
-            goTo(Screen.MAIN_MENU);
+            goTo(Screen.WIN);
         } else {
             goTo(Screen.WORKDAYS);
         }

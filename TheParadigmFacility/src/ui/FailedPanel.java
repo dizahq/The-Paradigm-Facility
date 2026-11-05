@@ -4,13 +4,8 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
-import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
-import java.io.File;
-
-import javax.imageio.ImageIO;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -18,26 +13,29 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import util.Assets;
+
 /** "FAILED" screen made entirely from pictures. */
 public class FailedPanel extends JPanel {
 
-    private static final String ASSETS = "TheParadigmFacility/assets/interface/";
+    // Paths are inside TheParadigmFacility/assets/ (Assets adds the rest)
+    private static final String ASSETS = "interface/";
     private static final String MESSAGE_PATH = ASSETS + "failed_message.png"; // whole text block
     private static final String IMAGE_PATH = ASSETS + "failed_monster.png"; // creature and box
-    private static final String MAINMENU_PATH = ASSETS + "button_mainmenu.png";
-    private static final String EXIT_PATH = ASSETS + "button_exit.png";
-    private static final String LEVELSELECT_PATH = ASSETS + "button_levelselect.png";
-    private static final Color TINT = new Color(40, 10, 10, 200); // dark red-brown; last number = opacity (0-255)
+    private static final String MAINMENU_PATH = ASSETS + "failed_mainmenu.png";
+    private static final String EXIT_PATH = ASSETS + "failed_exit.png";
+    private static final String LEVELSELECT_PATH = ASSETS + "failed_levelselect.png";
+    private static final Color TINT = new Color(40, 10, 10, 90); // dark red-brown; last number = opacity (0-255)
 
     // Widths in pixels. Heights follow each picture's proportions.
     private static final int MESSAGE_WIDTH = 650;
-    private static final int IMAGE_WIDTH = 260;
-    private static final int BUTTON_WIDTH = 170;
+    private static final int IMAGE_WIDTH = 500;
+    private static final int BUTTON_WIDTH = 230;
 
     // Spacing
-    private static final int GAP_PICTURE = 20; // message -> creature picture
-    private static final int GAP_BUTTONS = 30; // creature picture -> buttons
-    private static final int BUTTON_SPACING = 14;
+    private static final int GAP_PICTURE = 10; // message -> creature picture
+    private static final int GAP_BUTTONS = 5; // creature picture -> buttons
+    private static final int BUTTON_SPACING = 24; // space between buttons
 
     public FailedPanel(Runnable onMainMenu, Runnable onExit, Runnable onLevelSelect) {
         setOpaque(false);
@@ -74,28 +72,15 @@ public class FailedPanel extends JPanel {
     }
 
     /**
-     * Loads a picture, scales it to the given width, and returns it as a centered
+     * Loads a picture (cached by Assets), scaled to the given width, as a centered
      * label.
      */
     private JComponent picture(String path, int width) {
-        File file = new File(path);
         JLabel label = new JLabel();
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
-        try {
-            BufferedImage img = ImageIO.read(file);
-            if (img == null)
-                throw new java.io.IOException("Unsupported image");
-
-            int h = img.getHeight() * width / img.getWidth();
-            BufferedImage scaled = new BufferedImage(width, h, BufferedImage.TYPE_INT_ARGB);
-            Graphics2D g2 = scaled.createGraphics();
-            g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
-                    RenderingHints.VALUE_INTERPOLATION_BICUBIC);
-            g2.drawImage(img, 0, 0, width, h, null);
-            g2.dispose();
-            label.setIcon(new ImageIcon(scaled));
-        } catch (Exception e) {
-            System.err.println("Image not found at: " + file.getAbsolutePath());
+        BufferedImage img = Assets.scaled(path, width);
+        if (img != null) {
+            label.setIcon(new ImageIcon(img));
         }
         return label;
     }
