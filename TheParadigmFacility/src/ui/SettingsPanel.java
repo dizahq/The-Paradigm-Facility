@@ -19,11 +19,11 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-// Settings screen: A sound switch + Help, Admin, About
-
+/** Settings screen: the sound switch and the Help, Admin and About links. */
+@SuppressWarnings("serial")
 public class SettingsPanel extends JPanel {
     private static final String MAIN_MENU_BTN = "interface/mainMenubtn.png";
-    private static final String RETURN_BTN = "interface/returnBtn.png";
+    private static final String RETURN_BTN = "interface/returnbtn.png";
     private static final int BACK_BTN_WIDTH = 190;
 
     private static final int SIDE_PADDING = 105;
@@ -58,12 +58,12 @@ public class SettingsPanel extends JPanel {
         add(bottom, BorderLayout.SOUTH);
     }
 
-    // A row with a control on the right (like sound switch)
+    // A row with a control on the right, like the sound switch
     private JPanel buildRow(String title, String subtitle, JComponent action) {
         return withDivider(buildHeader(title, subtitle, action));
     }
 
-    // A row where the whole text area is clickable, with a green link on the right
+    // A row that is clickable as a whole, with a green link on the right
     private JPanel buildLinkRow(String title, String subtitle, String linkText, Runnable onClick) {
         JLabel link = label(linkText, Theme.plain(16), Theme.ACCENT);
         JPanel header = buildHeader(title, subtitle, link);
@@ -91,7 +91,7 @@ public class SettingsPanel extends JPanel {
         return withDivider(header);
     }
 
-    // Title and subtitle on the left, the action centered vertically on the right
+    // Title and subtitle on the left, the action on the right
     private JPanel buildHeader(String title, String subtitle, JComponent action) {
         JPanel text = new JPanel();
         text.setOpaque(false);
@@ -111,7 +111,7 @@ public class SettingsPanel extends JPanel {
         return header;
     }
 
-    // Puts a divider line under header
+    // Adds a divider line under the header
     private JPanel withDivider(JPanel header) {
         JPanel line = new JPanel();
         line.setBackground(Theme.MUTED);
@@ -128,7 +128,7 @@ public class SettingsPanel extends JPanel {
         row.add(Box.createVerticalStrut(DIVIDER_GAP));
         row.add(line);
 
-        // keep the row at its natural height so the layout doesnt stretch it
+        // keep the row at its natural height
         row.setMaximumSize(new Dimension(Integer.MAX_VALUE, row.getPreferredSize().height));
         return row;
     }

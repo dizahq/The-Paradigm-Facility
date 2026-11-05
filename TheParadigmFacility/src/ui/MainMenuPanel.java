@@ -11,7 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import util.Assets;
 
-/** Main menu: title on top, three picture buttons centered below. */
+// Main menu: the title with the start, settings and exit buttons below it. 
+@SuppressWarnings("serial")
 public class MainMenuPanel extends JPanel {
 
     private static final String ASSETS = "interface/";
@@ -20,18 +21,14 @@ public class MainMenuPanel extends JPanel {
     private static final String OPTIONS_PATH = ASSETS + "settingsbtn.png";
     private static final String QUIT_PATH = ASSETS + "exitbtn.png";
 
-    // // temp leaderboard button for testing
-    // private static final String LEADERBOARD_PATH = ASSETS + "leaderboardBtn.png";
-    // private static final int LEADERBOARD_WIDTH = 300;
-
-    private static final int TITLE_WIDTH = 1000; // title size
+    private static final int TITLE_WIDTH = 1000;
     private static final int BUTTON_WIDTH = 400; // width of every button
     private static final int TITLE_GAP = 80; // space between title and first button
     private static final int BUTTON_GAP = 10; // space between buttons
 
     public MainMenuPanel(Runnable onStart, Runnable onOptions, Runnable onQuit) {
         setOpaque(false);
-        setLayout(new GridBagLayout()); // centers the column in the window
+        setLayout(new GridBagLayout()); // centers the column
 
         JPanel column = new JPanel();
         column.setOpaque(false);
@@ -43,13 +40,10 @@ public class MainMenuPanel extends JPanel {
         ImageButton start = new ImageButton(START_PATH, BUTTON_WIDTH, onStart);
         ImageButton options = new ImageButton(OPTIONS_PATH, BUTTON_WIDTH, onOptions);
         ImageButton quit = new ImageButton(QUIT_PATH, BUTTON_WIDTH, onQuit);
-        // ImageButton leaderboard = new ImageButton(LEADERBOARD_PATH,
-        // LEADERBOARD_WIDTH, onLeaderBoard); // temporary
 
         start.setAlignmentX(Component.CENTER_ALIGNMENT);
         options.setAlignmentX(Component.CENTER_ALIGNMENT);
         quit.setAlignmentX(Component.CENTER_ALIGNMENT);
-        // leaderboard.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         column.add(title);
         column.add(Box.createVerticalStrut(TITLE_GAP));
@@ -58,8 +52,6 @@ public class MainMenuPanel extends JPanel {
         column.add(options);
         column.add(Box.createVerticalStrut(BUTTON_GAP));
         column.add(quit);
-        // column.add(Box.createVerticalStrut(BUTTON_GAP));
-        // column.add(leaderboard);
 
         add(column);
     }

@@ -28,7 +28,9 @@ import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JViewport;
 
-// Workday selection screen: a scrolling list of workday cards, a progress bar, and return / leaderboard buttons. 
+// Workday selection screen: a scrolling list of workday cards, a progress bar, and the return and leaderboard buttons.
+
+@SuppressWarnings("serial")
 
 public class WorkdaySelectPanel extends JPanel {
     // One card. Done/total is shown on the right; locked cards cannot be clicked
@@ -36,7 +38,7 @@ public class WorkdaySelectPanel extends JPanel {
     }
 
     private static final String RETURN_BTN = "interface/returnBtn2.png";
-    private static final String LEADERBOARD_BTN = "interface/leaderboardBtn.png";
+    private static final String LEADERBOARD_BTN = "interface/leaderboardbtn.png";
     private static final int RETURN_BTN_WIDTH = 165;
     private static final int LEADERBOARD_BTN_WIDTH = 200;
 
@@ -59,10 +61,9 @@ public class WorkdaySelectPanel extends JPanel {
     private static final Color LOCKED_TEXT = new Color(0x8A8A8A);
     private static final Color EDGE = new Color(0xD8D8D8);
 
-    // items: workdays, in order
-    // onSelect: called w the workday index (0 to 6) when an unlocked card is
+    // items: the workdays in order
+    // onSelect: called with the workday index (0 to 6) when an unlocked card is
     // clicked
-
     public WorkdaySelectPanel(List<Item> items, IntConsumer onSelect, Runnable onReturn, Runnable onLeaderboard) {
         setOpaque(false);
         setLayout(new BorderLayout());
@@ -110,7 +111,6 @@ public class WorkdaySelectPanel extends JPanel {
             list.add(new Card(i, items.get(i), onSelect));
         }
 
-        // the left padding balances the scrollbar so the cards stay centered
         JPanel content = new JPanel(new GridBagLayout());
         content.setOpaque(false);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -126,19 +126,17 @@ public class WorkdaySelectPanel extends JPanel {
         scroll.setBorder(BorderFactory.createEmptyBorder());
         scroll.getViewport().setOpaque(false);
 
-        // repaint fully while scrolling so the animated background doesnt smear
+        // repaint fully while scrolling so the animated background does not smear
         scroll.getViewport().setScrollMode(JViewport.SIMPLE_SCROLL_MODE);
 
         JScrollBar bar = scroll.getVerticalScrollBar();
-        // bar.setUI(new GameScrollBarUI());
-        // bar.setPreferredSize(new Dimension(GameScrollBarUI.WIDTH, 0));
         bar.setPreferredSize(new Dimension(0, 0)); // invisible, but wheel still works
         bar.setUnitIncrement(32); // mouse wheel speed
         return scroll;
     }
 
-    // Draws text with its vertical center at centerY. If alignRight, x is the
-    // righte edge
+    // Draws text with its vertical center at centerY. If alignRight, x is the right
+    // edge
     private static void drawText(Graphics2D g2, String text, Font font, Color color, int x, int centerY,
             boolean alignRight) {
         g2.setFont(font);
@@ -154,6 +152,7 @@ public class WorkdaySelectPanel extends JPanel {
     }
 
     // One workday card
+    @SuppressWarnings("serial")
     private static class Card extends JComponent {
         private final Item item;
         private boolean hover;
@@ -216,7 +215,8 @@ public class WorkdaySelectPanel extends JPanel {
         }
     }
 
-    // Progress bar w percentage under its right end
+    // Progress bar with the percentage under its right end
+    @SuppressWarnings("serial")
     private static class Progress extends JComponent {
         private final int percent;
 

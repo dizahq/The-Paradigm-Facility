@@ -10,15 +10,17 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 import util.Assets;
 
+// The animated background, played from a sprite sheet of 10 x 9 frames. 
+@SuppressWarnings("serial")
 public class BackgroundLoop extends JPanel {
 
-    private static final String DEFAULT_BACKGROUND_PATH = "background/background.png";
+    private static final String BACKGROUND_PATH = "background/background.png";
     private static final int FRAME_WIDTH = 480;
     private static final int FRAME_HEIGHT = 270;
     private static final int COLUMNS = 10;
     private static final int ROWS = 9;
     private static final int TOTAL_FRAMES = COLUMNS * ROWS;
-    private static final int PLAYBACK_SPEED = 30; // milliseconds per frame
+    private static final int FRAME_MS = 30; // milliseconds per frame
 
     private final BufferedImage[] frames = new BufferedImage[TOTAL_FRAMES];
     private boolean loaded;
@@ -28,10 +30,10 @@ public class BackgroundLoop extends JPanel {
     public BackgroundLoop() {
         setOpaque(false);
         setPreferredSize(new Dimension(1280, 720));
-        loadFrames(DEFAULT_BACKGROUND_PATH);
+        loadFrames(BACKGROUND_PATH);
 
         if (loaded) {
-            timer = new Timer(PLAYBACK_SPEED, e -> {
+            timer = new Timer(FRAME_MS, e -> {
                 currentFrameIndex = (currentFrameIndex + 1) % TOTAL_FRAMES;
                 repaint();
             });
@@ -59,20 +61,14 @@ public class BackgroundLoop extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        if (!loaded)
-            return;
-
         Graphics2D g2d = (Graphics2D) g.create();
-        g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-
         if (loaded) {
-            BufferedImage currentFrame = frames[currentFrameIndex];
-            g2d.drawImage(currentFrame, 0, 0, getWidth(), getHeight(), null);
+            g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+            g2d.drawImage(frames[currentFrameIndex], 0, 0, getWidth(), getHeight(), null);
         } else {
-            g2d.setColor(Color.BLACK);
+            g2d.setColor(Color.BLACK); // the sprite sheet is missing
             g2d.fillRect(0, 0, getWidth(), getHeight());
         }
-
         g2d.dispose();
     }
 

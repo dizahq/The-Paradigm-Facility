@@ -9,13 +9,16 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
-// Popup that asks for the player's name
-
+// Popup that asks for the player's name.
+@SuppressWarnings("serial")
 public class NamePanel extends PopupWindow {
     private static final int BOX_WIDTH = 620;
     private static final int BOX_HEIGHT = 340;
-    private static final int MAX_NAME = 15; // keeps the leaderboard rows tidy. max name = 15 characters'
+    private static final int MAX_NAME = 15; // keeps the leaderboard rows tidy
+
+    private final JTextField field;
 
     public NamePanel(Consumer<String> onSubmit, Runnable onClose) {
         super(BOX_WIDTH, BOX_HEIGHT, onClose);
@@ -40,7 +43,7 @@ public class NamePanel extends PopupWindow {
         field.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         ActionListener submit = e -> {
-            // commas would break the scoreboard.csv format
+            // commas would break the scoreboard file
             String name = field.getText().trim().replace(",", "");
             if (name.length() > MAX_NAME) {
                 name = name.substring(0, MAX_NAME);
@@ -49,12 +52,19 @@ public class NamePanel extends PopupWindow {
                 onSubmit.accept(name);
             }
         };
-        field.addActionListener(submit); // Enter key submits
+        field.addActionListener(submit); // Enter submits
 
         content.add(heading);
         content.add(Box.createVerticalStrut(10));
         content.add(subtitle);
         content.add(Box.createVerticalStrut(40));
         content.add(field);
+        this.field = field;
+    }
+
+    @Override
+    public void addNotify() {
+        super.addNotify();
+        SwingUtilities.invokeLater(field::requestFocusInWindow);
     }
 }

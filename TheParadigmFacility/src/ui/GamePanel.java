@@ -2,7 +2,6 @@ package ui;
 
 import audio.SoundManager;
 import core.*;
-
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -27,31 +26,32 @@ import ui.QuestionContent.Kind;
 import util.Assets;
 
 /**
- * The main game screen: pause button, score, bugs, timer, question and 4
+ * The main game screen: pause button, score, bugs, timer, question and four
  * answers.
- * It shows the state of a GameState and sends the player's answers to it.
- * The workday must already be started (GameState.startDay) before this screen
- * is created.
+ * It shows a GameState and sends the player's answers to it. The workday must
+ * already be started before this screen is created.
  *
- * Three layouts, picked per question from its content (see QuestionContent):
- * SIMPLE - question on top, 2x2 grid of answers (as before).
+ * The layout is picked per question from its content (see QuestionContent):
+ * SIMPLE - question on top, 2x2 grid of answers.
  * CODE_QUESTION - prompt, code panel on the left, answers stacked on the right.
- * CODE_CHOICES - prompt + expected output on top, 2x2 grid of code boxes.
+ * CODE_CHOICES - prompt and expected output on top, 2x2 grid of code boxes.
  */
+@SuppressWarnings("serial")
 public class GamePanel extends JPanel {
 
     private enum Phase {
         ASKING, SHOWING_RESULT, DONE
     }
 
-    private static final String PAUSE_BTN = "interface/pauseBtn.png";
+    private static final String PAUSE_BTN = "interface/pausebtn.png";
     private static final String WHITE_BUG = "interface/whiteBug.png";
     private static final String RED_BUG = "interface/redBug.png";
 
-    private static final int GLOW_RADIUS = 6; // how far the score's glow spreads
+    private static final int GLOW_RADIUS = 6;
     private static final int RESULT_MS = 1000; // how long the result of an answer stays on screen
+    private static final int CODE_EXTRA_SECONDS = 30; // extra reading time for questions with code
 
-    // Positions are pixels of the 1280x720 window, measured from the mockup
+    // Positions are in pixels of the 1280x720 window
     private static final int BAR_HEIGHT = 116;
     private static final int PAUSE_SIZE = 57;
     private static final int PAUSE_X = 50;
@@ -75,7 +75,7 @@ public class GamePanel extends JPanel {
     private static final int COL_GAP = 70;
     private static final int ROW_GAP = 17;
 
-    // Code layouts: everything below the prompt line, same left edge as the question
+    // Code layouts: everything below the prompt line
     private static final int CONTENT_X = QUESTION_X;
     private static final int CONTENT_W = 1134;
     private static final int PROMPT_H = 56; // one or two lines
@@ -91,7 +91,8 @@ public class GamePanel extends JPanel {
     private static final int CODE_GRID_Y = 297;
     private static final int CODE_GRID_GAP = 16;
 
-    // Font sizes (px): the biggest that fits is used, never below the minimum
+    // Font sizes in pixels: the biggest size that fits is used, never below the
+    // minimum
     private static final int CODE_MAX = 22;
     private static final int CODE_MIN = 11;
     private static final int CHOICE_CODE_MAX = 20;
@@ -137,13 +138,9 @@ public class GamePanel extends JPanel {
     private String glowText; // the score text the glow image was made for
     private BufferedImage glowImage;
 
-    /**
-     * @param game     a game with a workday already started
-     * @param onPause  called when the pause button is clicked (the timer is already
-     *                 paused)
-     * @param onDayEnd called after the last answer's result was shown: the day is
-     *                 cleared or the game is over
-     */
+    // game a game with a workday already started
+    // onPause called when the pause button is clicked (the timer is already paused)
+    // onDayEnd called after the result of the last answer was shown
     public GamePanel(GameState game, Runnable onPause, Runnable onDayEnd) {
         if (game.currentQuestion() == null) {
             throw new IllegalStateException("Start a workday before opening the game screen");
@@ -174,12 +171,8 @@ public class GamePanel extends JPanel {
         showQuestion();
     }
 
-    // ---- public controls ----
-
-    /**
-     * Freezes the timer (and the result delay). The player cannot answer until
-     * resume().
-     */
+    // Freezes the timer and the result delay. The player cannot answer until
+    // resume().
     public void pause() {
         if (paused) {
             return;
@@ -192,7 +185,7 @@ public class GamePanel extends JPanel {
         }
     }
 
-    /** Continues after pause(). */
+    // Continues after pause().
     public void resume() {
         if (!paused) {
             return;
@@ -205,14 +198,12 @@ public class GamePanel extends JPanel {
         }
     }
 
-    /** Stops all timers. Call it when the screen is left for good. */
+    // Stops all timers. Call this when the screen is left for good.
     public void dispose() {
         countdown.stop();
         resultTimer.stop();
         phase = Phase.DONE;
     }
-
-    // ---- game flow ----
 
     private void showQuestion() {
         Question question = game.currentQuestion();
@@ -240,9 +231,8 @@ public class GamePanel extends JPanel {
         }
 
         phase = Phase.ASKING;
-        if (simple) {
-            countdown.start(game.day().timeLimit());
-        }else countdown.start(game.day().timeLimit() + 30);
+        int seconds = game.day().timeLimit();
+        countdown.start(simple ? seconds : seconds + CODE_EXTRA_SECONDS);
 
         repaint();
     }
@@ -253,12 +243,12 @@ public class GamePanel extends JPanel {
 
         promptFit = TextFit.fit(this, content.prompt(), true, 26, 16, 1.4, promptBox.width, promptBox.height);
         for (int i = 0; i < codeChoices.length; i++) {
-            // short answers may wrap; code answers keep their lines
+            // short answers may wrap, code answers keep their lines
             codeChoices[i].show(answers.get(i), QuestionContent.normalize(texts.get(i)), content.monoAnswers(),
                     codeInQuestion);
         }
 
-        // one font size for all 4 answers, so they are easy to compare
+        // one font size for all four answers
         int max = codeInQuestion ? CODE_MAX : CHOICE_CODE_MAX;
         int min = codeInQuestion ? CODE_MIN : CHOICE_CODE_MIN;
         int size = max;
@@ -301,10 +291,10 @@ public class GamePanel extends JPanel {
         });
     }
 
-    /**
-     * Correct answer turns green, the player's wrong pick turns red (picked is null
-     * on a timeout). A blank in the code is filled with the correct answer. Then the
-     * next question after RESULT_MS.
+    /*
+     * Shows the result: the correct answer turns green and a wrong pick turns red
+     * (picked is null on a timeout). A blank in the code is filled in. The next
+     * question follows after RESULT_MS.
      */
     private void showResult(Answer picked) {
         if (content.kind() == Kind.SIMPLE) {
@@ -354,23 +344,18 @@ public class GamePanel extends JPanel {
         repaint(TIMER_RIGHT - 180, TIMER_BASELINE - 44, 200, 60);
     }
 
-    /** The text of an answer. Adjust here if Answer names its getter differently. */
     private static String textOf(Answer answer) {
         return answer.getAnswer();
     }
 
-    // ---- layout and painting ----
-
     @Override
     public void doLayout() {
         Dimension p = pauseButton.getPreferredSize();
-        // the button image sits 10 px from the left and 6 px from the top of the
-        // component
         pauseButton.setBounds(PAUSE_X - 10, PAUSE_Y - 6, p.width, p.height);
         layoutAnswers();
     }
 
-    /** Places the answer buttons (and the code panel) for the current question. */
+    // Places the answer buttons and the code panel for the current question.
     private void layoutAnswers() {
         if (content == null) {
             return;
@@ -384,7 +369,7 @@ public class GamePanel extends JPanel {
                 }
             }
             case CODE_QUESTION -> {
-                // code on the left, the four answers in a column on the right
+                // code on the left, answers in a column on the right
                 boolean wide = !content.monoAnswers() || content.hasBlank();
                 int columnW = wide ? ANSWER_COL_WIDE : ANSWER_COL_NARROW;
                 int bodyH = BODY_BOTTOM - BODY_Y;
@@ -398,7 +383,7 @@ public class GamePanel extends JPanel {
                 }
             }
             case CODE_CHOICES -> {
-                // prompt (and the expected output next to it), then a 2x2 grid of code boxes
+                // prompt with the expected output next to it, then a 2x2 grid of code boxes
                 boolean hasOutput = content.expectedOutput() != null && !content.expectedOutput().isEmpty();
                 int promptW = hasOutput ? CONTENT_W - OUTPUT_W - BODY_GAP : CONTENT_W;
                 promptBox.setBounds(CONTENT_X, QUESTION_Y, promptW, PROMPT_H);
@@ -435,7 +420,7 @@ public class GamePanel extends JPanel {
         drawScore(g2);
         drawBugs(g2);
 
-        // timer, top right under the bar
+        // timer, top right below the bar
         g2.setFont(TIMER_FONT);
         g2.setColor(TIMER_RED);
         String time = String.format(Locale.US, "%.2f s", secondsLeft);
@@ -465,7 +450,10 @@ public class GamePanel extends JPanel {
         TextFit.draw(g2, promptFit, Color.WHITE, promptBox.x, promptBox.y, promptBox.width, promptBox.height, false);
     }
 
-    /** The snippet, in a dark rounded panel. A blank shows the correct answer once the result is on screen. */
+    /**
+     * The code in a dark rounded panel. A blank shows the correct answer once the
+     * result is on screen.
+     */
     private void drawCodePanel(Graphics2D g2) {
         g2.setColor(PANEL_FILL);
         g2.fillRoundRect(codePanel.x, codePanel.y, codePanel.width, codePanel.height, 18, 18);
@@ -477,7 +465,7 @@ public class GamePanel extends JPanel {
         }
     }
 
-    /** "OUTPUT" label and the expected output in monospace, top right. */
+    // The "OUTPUT" label and the expected output in monospace, top right.
     private void drawOutputChip(Graphics2D g2) {
         if (outputChip.isEmpty()) {
             return;
@@ -504,7 +492,7 @@ public class GamePanel extends JPanel {
         g2.drawString(output, r.x + 14, r.y + 46);
     }
 
-    /** "10 PTS" in the middle of the bar, with a glow. */
+    // The score in the middle of the top bar, with a glow.
     private void drawScore(Graphics2D g2) {
         String text = String.format(Locale.US, "%,d", game.score()).replace(',', ' ') + " PTS";
         if (!text.equals(glowText)) {
@@ -521,10 +509,7 @@ public class GamePanel extends JPanel {
         g2.drawString(text, x, SCORE_BASELINE);
     }
 
-    /**
-     * The text in the glow color, blurred and brightened. It is made once per score
-     * and reused.
-     */
+    // The text in the glow color, blurred and brightened. Made once per score.
     private BufferedImage makeGlow(String text) {
         FontMetrics fm = getFontMetrics(SCORE_FONT);
         int pad = GLOW_RADIUS * 2;
@@ -532,8 +517,7 @@ public class GamePanel extends JPanel {
                 BufferedImage.TYPE_INT_ARGB);
 
         Graphics2D g = image.createGraphics();
-        // start with invisible pixels that already have the glow color, so blurring
-        // never darkens it
+        // start with invisible pixels in the glow color so the blur does not darken it
         g.setComposite(AlphaComposite.Src);
         g.setColor(new Color(SCORE_GLOW.getRed(), SCORE_GLOW.getGreen(), SCORE_GLOW.getBlue(), 0));
         g.fillRect(0, 0, image.getWidth(), image.getHeight());
@@ -554,7 +538,7 @@ public class GamePanel extends JPanel {
         return new RescaleOp(new float[] { 1f, 1f, 1f, 3f }, new float[4], null).filter(image, null);
     }
 
-    /** 3 ants. Each bug turns one ant red, starting from the right. */
+    // Three ants. Each bug turns one ant red, starting from the right.
     private void drawBugs(Graphics2D g2) {
         BufferedImage white = Assets.scaled(WHITE_BUG, ANT_WIDTH);
         BufferedImage red = Assets.scaled(RED_BUG, ANT_WIDTH);

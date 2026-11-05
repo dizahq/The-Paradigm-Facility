@@ -1,8 +1,5 @@
 package util;
 
-// Only class that knows where the game's files live: TheParadigmFacility/assets/
-// Important for JAR/exe packaging
-
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
@@ -14,30 +11,45 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.imageio.ImageIO;
 
-public class Assets {
-    private static final String PROJECT_DIR = "TheParadigmFacility/";
-    private static final String ASSETS_DIR = PROJECT_DIR + "assets/";
-    private static final String DATA_DIR = PROJECT_DIR + "data/";
+public final class Assets {
+
+    private static final String[] DEV_ROOTS = { "", "TheParadigmFacility/" };
+    private static final String SAVE_FOLDER = "ParadigmFacility";
 
     private static final Map<String, BufferedImage> cache = new HashMap<>();
 
     private Assets() {
     }
 
-    // Opens a file under assets/, null if not found
+    // Opens a file under assets/. Returns null if it is not found
     public static InputStream open(String path) {
-        InputStream in = Assets.class.getResourceAsStream("/assets/" + path);
+        return openResource("assets/" + path);
+    }
+
+    // Opens a file under data/. Returns null if it is not found.
+    public static InputStream openData(String name) {
+        return openResource("data/" + name);
+    }
+
+    private static InputStream openResource(String path) {
+        InputStream in = Assets.class.getResourceAsStream("/" + path);
         if (in != null) {
             return in;
         }
-        try {
-            return new FileInputStream(ASSETS_DIR + path);
-        } catch (IOException e) {
-            return null;
+        for (String root : DEV_ROOTS) {
+            File file = new File(root + path);
+            if (file.isFile()) {
+                try {
+                    return new FileInputStream(file);
+                } catch (IOException e) {
+                    return null;
+                }
+            }
         }
+        return null;
     }
 
-    // Loads an image under assets/, null if missing
+    // Loads an image under assets/. Returns null if it is missing.
     public static BufferedImage image(String path) {
         if (cache.containsKey(path)) {
             return cache.get(path);
@@ -47,7 +59,8 @@ public class Assets {
             if (in != null) {
                 img = ImageIO.read(in);
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
+            System.err.println("Could not read image " + path + ": " + e.getMessage());
         }
         if (img == null) {
             System.err.println("Image not found: " + path);
@@ -56,7 +69,7 @@ public class Assets {
         return img;
     }
 
-    // Same as image(), scaled to the given width, keeping the aspect ratio
+    // Same as image(), scaled to the given width with the aspect ratio kept.
     public static BufferedImage scaled(String path, int width) {
         String key = path + "@" + width;
         if (cache.containsKey(key)) {
@@ -76,13 +89,12 @@ public class Assets {
         return out;
     }
 
-    // A file inside data/, e.g. "scoreboard.csv". Folder is created if missing.
-    public static File dataFile(String name) {
-        File file = new File(DATA_DIR + name);
-        File dir = file.getParentFile();
-        if (dir != null) {
-            dir.mkdirs();
+    // A writable file in the game's save folder. The folder is created if needed.
+    public static File saveFile(String name) {
+        File dir = new File(System.getProperty("user.home"), SAVE_FOLDER);
+        if (!dir.isDirectory() && !dir.mkdirs()) {
+            System.err.println("Could not create save folder: " + dir);
         }
-        return file;
+        return new File(dir, name);
     }
 }

@@ -1,5 +1,6 @@
 package ui;
 
+import core.ScoreManager.Entry;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -12,14 +13,15 @@ import java.awt.Insets;
 import java.awt.RenderingHints;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-// Leaderboard screen: records top 5 players, with gold, silver, and bronze points for the top 3.
+// Leaderboard screen: the top 5 scores, with gold, silver and bronze points for the top 3.
+
+@SuppressWarnings("serial")
 
 public class LeaderBoard extends JPanel {
     private static final String RETURN_BTN = "interface/returnBtn2.png";
@@ -35,8 +37,8 @@ public class LeaderBoard extends JPanel {
     private static final Color SILVER = new Color(0xC0C4C0);
     private static final Color BRONZE = new Color(0xB8862B);
 
-    // Players sorted in descending (at most 5)
-    public LeaderBoard(List<Map.Entry<String, Integer>> top, Runnable onReturn) {
+    // top: the scores, highest first (at most 5)
+    public LeaderBoard(List<Entry> top, Runnable onReturn) {
         setOpaque(false);
         setLayout(new GridBagLayout());
 
@@ -76,22 +78,22 @@ public class LeaderBoard extends JPanel {
         add(rows, gbc);
     }
 
-    // 14000 becomes "14 000"
     private static String formatPoints(int points) {
         return String.format(Locale.US, "%,d", points).replace(',', ' ');
     }
 
     // One leaderboard row: rank, name, points. A null entry draws an empty place.
+    @SuppressWarnings("serial")
     private static class Row extends JComponent {
         private final String rank;
         private final String name;
         private final String points;
         private final Color pointsColor;
 
-        Row(int place, Map.Entry<String, Integer> entry) {
+        Row(int place, Entry entry) {
             this.rank = "#" + place;
-            this.name = entry == null ? "---" : entry.getKey();
-            this.points = entry == null ? "" : formatPoints(entry.getValue()) + " PTS";
+            this.name = entry == null ? "---" : entry.name();
+            this.points = entry == null ? "" : formatPoints(entry.score()) + " PTS";
             this.pointsColor = place == 1 ? GOLD : place == 2 ? SILVER : place == 3 ? BRONZE : Color.WHITE;
 
             Dimension size = new Dimension(ROW_WIDTH, ROW_HEIGHT);
@@ -116,8 +118,6 @@ public class LeaderBoard extends JPanel {
             g2.dispose();
         }
 
-        // Draws text vertically centered. If alignRight, x is the right edge of the
-        // text
         private void draw(Graphics2D g2, String text, Font font, Color color, int x, boolean alignRight) {
             g2.setFont(font);
             g2.setColor(color);

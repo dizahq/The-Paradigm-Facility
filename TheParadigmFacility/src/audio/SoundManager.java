@@ -1,8 +1,5 @@
 package audio;
 
-// Plays all of the game's sound: looping music and one-shot effects (Java Sound, WAV only).
-// Files live in assets/audio/. Everything is muted when the Sound switch in Settings is off.
-
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.util.EnumMap;
@@ -14,9 +11,14 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineEvent;
 import util.Assets;
 
+/**
+ * Plays the game's music and sound effects with Java Sound (WAV files in
+ * assets/audio/).
+ * Everything is silent while the Sound switch in Settings is off.
+ */
 public class SoundManager {
 
-    /** Short sounds. Each play starts a new clip, so they can overlap. */
+    // Short sounds. Each play starts a new clip, so sounds can overlap.
     public enum Sfx {
         CLICK("click"), CORRECT("correct_ping"), WRONG("wrong_buzz"),
         STREAK("streak"), WIN("win"), LOSS("loss");
@@ -28,7 +30,7 @@ public class SoundManager {
         }
     }
 
-    /** Looping background tracks. Only one plays at a time. */
+    // Looping background tracks. Only one plays at a time.
     public enum Music {
         MAIN("main_theme"), GAME("game_theme");
 
@@ -47,15 +49,13 @@ public class SoundManager {
 
     private static boolean enabled = true;
     private static boolean paused;
-    private static Music wanted; // the track that should be playing, null = none yet
+    private static Music wanted; // the track that should play, null before the first one
     private static Clip current;
 
     private SoundManager() {
     }
 
-    // ---- setup ----
-
-    /** Loads every sound once, so nothing stutters later. Call at startup. */
+    // Loads every sound once so nothing stutters later. Call at startup.
     public static void preload() {
         for (Sfx s : Sfx.values()) {
             data(s);
@@ -64,8 +64,6 @@ public class SoundManager {
             track(m);
         }
     }
-
-    // ---- sound effects ----
 
     public static void play(Sfx s) {
         Data data = data(s);
@@ -89,12 +87,8 @@ public class SoundManager {
         play(Sfx.CLICK);
     }
 
-    // ---- music ----
-
-    /**
-     * Switches to a track, from its start. Does nothing if it is already the
-     * current one.
-     */
+    // Switches to a track and plays it from the start. Does nothing if it is
+    // already playing.
     public static void playMusic(Music m) {
         if (m == wanted) {
             return;
@@ -109,7 +103,7 @@ public class SoundManager {
         startMusic();
     }
 
-    /** Freezes the current track where it is. */
+    // Freezes the current track where it is.
     public static void pauseMusic() {
         paused = true;
         if (current != null) {
@@ -117,19 +111,17 @@ public class SoundManager {
         }
     }
 
-    /** Continues the track from where pauseMusic() stopped it. */
+    // Continues the track where pauseMusic() stopped it.
     public static void resumeMusic() {
         paused = false;
         startMusic();
     }
 
-    // ---- mute ----
-
     public static boolean isEnabled() {
         return enabled;
     }
 
-    /** Sound switch: off silences effects and music, on brings the music back. */
+    // Sound switch: off silences effects and music, on brings the music back.
     public static void setEnabled(boolean on) {
         enabled = on;
         if (on) {
@@ -138,8 +130,6 @@ public class SoundManager {
             current.stop();
         }
     }
-
-    // ---- internals ----
 
     private static void startMusic() {
         if (current != null && enabled && !paused) {
@@ -176,7 +166,7 @@ public class SoundManager {
         return clip;
     }
 
-    // Reads assets/audio/<name>.wav, null if missing or unreadable
+    // Reads assets/audio/<name>.wav. Returns null if it is missing or unreadable.
     private static Data load(String name) {
         try (InputStream in = Assets.open("audio/" + name + ".wav")) {
             if (in == null) {

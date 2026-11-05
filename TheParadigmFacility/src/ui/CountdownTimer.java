@@ -3,10 +3,8 @@ package ui;
 import java.util.function.DoubleConsumer;
 import javax.swing.Timer;
 
-/**
- * Counts down in seconds and reports the time left. Pause and resume keep the
- * time that is
- * left. Runs on the Swing thread, so the callbacks can touch the UI.
+/* Counts down in seconds and reports the time left. Pausing keeps the time that
+ * is left. Runs on the Swing thread, so the callbacks can touch the UI.
  */
 public class CountdownTimer {
 
@@ -17,8 +15,9 @@ public class CountdownTimer {
     private final Runnable onFinish;
 
     private long endNanos; // when the countdown reaches 0, while running
-    private double remaining; // seconds left, while paused or stopped
+    private double remaining; // seconds left, while paused
     private boolean running;
+    private boolean paused;
 
     /**
      * @param onTick   called about every 20 ms with the seconds left
@@ -30,35 +29,42 @@ public class CountdownTimer {
         this.timer = new Timer(TICK_MS, e -> tick());
     }
 
-    /** Starts a new countdown from the given seconds. */
+    // Starts a new countdown from the given seconds.
     public void start(double seconds) {
+        paused = false;
         remaining = seconds;
         onTick.accept(remaining);
         run();
     }
 
-    /** Freezes the countdown and keeps the time that is left. */
+    // Freezes the countdown and keeps the time that is left.
     public void pause() {
         if (running) {
-            remaining = secondsLeft();
+            remaining = Math.max(0, secondsLeft());
             timer.stop();
             running = false;
+            paused = true;
         }
     }
 
-    /**
-     * Continues after pause(). Does nothing after stop() or when the time is up.
-     */
+    // Continues after pause(). Does nothing after stop().
     public void resume() {
-        if (!running && remaining > 0) {
+        if (!paused) {
+            return;
+        }
+        paused = false;
+        if (remaining > 0) {
             run();
+        } else {
+            finish(); // time ran out at the moment of the pause
         }
     }
 
-    /** Ends the countdown. It cannot be resumed. */
+    // Ends the countdown. It cannot be resumed.
     public void stop() {
         timer.stop();
         running = false;
+        paused = false;
         remaining = 0;
     }
 
@@ -81,6 +87,10 @@ public class CountdownTimer {
             onTick.accept(left);
             return;
         }
+        finish();
+    }
+
+    private void finish() {
         stop();
         onTick.accept(0);
         onFinish.run();

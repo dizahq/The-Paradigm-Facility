@@ -1,19 +1,19 @@
 package core;
 
 public class Answer {
-    String answer;
-    boolean isCorrect;
+    private final String text;
+    private final boolean correct;
 
-    public Answer(String answer, boolean isCorrect) {
-        this.answer = answer;
-        this.isCorrect = isCorrect;
+    public Answer(String text, boolean correct) {
+        this.text = text;
+        this.correct = correct;
     }
 
     public String getAnswer() {
-        return answer;
+        return text;
     }
 
     public boolean isCorrect() {
-        return isCorrect;
+        return correct;
     }
 }

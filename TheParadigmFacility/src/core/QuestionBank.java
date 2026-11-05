@@ -1,32 +1,25 @@
 package core;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import util.Assets;
 
-// Loads data/Questions.csv. Columns:
-// workday,type,question,code,correct,wrong1,wrong2,wrong3
 public class QuestionBank {
     private static final String QUESTION_FILE = "Questions.csv";
     private static final int COLUMNS = 8;
 
-    private final ArrayList<Question> questions = new ArrayList<>();
+    private final List<Question> questions = new ArrayList<>();
 
     public QuestionBank() {
         load();
     }
 
-    // Every question, all workdays
-    public ArrayList<Question> getQuestions() {
-        return new ArrayList<>(questions);
-    }
-
-    // A fresh list of the questions for one workday (1 to 7)
-    public ArrayList<Question> getQuestions(int workday) {
-        ArrayList<Question> result = new ArrayList<>();
+    // A new list with the questions of one workday (1 to 7).
+    public List<Question> getQuestions(int workday) {
+        List<Question> result = new ArrayList<>();
         for (Question q : questions) {
             if (q.getWorkday() == workday) {
                 result.add(q);
@@ -37,14 +30,18 @@ public class QuestionBank {
 
     private void load() {
         String text;
-        try {
-            text = new String(Files.readAllBytes(Assets.dataFile(QUESTION_FILE).toPath()), StandardCharsets.UTF_8);
+        try (InputStream in = Assets.openData(QUESTION_FILE)) {
+            if (in == null) {
+                System.err.println(QUESTION_FILE + " not found");
+                return;
+            }
+            text = new String(in.readAllBytes(), StandardCharsets.UTF_8);
         } catch (IOException e) {
             System.err.println("Could not read " + QUESTION_FILE + ": " + e.getMessage());
             return;
         }
         if (text.startsWith("\uFEFF")) {
-            text = text.substring(1); // Excel's "CSV UTF-8" adds this marker
+            text = text.substring(1); // byte order mark added by Excel
         }
 
         List<List<String>> rows = parse(text);
@@ -59,7 +56,6 @@ public class QuestionBank {
                         Integer.parseInt(r.get(0).trim()),
                         r.get(1).trim(),
                         r.get(2).trim(),
-                        r.get(3).replace("\r\n", "\n").stripTrailing(),
                         r.get(4).trim(), r.get(5).trim(), r.get(6).trim(), r.get(7).trim()));
             } catch (NumberFormatException e) {
                 System.err.println(QUESTION_FILE + ": skipped row " + (i + 1) + " (workday is not a number)");
@@ -67,8 +63,7 @@ public class QuestionBank {
         }
     }
 
-    // Reads CSV text: "quoted, fields", "" for a literal quote, line breaks inside
-    // quotes
+    // Reads CSV text.
     private static List<List<String>> parse(String text) {
         List<List<String>> rows = new ArrayList<>();
         List<String> row = new ArrayList<>();
@@ -107,7 +102,7 @@ public class QuestionBank {
                 field.append(c);
             }
         }
-        if (field.length() > 0 || !row.isEmpty()) { // last line without a trailing newline
+        if (field.length() > 0 || !row.isEmpty()) { // last line without a newline
             row.add(field.toString());
             rows.add(row);
         }

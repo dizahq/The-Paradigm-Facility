@@ -1,89 +1,84 @@
 package core;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import util.Assets;
 
+// Keeps the top 5 scores of all playthroughs in scoreboard.csv (name,score per line). 
 public class ScoreManager {
 
-    private static final File SCORES_FILE = Assets.dataFile("scoreboard.csv");
+    public static final int MAX_ENTRIES = 5;
 
-    private final Map<String, Integer> scores = new LinkedHashMap<>();
-
-    public ScoreManager() {
-        loadScores();
+    // One leaderboard line.
+    public record Entry(String name, int score) {
     }
 
-    private void loadScores() {
-        File file = SCORES_FILE;
-        if (!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                System.err.println("Failed to create scores file: " + e.getMessage());
-            }
+    private final File file = Assets.saveFile("scoreboard.csv");
+    private final List<Entry> entries = new ArrayList<>();
+
+    public ScoreManager() {
+        load();
+    }
+
+    public void record(String name, int score) {
+        if (name == null || name.isBlank()) {
             return;
         }
+        entries.add(new Entry(name.trim(), score));
+        entries.sort(Comparator.comparingInt(Entry::score).reversed()); // stable sort
+        while (entries.size() > MAX_ENTRIES) {
+            entries.remove(entries.size() - 1);
+        }
+        save();
+    }
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+    // Saved scores, highest first.
+    public List<Entry> getTop() {
+        return new ArrayList<>(entries);
+    }
+
+    private void load() {
+        if (!file.isFile()) {
+            return;
+        }
+        try (BufferedReader reader = Files.newBufferedReader(file.toPath(), StandardCharsets.UTF_8)) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length == 2) {
-                    try {
-                        scores.put(parts[0].trim(), Integer.parseInt(parts[1].trim()));
-                    } catch (NumberFormatException ignored) {
-                    }
+                int comma = line.lastIndexOf(',');
+                if (comma <= 0) {
+                    continue;
+                }
+                try {
+                    entries.add(new Entry(line.substring(0, comma).trim(),
+                            Integer.parseInt(line.substring(comma + 1).trim())));
+                } catch (NumberFormatException e) {
+                    // skip a damaged line
                 }
             }
         } catch (IOException e) {
-            System.err.println("Error reading scores file: " + e.getMessage());
+            System.err.println("Could not read scores: " + e.getMessage());
+        }
+        entries.sort(Comparator.comparingInt(Entry::score).reversed());
+        while (entries.size() > MAX_ENTRIES) {
+            entries.remove(entries.size() - 1);
         }
     }
 
-    public void recordPlayer(String name, int score) {
-        if (name == null || name.trim().isEmpty()) {
-            return;
-        }
-
-        String cleanName = name.trim();
-        Integer saved = scores.get(cleanName);
-        if (saved == null || score > saved) {
-            scores.put(cleanName, score);
-            saveScores();
-        }
-    }
-
-    private void saveScores() {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(SCORES_FILE))) {
-            for (Map.Entry<String, Integer> entry : scores.entrySet()) {
-                writer.println(entry.getKey() + "," + entry.getValue());
+    private void save() {
+        try (BufferedWriter writer = Files.newBufferedWriter(file.toPath(), StandardCharsets.UTF_8)) {
+            for (Entry e : entries) {
+                writer.write(e.name() + "," + e.score());
+                writer.newLine();
             }
         } catch (IOException e) {
-            System.err.println("Error writing scores file: " + e.getMessage());
+            System.err.println("Could not save scores: " + e.getMessage());
         }
-    }
-
-    public int getScore(String name, int score) {
-        return scores.getOrDefault(name, score);
-    }
-
-    public void setScore(String name, int score) {
-        scores.put(name, score);
-        saveScores();
-    }
-
-    public List<Map.Entry<String, Integer>> getTop(int n) {
-        List<Map.Entry<String, Integer>> sorted = new ArrayList<>(scores.entrySet());
-        sorted.sort(Map.Entry.<String, Integer>comparingByValue().reversed());
-        return new ArrayList<>(sorted.subList(0, Math.min(n, sorted.size())));
     }
 }

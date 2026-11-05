@@ -7,32 +7,31 @@ import javax.swing.BorderFactory;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+// Popup that prints the Help, About or Credits text in a scrolling terminal-style box. 
+@SuppressWarnings("serial")
 public class InfoPanel extends PopupWindow {
     private static final int BOX_WIDTH = 750;
     private static final int BOX_HEIGHT = 340;
     private static final int TEXT_SIZE = 18;
 
-    // Add text anytime. Box scrolls when it does not fit.
-    // Help Popup
-    private static final String HELP_TEXT = "Clear all 7 workdays by passing programming paradigm quizzes, earning a position in the "
-            + "leaderboard, and in the company while keeping bugs below 3.\n\n"
-            + "The game spans for 7 days. Each day introduces a new programming paradigm "
-            + "and scales up the points per question.\n\n"
-            + "Correct answers earn full points and add to a streak.\n"
-            + "Wrong answers cost half the question\u2019s points, gains 1 bug, and resets the streak."
-            + "The game ends when 3 bugs is earned.";
+    private static final String HELP_TEXT = "Clear all 7 workdays by passing the paradigm quizzes and keeping your bugs below 3.\n\n"
+            + "Each workday covers one paradigm. The points per question go up and the time per question "
+            + "goes down every day.\n\n"
+            + "A correct answer earns full points and adds to your streak. Five correct answers in a row "
+            + "remove one bug.\n"
+            + "A wrong answer costs half the question\u2019s points, adds 1 bug and resets the streak. "
+            + "A timeout adds 1 bug and resets the streak.\n\n"
+            + "The game ends when you reach 3 bugs. Your final score may earn a place on the leaderboard.";
 
-    // About Popup
     private static final String ABOUT_TEXT = "Welcome to the Paradigm Facility, where badly written code comes alive as terrifying "
             + "spaghetti code monsters. Contained inside locked packages, these creatures "
             + "threaten to corrupt the entire tech stack. As a new software engineer, you "
-            + "must pass rigorous paradigm quizzes to unlock, refactor, and delete them. \n\n"
+            + "must pass rigorous paradigm quizzes to unlock, refactor, and defeat them.\n\n"
             + "Survive the 7-day probationary training, keep your job, and earn your "
             + "permanent position!";
 
-    // Credits Popup
-    private static final String CREDITS_TEXT = "Programmers: \n"
-            + "Catenza, Dizahlene \n"
+    private static final String CREDITS_TEXT = "Programmers:\n"
+            + "Catenza, Dizahlene\n"
             + "Chu, Joshua\n"
             + "Cristino, Allyssa";
 
@@ -61,7 +60,7 @@ public class InfoPanel extends PopupWindow {
         text.setFont(Theme.plain(TEXT_SIZE));
         text.setForeground(Color.WHITE);
         text.setBackground(Color.BLACK);
-        text.setCaretPosition(0); // start at the top
+        text.setCaretPosition(0); // show the top of the text
 
         JScrollPane scroll = new JScrollPane(text, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
                 JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);

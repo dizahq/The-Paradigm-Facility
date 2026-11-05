@@ -12,11 +12,13 @@ import java.awt.event.MouseEvent;
 import java.util.function.Consumer;
 import javax.swing.JComponent;
 
+// An on/off switch with a square knob. 
+@SuppressWarnings("serial")
 public class ToggleSwitch extends JComponent {
     private static final int WIDTH = 80;
     private static final int HEIGHT = 36;
     private static final int BORDER = 2;
-    private static final int KNOB_GAP = 4; // space between the border and knob
+    private static final int KNOB_GAP = 4; // space between the border and the knob
 
     private boolean on;
 
@@ -37,10 +39,6 @@ public class ToggleSwitch extends JComponent {
                 repaint();
             }
         });
-    }
-
-    public boolean isOn() {
-        return on;
     }
 
     @Override
