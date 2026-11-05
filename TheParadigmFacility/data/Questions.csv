@@ -99,3 +99,1133 @@ workday,type,question,code,correct,wrong1,wrong2,wrong3
 7,theory,Which procedural component does a query to a logic program most closely resemble?,,A procedure call that returns bindings for its variables,A variable assignment,A comment block,A memory deallocation
 7,theory,"In functional programming, what takes the place of an imperative loop that updates a variable on every iteration?",,"Recursion, where parameters carry the updated state",A mutable counter shared across threads,A goto statement,A class with a static field
 7,theory,"A closure in functional programming captures variables from its surrounding scope. Which OOP component does it most closely correspond to?",,An object whose fields hold the captured state and whose method performs the behavior,An abstract class with no fields or methods,A package that contains only constants,A compile-time annotation
+4,programming,"What is the output?
+class Student {
+  String name;
+  Student() {
+    this(""Unknown"");
+  }
+  Student(String n) {
+    this.name = n;
+  }
+  void display() {
+    System.out.print(name);
+  }
+}
+public class Main {
+  public static void main(String[] args) {
+    Student s1 = new Student();
+    s1.display();
+  }
+}",2,Unknown,null,Student,Compilation Error
+4,programming,"Which code snippet instantiates an object of class Car and prints:
+Brand: Honda",3,"class Car {
+  String brand = ""Honda"";
+  void show() { System.out.print(""Brand: "" + brand); }
+}
+public class Main {
+  public static void main(String[] args) {
+    Car c = new Car();
+    c.show();
+  }
+}","class Car {
+  String brand;
+  Car() { System.out.print(""Brand: Honda""); }
+}
+public class Main {
+  public static void main(String[] args) {
+    Car c;
+  }
+}","class Car {
+  String brand = ""Toyota"";
+  void show() { System.out.print(""Brand : "" + brand); }
+}
+public class Main {
+  public static void main(String[] args) {
+    Car c = new Car();
+    c.show();
+  }
+}","class Car {
+  static void show() { System.out.print(""Honda""); }
+}
+public class Main {
+  public static void main(String[] args) {
+    System.out.print(""Brand: "");
+  }
+}"
+4,programming,"Fill in the missing line to inherit from Building so h.type prints: Residential
+class Building {
+  String type = ""Residential"";
+}
+class House _________ {
+}
+public class Main {
+  public static void main(String[] args) {
+    House h = new House();
+    System.out.print(h.type);
+  }
+}",4,extends Building,implements Building,: Building,inherits Building
+4,programming,"What is the output?
+class Parent {
+  void show() {
+    System.out.print(""Parent "");
+  }
+}
+class Child extends Parent {
+  void show() {
+    super.show();
+    System.out.print(""Child"");
+  }
+}
+public class Main {
+  public static void main(String[] args) {
+    Parent p = new Child();
+    p.show();
+  }
+}",2,Parent Child,Child,Parent,Child Parent
+4,programming,Which snippet uses constructor parameter passing to set dimensions and print the area 20?,3,"class Rectangle {
+  int area;
+  Rectangle(int w, int h) { area = w * h; }
+}
+public class Main {
+  public static void main(String[] args) {
+    Rectangle r = new Rectangle(5, 4);
+    System.out.print(r.area);
+  }
+}","class Rectangle {
+  int area;
+  Rectangle(int w, int h) { area = w + h; }
+}
+public class Main {
+  public static void main(String[] args) {
+    Rectangle r = new Rectangle(5, 4);
+    System.out.print(r.area);
+  }
+}","class Rectangle {
+  int w = 5, h = 4;
+  void calc() { System.out.print(w / h); }
+}
+public class Main {
+  public static void main(String[] args) {
+    new Rectangle().calc();
+  }
+}","class Rectangle {
+  Rectangle() { System.out.print(20); }
+}
+public class Main {
+  public static void main(String[] args) {
+    Rectangle r;
+  }
+}"
+4,programming,"Complete the constructor to assign the parameter to the instance variable.
+class Person {
+  String name;
+  Person(String name) {
+    _________________
+  }
+}
+public class Main {
+  public static void main(String[] args) {
+    Person p = new Person(""John"");
+    System.out.print(p.name);
+  }
+}",4,this.name = name;,name = name;,String name = this.name;,super.name = name;
+4,programming,"What is the output?
+class Counter {
+  static int count = 0;
+  Counter() {
+    count++;
+  }
+}
+public class Main {
+  public static void main(String[] args) {
+    Counter c1 = new Counter();
+    Counter c2 = new Counter();
+    Counter c3 = new Counter();
+    System.out.print(Counter.count);
+  }
+}",2,3,1,2,0
+4,programming,"Which snippet correctly implements an interface to output:
+Drawing Circle",3,"interface Drawable { void draw(); }
+class Circle implements Drawable {
+  public void draw() { System.out.print(""Drawing Circle""); }
+}
+public class Main {
+  public static void main(String[] args) {
+    Drawable d = new Circle();
+    d.draw();
+  }
+}","class Drawable { void draw() {} }
+class Circle extends Drawable { void draw() { System.out.print(""Circle""); } }
+public class Main {
+  public static void main(String[] args) {
+    Drawable d = new Drawable();
+    d.draw();
+  }
+}","interface Drawable {
+  static void draw() { System.out.print(""Drawing""); }
+}
+public class Main {
+  public static void main(String[] args) {
+    System.out.print(""Circle"");
+  }
+}","abstract class Circle {
+  abstract void draw();
+}
+public class Main {
+  public static void main(String[] args) {
+    Circle c = new Circle();
+  }
+}"
+4,programming,"Complete the subclass constructor by calling the superclass constructor to set id.
+class Base {
+  int id;
+  Base(int id) {
+    this.id = id;
+  }
+}
+class Derived extends Base {
+  Derived(int id) {
+    __________________
+  }
+}
+public class Main {
+  public static void main(String[] args) {
+    Derived d = new Derived(101);
+    System.out.print(d.id);
+  }
+}",4,super(id);,this.id = super.id;,Base(id);,super.id(id);
+4,programming,"What is the output?
+class Animal {
+  void sound() {
+    System.out.print(""Generic Sound "");
+  }
+}
+class Dog extends Animal {
+  void sound() {
+    System.out.print(""Bark "");
+  }
+}
+public class Main {
+  public static void main(String[] args) {
+    Animal myDog = new Dog();
+    myDog.sound();
+  }
+}",2,Bark,Generic Sound,Generic Sound Bark,Compilation Error
+5,programming,Which imperative Java program iterates 1 to 3 and outputs their product 6?,3,"public class Main {
+  public static void main(String[] args) {
+    int prod = 1;
+    for (int i = 1; i <= 3; i++) {
+      prod *= i;
+    }
+    System.out.print(prod);
+  }
+}","public class Main {
+  public static void main(String[] args) {
+    int prod = 0;
+    for (int i = 1; i <= 3; i++) {
+      prod *= i;
+    }
+    System.out.print(prod);
+  }
+}","public class Main {
+  public static void main(String[] args) {
+    System.out.print(1 * 2 * 3 * 0);
+  }
+}","public class Main {
+  public static void main(String[] args) {
+    int prod = 6;
+    while(prod < 6) { prod++; }
+    System.out.print(prod);
+  }
+}"
+5,programming,"Fill in the missing update step in the imperative for loop to print 0 2 4.
+public class Main {
+  public static void main(String[] args) {
+    for(int i = 0; i <= 4; ___) {
+      System.out.print(i + "" "");
+    }
+  }
+}",4,i += 2,i++,i = i + 1,i *= 2
+5,programming,"What is the output?
+public class Main {
+  public static void main(String[] args) {
+    int sum = 0;
+    for(int i = 1; i <= 4; i++) {
+      sum += i;
+    }
+    System.out.print(sum);
+  }
+}",2,10,4,0,24
+5,programming,"Which Java code uses a do-while loop to print ""Iterate"" once despite a false condition?",3,"public class Main {
+  public static void main(String[] args) {
+    int x = 10;
+    do {
+      System.out.print(""Iterate"");
+    } while (x < 5);
+  }
+}","public class Main {
+  public static void main(String[] args) {
+    int x = 10;
+    while(x < 5) {
+      System.out.print(""Iterate"");
+    }
+  }
+}","public class Main {
+  public static void main(String[] args) {
+    for(int x = 10; x < 5; x++) {
+      System.out.print(""Iterate"");
+    }
+  }
+}","public class Main {
+  public static void main(String[] args) {
+    System.out.print(""No Iterate"");
+  }
+}"
+5,programming,"Complete the statement to increment the variable count by 1.
+public class Main {
+  public static void main(String[] args) {
+    int count = 10;
+    _____________
+    System.out.print(count);
+  }
+}",4,count++;,count == count + 1;,final count = 11;,int count = 11;
+5,programming,"What is the output?
+public class Main {
+  public static void main(String[] args) {
+    int x = 5;
+    x = x + 3;
+    if(x > 7) {
+      x = x * 2;
+    }
+    System.out.print(x);
+  }
+}",2,16,8,5,10
+5,programming,"Which Java snippet uses conditional branching (if-else) to print ""Positive"" for input 15?",3,"public class Main {
+  public static void main(String[] args) {
+    int n = 15;
+    if (n > 0) {
+      System.out.print(""Positive"");
+    } else {
+      System.out.print(""Negative"");
+    }
+  }
+}","public class Main {
+  public static void main(String[] args) {
+    int n = 15;
+    if (n < 0) {
+      System.out.print(""Positive"");
+    }
+  }
+}","public class Main {
+  public static void main(String[] args) {
+    System.out.print(""Negative"");
+  }
+}","public class Main {
+  public static void main(String[] args) {
+    int n = 15;
+    while(n == 0) System.out.print(""Positive"");
+  }
+}"
+5,programming,"Fill in the missing loop condition to iterate as long as x is greater than 0.
+public class Main {
+  public static void main(String[] args) {
+    int x = 3;
+    while (_______) {
+      System.out.print(x);
+      x--;
+    }
+  }
+}",4,x > 0,x < 0,x == 0,x != 3
+5,programming,"What is the output?
+public class Main {
+  public static void main(String[] args) {
+    int p = 1, i = 1;
+    while (i <= 3) {
+      p *= i;
+      i++;
+    }
+    System.out.println(p);
+  }
+}",2,6,3,1,0
+5,programming,Which of the following code snippets will produce the output: 12,3,"int a = 6, b = 6;
+System.out.print(a + b);","int a = 5, b = 3;
+System.out.print(a + b * 2);","int a = 5, b = 3;
+System.out.print((a + b) * 2);","int a = 10, b = 2;
+System.out.print(a * b);"
+5,programming,"Fill in the missing statement so the output is: Sum: 15
+public class Main {
+  public static void main(String[] args) {
+    int sum = 0;
+    for (int i = 1; i <= 5; i++) {
+      ______________
+    }
+    System.out.print(""Sum: "" + sum);
+  }
+}",4,sum += i;,sum = i;,sum -= i;,i += sum;
+5,programming,"What is the output?
+public class Main {
+  public static void main(String[] args) {
+    int[] nums = {10, 20, 30};
+    nums[1] = 50;
+    System.out.print(nums[0] + nums[1]);
+  }
+}",2,60,30,70,50
+5,programming,Which of the following code snippets will produce the output: 25,3,"int a = 5, b = 5;
+System.out.print(a * b);","int a = 10, b = 15;
+System.out.print(b - a);","int a = 20, b = 5;
+System.out.print(a - b);","int a = 5, b = 20;
+System.out.print(b / a);"
+5,programming,"Fill in the missing statement so the output is: Factorial: 24
+public class Main {
+  public static void main(String[] args) {
+    int fact = 1;
+    int n = 4;
+    for (int i = 1; i <= n; i++) {
+      ______________
+    }
+    System.out.print(""Factorial: "" + fact);
+  }
+}",4,fact *= i;,fact += i;,fact = i;,fact /= i;
+5,programming,"What is the output?
+public class Main {
+  public static void main(String[] args) {
+    int a = 5;
+    int b = 3;
+    System.out.print(a + b * 2);
+  }
+}",2,11,16,10,8
+5,programming,Which of the following code snippets will produce the output: Even,3,"int n = 8;
+if (n % 2 == 0) System.out.print(""Even""); else System.out.print(""Odd"");","int n = 7;
+if (n % 2 == 0) System.out.print(""Even""); else System.out.print(""Odd"");","int n = 9;
+if (n % 2 != 0) System.out.print(""Odd""); else System.out.print(""Even"");","int n = 10;
+if (n % 2 != 0) System.out.print(""Even""); else System.out.print(""Odd"");"
+5,programming,"Fill in the missing line so the output is: Wednesday
+public class Main {
+  public static void main(String[] args) {
+    int day = 3;
+    switch (day) {
+      case 1: System.out.print(""Monday""); break;
+      case 2: System.out.print(""Tuesday""); break;
+      ______________
+      case 4: System.out.print(""Thursday""); break;
+      default: System.out.print(""Invalid"");
+    }
+  }
+}",4,"case 3: System.out.print(""Wednesday""); break;","case 3: System.out.print(""Wednesday"");","case 3: System.print(""Wednesday"");","if (day == 3) System.out.print(""Wednesday"");"
+5,programming,"What is the output?
+public class Main {
+  public static void main(String[] args) {
+    int x = 10;
+    if (x > 5 && x < 20) {
+      System.out.print(""In range"");
+    } else {
+      System.out.print(""Out of range"");
+    }
+  }
+}",2,In range,Out of range,Compile error,No output
+5,programming,Which of the following code snippets will produce the output: Hello World,3,"System.out.print(""Hello World"");","System.out.print(""Hello"");
+System.out.print(""World"");","System.out.print(""Hello, World"");","System.out.print(""hello world"");"
+6,programming,"What goes in the blank so the window is created on the Swing event dispatch thread?
+SwingUtilities.___(() -> new JFrame(""App"").setVisible(true));",4,invokeLater,runNow,startThread,execute
+5,programming,"What is the output?
+public class Main {
+  static int square(int n) {
+    return n * n;
+  }
+  public static void main(String[] args) {
+    System.out.print(square(4) + square(2));
+  }
+}",2,20,16,24,8
+6,programming,"Which snippet prints ""Button clicked"" each time the button is clicked?",3,"button.addActionListener(e -> System.out.println(""Button clicked""));","button.setText(""Button clicked"");","button.addActionListener(System.out.println(""Button clicked""));","button.removeActionListener(e -> System.out.println(""Button clicked""));"
+6,programming,"What is the output of this program?
+import javax.swing.JButton;
+public class Main {
+  public static void main(String[] args) {
+    JButton button = new JButton(""Hello"");
+    button.addActionListener(e ->
+      System.out.println(""Print: "" + e.getActionCommand()));
+    button.doClick();
+  }
+}",2,Print: Hello,Print: null,Print: ActionEvent,Nothing is printed
+6,programming,Which snippet displays the characters typed into a text field in the console?,3,"textField.addKeyListener(new KeyAdapter() { public void keyTyped(KeyEvent e) {
+  System.out.print(e.getKeyChar());
+} });","textField.addKeyListener(new KeyAdapter() { public void keyTyped(KeyEvent e) {
+  System.out.print(textField);
+} });","textField.removeKeyListener(new KeyAdapter() { public void keyTyped(KeyEvent e) {
+  System.out.print(e.getKeyChar());
+} });",textField.addKeyListener(new KeyAdapter() { public void keyTyped(KeyEvent e) { } });
+6,programming,"What is the output of this program?
+import java.awt.event.ItemEvent;
+import javax.swing.JCheckBox;
+public class Main {
+  public static void main(String[] args) {
+    JCheckBox box = new JCheckBox(""Subscribe"");
+    box.addItemListener(e -> {
+      if (e.getStateChange() == ItemEvent.SELECTED) {
+        System.out.println(""Checked"");
+      } else {
+        System.out.println(""Unchecked"");
+      }
+    });
+    box.doClick();
+    box.doClick();
+  }
+}",2,Checked then Unchecked (on separate lines),Checked then Checked (on separate lines),Unchecked then Checked (on separate lines),Checked only
+2,programming,"What is the output?
+#include <stdio.h>
+int main() {
+  int a = 10;
+  int *p = &a;
+  *p = 25;
+  printf(""%d"", a);
+  return 0;
+}",2,25,10,0,Garbage address value
+2,programming,"Which C snippet swaps two variables a = 5 and b = 10 using a temporary variable and outputs:
+10 5",3,"#include <stdio.h>
+int main() {
+  int a = 5, b = 10, temp;
+  temp = a;
+  a = b;
+  b = temp;
+  printf(""%d %d"", a, b);
+  return 0;
+}","#include <stdio.h>
+int main() {
+  int a = 5, b = 10;
+  a = b;
+  b = a;
+  printf(""%d %d"", a, b);
+  return 0;
+}","#include <stdio.h>
+int main() {
+  int a = 5, b = 10;
+  printf(""%d %d"", b, b);
+  return 0;
+}","#include <stdio.h>
+int main() {
+  int a = 5, b = 10;
+  printf(""5 10"");
+  return 0;
+}"
+2,programming,"Fill in missing code to display value of val:
+#include <stdio.h>
+int main() {
+  int val = 42;
+  printf(____, val);
+  return 0;
+}",4,"""%d""","""%s""","""%f""","""%c"""
+2,programming,"What is the output?
+#include <stdio.h>
+int main() {
+  int count = 3;
+  int fact = 1;
+  while(count > 0) {
+    fact *= count;
+    count--;
+  }
+  printf(""%d"", fact);
+  return 0;
+}",2,6,3,1,0
+2,programming,"Which C snippet uses a for loop to print numbers ""321"" backwards?
+Expected Output: 3 2 1",3,"#include <stdio.h>
+int main() {
+  for(int i = 3; i >= 1; i--) {
+    printf(""%d "", i);
+  }
+  return 0;
+}","#include <stdio.h>
+int main() {
+  for(int i = 3; i <= 1; i++) {
+    printf(""%d "", i);
+  }
+  return 0;
+}","#include <stdio.h>
+int main() {
+  int i = 3;
+  printf(""%d "", i);
+  return 0;
+}","#include <stdio.h>
+int main() {
+  for(int i = 3; i > 3; i--) {
+    printf(""%d "", i);
+  }
+  return 0;
+}"
+2,programming,"Complete the conditional expression to check if num is negative.
+#include <stdio.h>
+int main() {
+  int num = -5;
+  if(_______) {
+    printf(""Negative"");
+  }
+  return 0;
+}",4,num < 0,num > 0,num == 0,num != -5
+2,programming,"What is the output?
+#include <stdio.h>
+int main() {
+  int arr[] = {2, 4, 6};
+  arr[1] = 9;
+  printf(""%d"", arr[0] + arr[1]);
+  return 0;
+}",2,11,8,15,12
+2,programming,"Which C snippet uses conditional execution (if-else) to output ""Even"" for input 8?
+Expected Output: Even",3,"#include <stdio.h>
+int main() {
+  int num = 8;
+  if(num % 2 == 0) {
+    printf(""Even"");
+  } else {
+    printf(""Odd"");
+  }
+  return 0;
+}","#include <stdio.h>
+int main() {
+  int num = 8;
+  if(num % 2 != 0) {
+    printf(""Even"");
+  }
+  return 0;
+}","#include <stdio.h>
+int main() {
+  printf(""Odd"");
+  return 0;
+}","#include <stdio.h>
+int main() {
+  int num = 8;
+  while(num == 0) { printf(""Even""); }
+  return 0;
+}"
+2,programming,"Complete the line to declare a pointer variable ptr pointing to integer variable x.
+#include <stdio.h>
+int main() {
+  int x = 100;
+  ____ = &x;
+  printf(""%d"", *ptr);
+  return 0;
+}",4,int *ptr,int ptr,ptr,int &ptr
+2,programming,"What is the output?
+#include <stdio.h>
+int main() {
+  int x = 4;
+  x += 6;
+  x /= 2;
+  printf(""%d"", x);
+  return 0;
+}",2,5,10,4,2
+2,programming,"Which C snippet uses a loop to compute the sum of elements in array {1, 2, 3} and output 6?
+Expected Output: 6",3,"#include <stdio.h>
+int main() {
+  int arr[] = {1, 2, 3};
+  int sum = 0;
+  for(int i = 0; i < 3; i++) {
+    sum += arr[i];
+  }
+  printf(""%d"", sum);
+  return 0;
+}","#include <stdio.h>
+int main() {
+  int arr[] = {1, 2, 3};
+  printf(""%d"", arr[0]);
+  return 0;
+}","#include <stdio.h>
+int main() {
+  int arr[] = {1, 2, 3};
+  printf(""%d"", arr[3]);
+  return 0;
+}","#include <stdio.h>
+int main() {
+  printf(""123"");
+  return 0;
+}"
+2,programming,"Fill in the missing loop condition to iterate through all 3 elements of arr.
+#include <stdio.h>
+int main() {
+  int arr[3] = {10, 20, 30};
+  for(int i = 0; ___; i++) {
+    printf(""%d"", arr[i]);
+  }
+  return 0;
+}",4,i < 3,i <= 3,i > 3,i == 3
+2,programming,"What is the output?
+#include <stdio.h>
+int main() {
+  int total = 0;
+  for(int i = 0; i < 2; i++) {
+    for(int j = 0; j < 2; j++) {
+      total++;
+    }
+  }
+  printf(""%d"", total);
+  return 0;
+}",2,4,2,6,0
+2,programming,"Which C snippet uses a function parameter passed by reference (using pointer) to add 5 to variable val?
+Expected Output: 15",3,"#include <stdio.h>
+void addFive(int *x) { *x += 5; }
+int main() {
+  int val = 10;
+  addFive(&val);
+  printf(""%d"", val);
+  return 0;
+}","#include <stdio.h>
+void addFive(int x) { x += 5; }
+int main() {
+  int val = 10;
+  addFive(val);
+  printf(""%d"", val);
+  return 0;
+}","#include <stdio.h>
+int main() {
+  int val = 10;
+  printf(""%d"", val);
+  return 0;
+}","#include <stdio.h>
+void addFive(int x) { printf(""15""); }
+int main() {
+  addFive(10);
+  return 0;
+}"
+2,programming,"Complete the function signature so that 'square' accepts an integer and returns an integer.
+#include <stdio.h>
+______ {
+  return num * num;
+}
+int main() {
+  printf(""%d"", square(4));
+  return 0;
+}",4,int square(int num),void square(int num),square(num),int square()
+5,programming,"What is the output?
+#include <stdio.h>
+int main() {
+  int a = 5;
+  int b = 3;
+  printf(""%d"", a + b * 2);
+  return 0;
+}",2,11,16,10,8
+5,programming,Which of the following code snippets will produce the output: 11,3,"int a = 5, b = 3;
+printf(""%d"", a + b * 2);","int a = 5, b = 3;
+printf(""%d"", (a + b) * 2);","int a = 6, b = 6;
+printf(""%d"", a + b);","int a = 10, b = 2;
+printf(""%d"", a * b);"
+2,programming,"Fill in the missing statement so the output is: Sum: 15
+#include <stdio.h>
+int main() {
+  int i, sum = 0;
+  for (i = 1; i <= 5; i++) {
+    ______________
+  }
+  printf(""Sum: %d"", sum);
+  return 0;
+}",4,sum += i;,sum = i;,sum -= i;,i += sum;
+5,programming,"What is the output?
+#include <stdio.h>
+int main() {
+  int x = 10;
+  if (x > 5 && x < 20) {
+    printf(""In range"");
+  } else {
+    printf(""Out of range"");
+  }
+  return 0;
+}",2,In range,Out of range,Compile error,No output
+5,programming,Which of the following code snippets will produce the output: 25,3,"int a = 5, b = 5;
+printf(""%d"", a * b);","int a = 10, b = 15;
+printf(""%d"", b - a);","int a = 20, b = 5;
+printf(""%d"", a - b);","int a = 5, b = 20;
+printf(""%d"", b / a);"
+2,programming,"Fill in the missing statement so the output is: Sum: 55
+#include <stdio.h>
+int main() {
+  int j, sum = 0;
+  for (j = 1; j <= 10; j++) {
+    ______________
+  }
+  printf(""Sum: %d"", sum);
+  return 0;
+}",4,sum += j;,sum = j;,sum -= j;,j += sum;
+2,programming,"What is the output?
+#include <stdio.h>
+int square(int n) {
+  return n * n;
+}
+int main() {
+  printf(""%d"", square(4) + square(2));
+  return 0;
+}",2,20,16,24,8
+5,programming,Which of the following code snippets will produce the output: Even,3,"int n = 8;
+if (n % 2 == 0) printf(""Even""); else printf(""Odd"");","int n = 7;
+if (n % 2 == 0) printf(""Even""); else printf(""Odd"");","int n = 9;
+if (n % 2 != 0) printf(""Odd""); else printf(""Even"");","int n = 10;
+if (n % 2 != 0) printf(""Even""); else printf(""Odd"");"
+2,programming,"Fill in the missing line so the output is: Wednesday
+#include <stdio.h>
+int main() {
+  int day = 3;
+  switch (day) {
+    case 1: printf(""Monday""); break;
+    case 2: printf(""Tuesday""); break;
+    ______________
+    case 4: printf(""Thursday""); break;
+    default: printf(""Invalid"");
+  }
+  return 0;
+}",4,"case 3: printf(""Wednesday""); break;","case 3: printf(""Wednesday"");","case 3: print(""Wednesday""); break;","if (day == 3) printf(""Wednesday"");"
+6,programming,"The user types ""adx"" and presses Enter. What is the output?
+#include <stdio.h>
+int main(void) {
+  int c;
+  while ((c = getchar()) != '\n') {
+    switch (c) {
+      case 'a':
+        printf(""Add "");
+        break;
+      case 'd':
+        printf(""Delete "");
+        break;
+      default:
+        printf(""Unknown "");
+    }
+  }
+  return 0;
+}",2,Add Delete Unknown,Add Delete,Delete Add Unknown,Unknown Unknown Unknown
+6,programming,"The user types ""abc"" and presses Enter. Which snippet prints ""abc"", echoing each key as it is read?",3,"int c;
+while ((c = getchar()) != '\n') { putchar(c); }","int c;
+while ((c = getchar()) == '\n') { putchar(c); }","int c = getchar();
+putchar(c);","int c;
+while ((c = getchar()) != '\n') { putchar('c'); }"
+2,programming,"Fill in the missing loop condition so the output is: 1 2 3 4 5
+#include <stdio.h>
+int main() {
+  int i = 1;
+  while (______________) {
+    printf(""%d "", i);
+    i++;
+  }
+  return 0;
+}",4,i <= 5,i < 5,i >= 5,i == 5
+6,programming,"The user types ""sxss"" and presses Enter. What is the output?
+#include <stdio.h>
+int main(void) {
+  int c;
+  int running = 0;
+  while ((c = getchar()) != '\n') {
+    if (c == 's') {
+      running = !running;
+      if (running) {
+        printf(""Start "");
+      } else {
+        printf(""Stop "");
+      }
+    }
+  }
+  return 0;
+}",2,Start Stop Start,Start Start Start,Start Stop,Stop Start Stop
+6,programming,"The user types a single character. Which snippet prints ""Hello"" only when that character is h (and nothing for other keys)?",3,"int c = getchar();
+if (c == 'h') {
+  printf(""Hello"");
+}","int c = getchar();
+if (c = 'h') {
+  printf(""Hello"");
+}","int c = getchar();
+if (c != 'h') {
+  printf(""Hello"");
+}","int c = getchar();
+if (c == 'H') {
+  printf(""Hello"");
+}"
+6,programming,"What goes in the blank to read one typed character from the keyboard?
+int c = ___();",4,getchar,putchar,printf,main
+6,programming,"The user types ""uudru"" and presses Enter. What is the output?
+#include <stdio.h>
+int main(void) {
+  int c;
+  int score = 0;
+  while ((c = getchar()) != '\n') {
+    switch (c) {
+      case 'u': score += 10; break;
+      case 'd': score -= 5; break;
+      case 'r': score = 0; break;
+    }
+  }
+  printf(""%d"", score);
+  return 0;
+}",2,10,25,0,15
+6,programming,"The user types ""xyq"" and presses Enter. Which snippet prints Quit exactly once?",3,"int c;
+while ((c = getchar()) != 'q') { }
+printf(""Quit"");","int c;
+while ((c = getchar()) != '\n') {
+  printf(""Quit"");
+}","int c = getchar();
+if (c == 'q') {
+  printf(""Quit"");
+}","int c;
+while ((c = getchar()) == 'q') {
+  printf(""Quit"");
+}"
+6,programming,"What goes in the blank so the loop stops when the user types q?
+int c;
+while ((c = getchar()) != ___) {
+  printf(""Event received\n"");
+}",4,'q',"""q""",q,'Q'
+6,programming,"What goes in the blank so the program picks the right response for the key the event carries?
+struct Event {
+  char type;
+  int value;
+};
+int main(void) {
+  struct Event ev;
+  ev.type = getchar();
+  ___ (ev.type) {
+    case 'a': printf(""Add\n""); break;
+    case 'd': printf(""Delete\n""); break;
+    default: printf(""Unknown\n"");
+  }
+  return 0;
+}",4,switch,if,while,case
+6,programming,"The user types abc and presses Enter. What goes in the blank so the program prints ""Last key: c, total: 3""?
+struct Event {
+  char type;
+  int count;
+};
+int main(void) {
+  struct Event ev = {'\0', 0};
+  int c;
+  while ((c = getchar()) != '\n') {
+    ev.___ = c;
+    ev.count++;
+  }
+  printf(""Last key: %c, total: %d"", ev.type, ev.count);
+  return 0;
+}",4,type,char,c,key
+3,programming,"What is the output?
+double :: Int -> Int
+double x = x * 2
+main :: IO ()
+main = print (double 7)",2,14,7,double 7,49
+3,programming,"Which declarative Haskell program computes the sum of list [10, 20, 30] returning 60?
+Expected Output: 60",3,"main :: IO ()
+main = print (sum [10, 20, 30])","main :: IO ()
+main = print (length [10, 20, 30])","main :: IO ()
+main = print (head [10, 20, 30])","main :: IO ()
+main = print [10 + 20 + 30]"
+3,programming,"Complete the declarative function definition in Haskell that adds 1 to its input parameter.
+addOne :: Int -> Int
+addOne x = _______
+main :: IO ()
+main = print (addOne 9)",4,x + 1,x = x + 1,return x + 1,x += 1
+3,programming,"What is the output?
+main :: IO ()
+main = print [x | x <- [1..5], even x]",2,"[2,4]","[1,2,3,4,5]","[1,3,5]",[even]
+3,programming,"Which Haskell snippet uses list comprehension to multiply every element in [1, 2, 3] by 10?
+Expected Output: [10,20,30]",3,"main :: IO ()
+main = print [x * 10 | x <- [1..3]]","main :: IO ()
+main = print [x + 10 | x <- [1..3]]","main :: IO ()
+main = print [10..30]","main :: IO ()
+main = print (map (+10) [1..3])"
+3,programming,"Complete the higher-order function mapping over list [1, 2, 3] to double each value.
+main :: IO ()
+main = print(____ (*2) [1, 2, 3])",4,map,filter,foldl,zip
+3,programming,"What is the output?
+fact :: Int -> Int
+fact 0 = 1;
+fact n = n * fact (n - 1)
+main :: IO ()
+main = print (fact 4)",2,24,4,16,1
+3,programming,"Which declarative Haskell code defines function square and evaluates square 5 to output 25?
+Expected Output: 25",3,"square :: Int -> Int
+square x = x * x
+main :: IO ()
+main = print (square 5)","square :: Int -> Int
+square x = x + x
+main :: IO ()
+main = print (square 5)","main :: IO ()
+main = print (5 * 2)","square x = 25;
+main = print (square 0)"
+3,programming,"Complete the list comprehension expression to select elements greater than 5 from [2, 4, 6, 8].
+main :: IO ()
+main = print [x | x <- [2, 4, 6, 8], ______]",4,x > 5,x < 5,x == 5,x = 5
+3,programming,"What is the output?
+main :: IO ()
+main = print (map (*2) [1,2,3])",2,"[2,4,6]","[1,2,3]","[2,4,6,8]",Error
+3,programming,"Which Haskell snippet gets the first element (head) of list [100, 200, 300] declaratively?
+Expected Output: 100",3,"main :: IO()
+main = print (head [100, 200, 300])","main :: IO()
+main = print (tail [100, 200, 300])","main :: IO()
+main = print (last [100, 200, 300])","main :: IO()
+main = print (reverse [100, 200, 300])"
+3,programming,"What programming concept does this code demonstrate?
+double :: Int -> Int
+double x = x * 2
+triple :: Int -> Int
+triple x = x * 3
+compose :: (Int -> Int) -> (Int -> Int) -> Int -> Int
+compose f g x = f (g x)
+main :: IO ()
+main = print (compose double triple 2)",4,Function composition,Object inheritance,Global mutable state,Event listening
+3,programming,"What is the output?
+square :: Int -> Int
+square x = x * x
+main :: IO ()
+main = print (square 5)",2,25,10,5,Error
+3,programming,Which snippet produces the target output: 8,3,main = print (2^3),main = print (3^2),main = print (2*3),main = print (2+3)
+3,programming,"Which programming concept does this code demonstrate?
+addFive :: Int -> Int
+addFive = (+5)
+main :: IO ()
+main = print (addFive 10)",4,Pure functions,Inheritance,Mutable global state,Polymorphism
+3,programming,"What is the output?
+factorial :: Int -> Int
+factorial 0 = 1
+factorial n = n * factorial (n - 1)
+main :: IO ()
+main = print (factorial 4)",2,24,10,4,16
+3,programming,"Which snippet produces the target output: [1,4,9]",3,"main = print (map (^2) [1,2,3])","main = print (map (*2) [1,2,3])","main = print [1,2,3]","main = print (map (+1) [1,2,3])"
+3,programming,"Which programming concept does this code demonstrate?
+countDown :: Int -> [Int]
+countDown 0 = [0]
+countDown n = n : countDown (n - 1)
+main :: IO ()
+main = print (countDown 3)",4,Recursion,Looping with a mutable counter,Event handling,Class inheritance
+3,programming,"What is the output?
+main :: IO ()
+main = print (filter even [1..10])",2,"[2,4,6,8,10]","[1,3,5,7,9]","[1,2,3,4,5,6,7,8,9,10]",Error
+3,programming,Which snippet produces the target output: 120,3,"fact n = product [1..n]
+main = print (fact 5)","fact n = sum [1..n]
+main = print (fact 5)","fact n = product [1..n]
+main = print (fact 4)",main = print (5*4)
+3,programming,"This function returns another function. Which programming concept does it demonstrate?
+makeAdder :: Int -> (Int -> Int)
+makeAdder n = \x -> x + n
+main :: IO ()
+main = print (makeAdder 3 4)",4,Higher-order functions,Procedural looping,Class instantiation,SQL querying
+3,programming,"What is the output?
+addOne :: Int -> Int
+addOne = (+1)
+main :: IO ()
+main = print (foldr (\x acc -> addOne x + acc) 0 [1,2,3])",2,9,6,10,Error
+3,programming,Which snippet produces the target output: True,3,main = print (even 4),main = print (odd 4),main = print (even 5),main = print (null [1])
+3,programming,"Which programming concept does this code demonstrate?
+xs :: [Int]
+xs = [1,2,3]
+ys :: [Int]
+ys = 0 : xs
+main :: IO ()
+main = print (xs, ys)",4,Immutability,Mutable shared state,Inheritance,Event-driven callbacks
+3,programming,Which snippet produces the target output: HELLO,3,"import Data.Char (toUpper)
+main = putStrLn (map toUpper ""hello"")","import Data.Char (toLower)
+main = putStrLn (map toLower ""HELLO"")","main = putStrLn ""hello""","import Data.Char (toUpper)
+main = putStrLn (map toUpper ""Hello World"")"
+4,programming,"What is the output?
+item <- list(name = ""Notebook"", price = 15)
+class(item) <- ""Product""
+print.Product <- function(obj) {
+  cat(obj$name, ""costs"", obj$price)
+}
+print(item)",2,Notebook costs 15,Product Notebook 15,item costs Product,Notebook 15
+4,programming,"Which R code constructs an S3 class ""Book"" and defines a generic method returning:
+Title: Java",3,"b <- list(title = ""Java"")
+class(b) <- ""Book""
+get_title <- function(obj) UseMethod(""get_title"")
+get_title.Book <- function(obj) cat(""Title:"", obj$title)
+get_title(b)","b <- c(""Title: Java"")
+class(b) <- ""Book""
+print(b)","b <- list(title = ""Java"")
+cat(""Title:"", b)","Book <- function(title) { title }
+Book(""Java"")"
+4,programming,"Fill in the missing R code to assign the S3 class ""Circle"" to object shape.
+shape <- list(radius = 5)
+________ <- ""Circle""
+print.Circle <- function(obj) {
+  cat(""Radius:"", obj$radius)
+}
+print(shape)",4,class(shape),type(shape),attr(shape),S3class(shape)
+4,programming,"What is the output?
+setClass(""Person"", slots = list(name = ""character"", age = ""numeric""))
+p1 <- new(""Person"", name = ""Alice"", age = 20)
+cat(p1@name, p1@age)",2,Alice 20,Person Alice 20,p1 name age,Name: Alice
+4,programming,"Which R script defines an S4 class ""Student"" with slot grade = ""A"" and outputs its value: A",3,"setClass(""Student"", slots = list(grade = ""character""))
+s <- new(""Student"", grade = ""A"")
+cat(s@grade)","setClass(""Student"", slots = list(grade = ""character""))
+s <- new(""Student"", grade = ""A"")
+cat(s$grade)","Student <- list(grade = ""A"")
+cat(Student$grade)","s <- structure(list(grade = ""A""), class = ""Student"")
+cat(s[1])"
+4,programming,"Complete the code to extract slot age from S4 object p.
+setClass(""Person"", slots = list(name = ""character"", age = ""numeric""))
+p <- new(""Person"", name = ""Sam"", age = 30)
+cat(_____)",4,p@age,p$age,"p[[""age""]]",p->age
+4,programming,"What is the output?
+make_car <- function(brand, speed) {
+  structure(list(brand = brand, speed = speed), class = ""Car"")
+}
+accelerate <- function(obj) {
+  obj$speed <- obj$speed + 10
+  return(obj)
+}
+c1 <- make_car(""Toyota"", 50)
+c1 <- accelerate(c1)
+cat(c1$speed)",2,60,50,10,Toyota 60
+4,programming,"Which R snippet creates an S3 constructor ""new_person"" to assign name and age?
+Expected Output: Bob 25",3,"new_person <- function(name, age) {
+  structure(list(name = name, age = age), class = ""Person"")
+}
+p <- new_person(""Bob"", 25)
+cat(p$name, p$age)","new_person <- function(name, age) {
+  c(name, age)
+}
+p <- new_person(""bob"", 25)
+cat(p)","p <- list(name = ""Bob"", age = 25)
+cat(p)","Person <- class(""Bob"", 25)
+cat(Person)"
+4,programming,"Complete the S3 method dispatch generator function ""describe"".
+describe <- function(obj) {
+  _______(""describe"")
+}
+describe.default <- function(obj) {
+  cat(""Default Object"")
+}
+describe(5)",4,UseMethod,DispatchMethod,ClassMethod,InvokeMethod
+5,programming,"What is the output?
+x <- c(1, 2, 3, 4)
+y <- sapply(x, function(n) n^2)
+print(y)",2,[1] 1 4 9 16,[1] 2 4 6 8,[1] 1 2 3 4,Error
+5,programming,Which snippet produces the target output: 15,3,print(sum(1:5)),print(prod(1:5)),print(sum(1:4)),print(length(1:5))
+4,programming,"Fill in the missing parameter name to create an S4 class ""Vehicle"" with slot speed.
+setClass(""Vehicle"", ______ = list(speed = ""numeric""))
+v <- new(""Vehicle"", speed = 80)
+cat(v@speed)",4,slots,fields,attributes,members
+5,programming,"What is the output?
+add <- function(a, b) a + b
+result <- Reduce(add, c(1,2,3,4))
+print(result)",2,10,24,4,Error
+5,programming,Which snippet produces the target output: [1] 4 16 36,3,"x <- c(2,4,6)
+print(x^2)","x <- c(2,4,6)
+print(x*2)","x <- c(1,2,3)
+print(x^2)","x <- c(2,4,6)
+print(x+2)"
+5,programming,"Which programming concept does this code demonstrate?
+square <- function(x) x^2
+result <- sapply(c(1,2,3), square)
+print(result)",4,Higher-order functions,Class inheritance,Global variable mutation,Event listeners
+5,programming,"What is the output?
+nums <- c(1,2,3,4,5)
+evens <- Filter(function(x) x %% 2 == 0, nums)
+print(evens)",2,[1] 2 4,[1] 1 3 5,[1] 1 2 3 4 5,Error
+5,programming,"Which snippet produces the target output: [1] ""A"" ""B"" ""C""",3,"x <- c(""a"",""b"",""c"")
+print(toupper(x))","x <- c(""A"",""B"",""C"")
+print(tolower(x))","x <- c(""a"",""b"",""c"")
+print(x)","x <- c(""a"",""b"",""c"")
+print(rev(x))"
+5,programming,"Which programming concept does this code demonstrate?
+add <- function(a, b) a + b
+print(add(2, 3))
+print(add(2, 3))
+add() always returns the same output for the same inputs and changes nothing outside itself.",4,Pure functions,Polymorphism,Encapsulation,Asynchronous callbacks
+5,programming,"Which programming concept does this code demonstrate?
+total <- Reduce(function(acc, x) acc + x, c(1,2,3,4))
+print(total)",4,Folding/accumulating a list with a combining function,Manual for-loop iteration,Class inheritance,SQL joins
+5,programming,"Which programming concept does this code demonstrate?
+nums <- c(1,2,3)
+newNums <- c(nums, 4)
+print(nums)
+print(newNums)",4,Immutability,Mutable state,Inheritance,Polymorphism
