@@ -1,5 +1,6 @@
 package ui;
 
+import audio.SoundManager;
 import java.awt.AlphaComposite;
 import java.awt.Cursor;
 import java.awt.Dimension;
@@ -52,6 +53,7 @@ public class ImageButton extends JComponent {
 
             @Override
             public void mouseClicked(MouseEvent e) {
+                SoundManager.click();
                 onClick.run();
             }
         });

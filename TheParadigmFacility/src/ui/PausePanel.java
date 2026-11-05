@@ -2,6 +2,7 @@ package ui;
 
 // Pause Popup. Each line is clickable: continue, main menu, settings, exit
 // X in title bar also continue the game.
+import audio.SoundManager;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Cursor;
@@ -64,6 +65,7 @@ public class PausePanel extends PopupWindow {
 
             @Override
             public void mouseClicked(MouseEvent e) {
+                SoundManager.click();
                 onClick.run();
             }
         });

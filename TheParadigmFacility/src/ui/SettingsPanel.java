@@ -1,5 +1,6 @@
 package ui;
 
+import audio.SoundManager;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -82,6 +83,7 @@ public class SettingsPanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 link.setForeground(Theme.ACCENT);
+                SoundManager.click();
                 onClick.run();
             }
         });

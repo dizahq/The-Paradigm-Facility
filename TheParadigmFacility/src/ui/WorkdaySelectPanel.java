@@ -1,5 +1,6 @@
 package ui;
 
+import audio.SoundManager;
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -182,6 +183,7 @@ public class WorkdaySelectPanel extends JPanel {
 
                     @Override
                     public void mouseClicked(MouseEvent e) {
+                        SoundManager.click();
                         onSelect.accept(index);
                     }
                 });

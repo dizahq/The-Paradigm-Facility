@@ -1,5 +1,6 @@
 package ui;
 
+import audio.SoundManager;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Cursor;
@@ -32,6 +33,7 @@ public class ToggleSwitch extends JComponent {
             public void mouseClicked(MouseEvent e) {
                 on = !on;
                 onToggle.accept(on);
+                SoundManager.click();
                 repaint();
             }
         });

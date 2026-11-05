@@ -1,3 +1,6 @@
+import audio.SoundManager;
+import audio.SoundManager.Music;
+import audio.SoundManager.Sfx;
 import core.GameState;
 import core.QuestionBank;
 import core.ScoreManager;
@@ -20,7 +23,6 @@ public class TheParadigmFacility {
     private static QuestionBank questionBank;
     private static GameState game; // the current playthrough, created when the player enters a name
     private static GamePanel gamePanel;
-    private static boolean soundOn = true;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(TheParadigmFacility::start);
@@ -30,6 +32,7 @@ public class TheParadigmFacility {
         scoreManager = new ScoreManager();
         questionBank = new QuestionBank();
         checkQuestionCounts();
+        SoundManager.preload();
 
         frame = new JFrame("The Paradigm Facility");
         frame.getContentPane().setBackground(Color.BLACK);
@@ -60,6 +63,7 @@ public class TheParadigmFacility {
     }
 
     private static void goTo(Screen screen) {
+        playSoundsFor(screen);
         switch (screen) {
             case TITLE ->
                 screens.show(new TitlePanel(() -> goTo(Screen.MAIN_MENU)));
@@ -120,6 +124,20 @@ public class TheParadigmFacility {
                         () -> startWorkday(game.nextDay()), // nextDay()
                         () -> goTo(Screen.MAIN_MENU), // mainMenu()
                         () -> goTo(Screen.WORKDAYS))); // levelSelect()
+            }
+        }
+    }
+
+    /**
+     * Music for the screen (game theme only while playing), plus the end-of-day
+     * jingles.
+     */
+    private static void playSoundsFor(Screen screen) {
+        SoundManager.playMusic(screen == Screen.GAME ? Music.GAME : Music.MAIN);
+        switch (screen) {
+            case FAILED -> SoundManager.play(Sfx.LOSS);
+            case DAY_CLEARED, WIN -> SoundManager.play(Sfx.WIN);
+            default -> {
             }
         }
     }
@@ -190,8 +208,8 @@ public class TheParadigmFacility {
 
     private static void showSettings(boolean fromGame) {
         screens.show(new SettingsPanel(
-                soundOn,
-                on -> soundOn = on,
+                SoundManager.isEnabled(),
+                SoundManager::setEnabled,
                 () -> screens.showOverlay(InfoPanel.help(screens::hideOverlay)),
                 () -> screens.showOverlay(InfoPanel.credits(screens::hideOverlay)),
                 () -> screens.showOverlay(InfoPanel.about(screens::hideOverlay)),
@@ -208,9 +226,11 @@ public class TheParadigmFacility {
 
     /** The game screen has already paused its timer when this is called. */
     private static void showPause() {
+        SoundManager.pauseMusic();
         screens.showOverlay(new PausePanel(
                 () -> { // continue
                     screens.hideOverlay();
+                    SoundManager.resumeMusic();
                     gamePanel.resume();
                 },
                 () -> { // main menu: leaving ends the playthrough

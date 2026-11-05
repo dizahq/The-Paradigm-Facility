@@ -1,5 +1,6 @@
 package ui;
 
+import audio.SoundManager;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Component;
@@ -96,6 +97,7 @@ public class TitlePanel extends JPanel {
 
                 @Override
                 public void mouseClicked(MouseEvent e) {
+                    SoundManager.click();
                     onClick.run();
                 }
             });
