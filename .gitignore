@@ -7,3 +7,4 @@ replay_pid*.log
 .iml
 .idea
 /out
+scoreboard.csv

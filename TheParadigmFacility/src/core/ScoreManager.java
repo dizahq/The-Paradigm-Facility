@@ -49,14 +49,15 @@ public class ScoreManager {
         }
     }
 
-    public void recordPlayer(String name) {
+    public void recordPlayer(String name, int score) {
         if (name == null || name.trim().isEmpty()) {
             return;
         }
 
         String cleanName = name.trim();
-        if (!scores.containsKey(cleanName)) {
-            scores.put(cleanName, 0);
+        Integer saved = scores.get(cleanName);
+        if (saved == null || score > saved) {
+            scores.put(cleanName, score);
             saveScores();
         }
     }

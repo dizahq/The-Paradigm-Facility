@@ -73,7 +73,6 @@ public class TheParadigmFacility {
                         () -> screens.showOverlay(new NamePanel(
                                 name -> {
                                     screens.hideOverlay();
-                                    scoreManager.recordPlayer(name);
                                     game = new GameState(name, questionBank); // a new playthrough
                                     goTo(Screen.WORKDAYS);
                                 },
@@ -179,7 +178,7 @@ public class TheParadigmFacility {
      */
     private static void endOfDay() {
         gamePanel.dispose();
-
+        scoreManager.recordPlayer(game.playerName(), game.score());
         // TEMPORARY until the Day Cleared, Game Over and Victory screens exist
         if (game.isGameOver()) {
             goTo(Screen.FAILED);
