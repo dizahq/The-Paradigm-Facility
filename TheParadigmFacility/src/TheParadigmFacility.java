@@ -56,7 +56,7 @@ public class TheParadigmFacility {
     }
 
     private enum Screen {
-        TITLE, MAIN_MENU, OPTIONS, GAME, WORKDAYS, LEADERBOARD, FAILED, WIN
+        TITLE, MAIN_MENU, OPTIONS, GAME, WORKDAYS, LEADERBOARD, FAILED, WIN, DAY_CLEARED
     }
 
     private static void goTo(Screen screen) {
@@ -107,6 +107,20 @@ public class TheParadigmFacility {
                         () -> goTo(Screen.MAIN_MENU),
                         TheParadigmFacility::quit,
                         () -> goTo(Screen.WORKDAYS)));
+
+            case DAY_CLEARED -> {
+                int day = game.day().number();
+                int total = questionBank.getQuestions(day).size();
+                int correct = game.correctIn(day);
+                int percent = total == 0 ? 0 : correct * 100 / total;
+                int overall = game.clearedDays() * 100 / Workday.ALL.size();
+
+                screens.show(new DayClearedPanel(
+                        day, percent, game.score(), correct, total, overall,
+                        () -> startWorkday(game.nextDay()), // nextDay()
+                        () -> goTo(Screen.MAIN_MENU), // mainMenu()
+                        () -> goTo(Screen.WORKDAYS))); // levelSelect()
+            }
         }
     }
 
@@ -154,7 +168,7 @@ public class TheParadigmFacility {
         } else if (game.isVictory()) {
             goTo(Screen.WIN);
         } else {
-            goTo(Screen.WORKDAYS);
+            goTo(Screen.DAY_CLEARED);
         }
     }
 
