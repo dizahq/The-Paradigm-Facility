@@ -1,5 +1,6 @@
 package ui;
 
+import audio.SoundManager;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Cursor;
@@ -113,6 +114,7 @@ public abstract class PopupWindow extends JPanel {
 
                 @Override
                 public void mouseClicked(MouseEvent e) {
+                    SoundManager.click();
                     onClick.run();
                 }
             });

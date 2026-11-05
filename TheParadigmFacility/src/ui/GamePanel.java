@@ -1,5 +1,6 @@
 package ui;
 
+import audio.SoundManager;
 import core.Answer;
 import core.GameState;
 import core.Question;
@@ -195,7 +196,7 @@ public class GamePanel extends JPanel {
             return;
         }
         countdown.stop();
-        game.submitAnswer(clicked.answer());
+        playResultSound(game.submitAnswer(clicked.answer()));
         showResult(clicked);
     }
 
@@ -203,8 +204,16 @@ public class GamePanel extends JPanel {
         if (phase != Phase.ASKING) {
             return;
         }
-        game.timeOut();
+        playResultSound(game.timeOut());
         showResult(null);
+    }
+
+    private void playResultSound(GameState.Result result) {
+        SoundManager.play(switch (result) {
+            case CORRECT -> SoundManager.Sfx.CORRECT;
+            case STREAK_REWARD -> SoundManager.Sfx.STREAK;
+            case WRONG, TIMEOUT -> SoundManager.Sfx.WRONG;
+        });
     }
 
     /**
