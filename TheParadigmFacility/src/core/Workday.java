@@ -41,7 +41,5 @@ public record Workday(int number, String title, String subtitle, int questionTot
     }
 
     /** Seconds per question: 30 on day 1, minus 3 each day (30, 27, 24 ... 12). */
-    public int timeLimit() {
-        return 30 - 3 * (number - 1);
-    }
+    public int timeLimit() { return 30 - 3 * (number - 1); }
 }
