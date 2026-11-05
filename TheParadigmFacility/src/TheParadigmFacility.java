@@ -1,4 +1,7 @@
+import core.GameState;
+import core.QuestionBank;
 import core.ScoreManager;
+import core.Workday;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
@@ -27,7 +30,9 @@ public class TheParadigmFacility {
     private static JFrame frame;
     private static ScreenManager screens;
     private static ScoreManager scoreManager;
-    private static String playerName;
+    private static QuestionBank questionBank;
+    private static GameState game;
+    private static GamePanel gamePanel;
     private static boolean soundOn = true;
     private static JComponent gameScreen;
 
@@ -37,6 +42,8 @@ public class TheParadigmFacility {
 
     private static void start() {
         scoreManager = new ScoreManager();
+        questionBank = new QuestionBank();
+        checkQuestionCounts();
 
         frame = new JFrame("The Paradigm Facility");
         frame.getContentPane().setBackground(Color.BLACK);
@@ -74,8 +81,8 @@ public class TheParadigmFacility {
                         () -> screens.showOverlay(new NamePanel(
                                 name -> {
                                     screens.hideOverlay();
-                                    playerName = name;
-                                    scoreManager.recordPlayer(name); // <-- this is the key fix
+                                    scoreManager.recordPlayer(name);
+                                    game = new GameState(name, questionBank); // a new playthrough
                                     goTo(Screen.WORKDAYS);
                                 },
                                 screens::hideOverlay)),
@@ -86,15 +93,20 @@ public class TheParadigmFacility {
             case OPTIONS -> showSettings(false);
 
             case GAME -> {
+<<<<<<< HEAD
                 gameScreen = new JPanel(); // Temporary stand-in until GamePanel exists
                 screens.show(gameScreen);
                 showPause();
+=======
+                gamePanel = new GamePanel(game, TheParadigmFacility::showPause, TheParadigmFacility::endOfDay);
+                screens.show(gamePanel);
+>>>>>>> b2dcba9edb52465a74fbcae6e64fecf9d962717e
             }
 
             case WORKDAYS ->
                 screens.show(new WorkdaySelectPanel(
                         workdayItems(),
-                        day -> goTo(Screen.GAME), // day is 0 to 6; GamePanel will use it later
+                        index -> startWorkday(index + 1), // index is 0 to 6
                         () -> goTo(Screen.MAIN_MENU),
                         () -> goTo(Screen.LEADERBOARD)));
 
@@ -111,6 +123,66 @@ public class TheParadigmFacility {
         }
     }
 
+    /** Workdays and the game **/
+    private static List<WorkdaySelectPanel.Item> workdayItems() {
+        List<WorkdaySelectPanel.Item> items = new ArrayList<>();
+        for (Workday day : Workday.ALL) {
+            int number = day.number();
+            boolean cleared = number <= game.clearedDays();
+            items.add(new WorkdaySelectPanel.Item(
+                    day.title(),
+                    day.subtitle(),
+                    game.correctIn(number),
+                    questionBank.getQuestions(number).size(),
+                    cleared || number == game.nextDay())); // green cards; only nextDay() can be started
+        }
+        return items;
+    }
+
+    private static void startWorkday(int number) {
+        if (number != game.nextDay()) {
+            return; // a cleared workday cannot be replayed, a later one is still locked
+        }
+        try {
+            game.startDay(number);
+        } catch (IllegalStateException e) {
+            System.err.println(e.getMessage());
+            return;
+        }
+        goTo(Screen.GAME);
+    }
+
+    // The last answer of the workday was shown; the day is cleared or the game is
+    // over.
+    private static void endOfDay() {
+        gamePanel.dispose();
+
+        // TEMPORARY until the Day Cleared, Game Over and Victory screens exist
+        if (game.isGameOver()) {
+            System.out.println("GAME OVER. Score: " + game.score());
+            goTo(Screen.MAIN_MENU);
+        } else if (game.isVictory()) {
+            System.out.println("VICTORY. Score: " + game.score());
+            goTo(Screen.MAIN_MENU);
+        } else {
+            goTo(Screen.WORKDAYS);
+        }
+    }
+
+    // Warns abt workdays whose question count in Questions.csv is not the planned
+    // one
+    private static void checkQuestionCounts() {
+        for (Workday day : Workday.ALL) {
+            int found = questionBank.getQuestions(day.number()).size();
+            if (found != day.questionTotal()) {
+                System.err.println("Workday " + day.number() + " should have " + day.questionTotal()
+                        + " qustions but Question.csv has " + found);
+            }
+        }
+    }
+
+    /** Settigs and pause **/
+
     private static void showSettings(boolean fromGame) {
         screens.show(new SettingsPanel(
                 soundOn,
@@ -120,7 +192,7 @@ public class TheParadigmFacility {
                 () -> screens.showOverlay(InfoPanel.about(screens::hideOverlay)),
                 () -> {
                     if (fromGame) {
-                        screens.show(gameScreen);
+                        screens.show(gamePanel); // back to the same game, still paused
                         showPause();
                     } else {
                         goTo(Screen.MAIN_MENU);
@@ -129,48 +201,23 @@ public class TheParadigmFacility {
                 fromGame));
     }
 
+    // The game screen has alr paused its timer when this is called
     private static void showPause() {
         screens.showOverlay(new PausePanel(
-                // Temporary: continue goes to the main menu until GamePanel exists
-                // screens::hideOverlay, // for continue if gamePanel exists
-                () -> {
+                () -> { // continue
                     screens.hideOverlay();
+                    gamePanel.resume();
+                },
+                () -> { // main menu: leaving ends the playthrough
+                    screens.hideOverlay();
+                    gamePanel.dispose();
                     goTo(Screen.MAIN_MENU);
                 },
-                () -> {
-                    screens.hideOverlay();
-                    goTo(Screen.MAIN_MENU);
-                }, // main menu
-                () -> {
+                () -> { // settings
                     screens.hideOverlay();
                     showSettings(true);
-                }, // settings
+                },
                 TheParadigmFacility::quit)); // exit
-    }
-
-    // TEMPORARY: will transfer to Workday later
-    private static List<WorkdaySelectPanel.Item> workdayItems() {
-        String[] titles = {
-                "Introduction to Programming Paradigm",
-                "Procedural Programming",
-                "Functional Programming",
-                "Object-Oriented Programming",
-                "Imperative vs Declarative Programming",
-                "Event-Driven Programming",
-                "Component Mappings Between Programming Paradigms" };
-        String[] subtitles = {
-                "What a \u201cparadigm\u201d even is",
-                "Step-by-step, top to bottom",
-                "Pure functions, no side effects",
-                "Classes, objects, inheritance, etc.",
-                "", "", "" };
-        int[] totals = { 15, 34, 39, 34, 49, 29, 15 };
-
-        List<WorkdaySelectPanel.Item> items = new ArrayList<>();
-        for (int i = 0; i < titles.length; i++) {
-            items.add(new WorkdaySelectPanel.Item(titles[i], subtitles[i], 0, totals[i], i == 0));
-        }
-        return items;
     }
 
     private static void quit() {

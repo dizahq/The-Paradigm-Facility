@@ -71,8 +71,8 @@ public class ScoreManager {
         }
     }
 
-    public int getScore(String name) {
-        return scores.getOrDefault(name, 0);
+    public int getScore(String name, int score) {
+        return scores.getOrDefault(name, score);
     }
 
     public void setScore(String name, int score) {
