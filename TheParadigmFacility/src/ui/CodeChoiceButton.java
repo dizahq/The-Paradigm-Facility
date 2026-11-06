@@ -1,11 +1,10 @@
 package ui;
 
 import core.Answer;
-
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.FontMetrics;
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -17,8 +16,10 @@ import javax.swing.JComponent;
 
 /**
  * An answer button that can show code: monospaced, line breaks kept, any size.
- * ChoiceButton keeps handling plain-text answers. Same flow: show(), mark(), lock().
- * The colors below are a guess at the ChoiceButton look. Match them if they differ.
+ * ChoiceButton keeps handling plain-text answers. Same flow: show(), mark(),
+ * lock().
+ * The colors below are a guess at the ChoiceButton look. Match them if they
+ * differ.
  */
 public final class CodeChoiceButton extends JComponent {
 
@@ -74,7 +75,8 @@ public final class CodeChoiceButton extends JComponent {
         return answer;
     }
 
-    /** Shows a new answer. The font size is set afterwards with bestSize() / setFontSize(). */
+    // Shows a new answer. The font size is set afterwards with bestSize() /
+    // setFontSize().
     public void show(Answer answer, String text, boolean mono, boolean wrap) {
         this.answer = answer;
         this.text = text;
@@ -93,7 +95,7 @@ public final class CodeChoiceButton extends JComponent {
         repaint();
     }
 
-    /** No more clicks (the result is on screen). */
+    // No more clicks (the result is on screen).
     public void lock() {
         locked = true;
         hovered = false;
@@ -101,7 +103,7 @@ public final class CodeChoiceButton extends JComponent {
         repaint();
     }
 
-    /** The biggest size in [min, max] at which the answer fits the current bounds. */
+    // The biggest size in [min, max] at which the answer fits the current bounds.
     public int bestSize(int max, int min) {
         for (int size = max; size > min; size--) {
             CodeBlock candidate = build(size);

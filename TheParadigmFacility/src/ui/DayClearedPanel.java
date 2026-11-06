@@ -9,14 +9,12 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
-
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import util.Assets;
 
 /**
@@ -50,14 +48,12 @@ public class DayClearedPanel extends JPanel {
     private static final int GAP_BUTTONS = 10; // card -> buttons
     private static final int BUTTON_SPACING = 24;
 
-    /**
-     * @param day     day number in the title
-     * @param percent 0-100, big bar on the right
-     * @param points  score under the bar
-     * @param correct correct answers (shown as correct/total)
-     * @param total   total questions
-     * @param overall 0-100, small bar under the monster (shown as overall/100)
-     */
+    // day day number in the title
+    // percent 0-100, big bar on the right
+    // points score under the bar
+    // correct correct answers (shown as correct/total)
+    // total total questions
+    // overall 0-100, small bar under the monster (shown as overall/100)
     public DayClearedPanel(int day, int percent, int points, int correct, int total, int overall,
             Runnable onNextDay, Runnable onMainMenu, Runnable onLevelSelect) {
         setOpaque(false);
@@ -86,7 +82,7 @@ public class DayClearedPanel extends JPanel {
         super.paintComponent(g);
     }
 
-    // ---------- card ----------
+    // Card
 
     private JPanel buildCard(int day, int percent, int points, int correct, int total, int overall) {
         JPanel card = new JPanel(new BorderLayout());
@@ -147,7 +143,7 @@ public class DayClearedPanel extends JPanel {
         return p;
     }
 
-    // ---------- buttons ----------
+    // Buttons
 
     private JPanel buildButtons(Runnable onNextDay, Runnable onMainMenu, Runnable onLevelSelect) {
         JPanel row = new JPanel(new FlowLayout(FlowLayout.CENTER, BUTTON_SPACING, 0));
@@ -159,7 +155,7 @@ public class DayClearedPanel extends JPanel {
         return row;
     }
 
-    // ---------- helpers ----------
+    // Helpers
 
     private JLabel text(String s, Font font, Color color) {
         JLabel label = new JLabel(s);
@@ -179,7 +175,7 @@ public class DayClearedPanel extends JPanel {
         return label;
     }
 
-    /** A panel with a semi-transparent fill, so the video shows faintly through. */
+    // A panel with a semi-transparent fill, so the video shows faintly through.
     private JPanel filled(Color color) {
         return new JPanel() {
             {
@@ -195,7 +191,7 @@ public class DayClearedPanel extends JPanel {
         };
     }
 
-    /** Flat bar: gold filled part over a green track. */
+    // Flat bar: gold filled part over a green track.
     private static class Bar extends JComponent {
         private final double fraction;
 

@@ -26,7 +26,7 @@ public class ScreenManager extends JLayeredPane {
         refresh();
     }
 
-    /** Show a panel above the current screen without removing it. */
+    // Show a panel above the current screen without removing it.
     public void showOverlay(JComponent panel) {
         if (overlay != null) {
             remove(overlay);
@@ -57,7 +57,7 @@ public class ScreenManager extends JLayeredPane {
         refresh();
     }
 
-    /** Remove whatever overlay is showing, revealing the screen underneath. */
+    // Remove whatever overlay is showing, revealing the screen underneath.
     public void hideOverlay() {
         if (overlay != null) {
             remove(overlay);

@@ -6,17 +6,15 @@ import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
-
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import util.Assets;
 
-/** "CONGRATULATIONS" screen made entirely from pictures. */
+// "CONGRATULATIONS" screen made entirely from pictures. 
 public class WinPanel extends JPanel {
 
     // Paths are inside TheParadigmFacility/assets/ (Assets adds the rest)
@@ -72,10 +70,8 @@ public class WinPanel extends JPanel {
         return row;
     }
 
-    /**
-     * Loads a picture (cached by Assets), scaled to the given width, as a centered
-     * label.
-     */
+    // Loads a picture (cached by Assets), scaled to the given width, as a centered
+    // label.
     private JComponent picture(String path, int width) {
         JLabel label = new JLabel();
         label.setAlignmentX(Component.CENTER_ALIGNMENT);

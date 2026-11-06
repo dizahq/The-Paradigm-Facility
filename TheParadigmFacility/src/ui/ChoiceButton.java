@@ -65,7 +65,7 @@ final class ChoiceButton extends JComponent {
         });
     }
 
-    /** Shows a new answer: normal look, clickable. */
+    // Shows a new answer: normal look, clickable.
     void show(Answer newAnswer) {
         answer = newAnswer;
         state = State.NORMAL;
@@ -76,18 +76,18 @@ final class ChoiceButton extends JComponent {
         repaint();
     }
 
-    /** The answer this button shows. */
+    // The answer this button shows.
     Answer answer() {
         return answer;
     }
 
-    /** Turns the button green (correct) or red (wrong). */
+    // Turns the button green (correct) or red (wrong).
     void mark(State newState) {
         state = newState;
         repaint();
     }
 
-    /** The button stops reacting to the mouse. */
+    // The button stops reacting to the mouse.
     void lock() {
         setEnabled(false);
         setCursor(Cursor.getDefaultCursor());

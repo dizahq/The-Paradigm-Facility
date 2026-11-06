@@ -8,20 +8,16 @@ import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Wraps text into lines and shrinks the font until the text fits a box. */
+// Wraps text into lines and shrinks the font until the text fits a box. 
 final class TextFit {
 
-    /**
-     * The font that fits, the wrapped lines, and the distance between two
-     * baselines.
-     */
     record Fit(Font font, List<String> lines, int pitch) {
     }
 
     private TextFit() {
     }
 
-    /**
+    /*
      * Finds the biggest font size (from maxSize down to minSize) at which the text,
      * wrapped to
      * boxWidth, fits boxHeight. If even minSize does not fit, minSize is used.
@@ -41,7 +37,7 @@ final class TextFit {
         return fit;
     }
 
-    /**
+    /*
      * Draws the fitted text inside the box at (x, y, width, height).
      * centered: centered both ways. Otherwise left aligned at the top of the box.
      */
@@ -63,7 +59,7 @@ final class TextFit {
         return (fit.lines().size() - 1) * fit.pitch() + fm.getAscent() + fm.getDescent();
     }
 
-    /** Splits text into lines no wider than maxWidth. Line breaks (\n) are kept. */
+    // Splits text into lines no wider than maxWidth. Line breaks (\n) are kept.
     private static List<String> wrap(String text, FontMetrics fm, int maxWidth) {
         List<String> lines = new ArrayList<>();
         for (String paragraph : text.split("\n", -1)) {

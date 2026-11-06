@@ -12,10 +12,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import util.Assets;
 
-/** "FAILED" screen made entirely from pictures. */
+// "FAILED" screen made entirely from pictures. 
 public class FailedPanel extends JPanel {
 
     // Paths are inside TheParadigmFacility/assets/ (Assets adds the rest)
@@ -71,10 +70,8 @@ public class FailedPanel extends JPanel {
         return row;
     }
 
-    /**
-     * Loads a picture (cached by Assets), scaled to the given width, as a centered
-     * label.
-     */
+    // Loads a picture (cached by Assets), scaled to the given width, as a centered
+    // label.
     private JComponent picture(String path, int width) {
         JLabel label = new JLabel();
         label.setAlignmentX(Component.CENTER_ALIGNMENT);

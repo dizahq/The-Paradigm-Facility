@@ -23,10 +23,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import util.Assets;
 
-/** Title screen: PNG title and a play button. Pure AWT/Swing. */
+// Title screen: PNG title and a play button. Pure AWT/Swing. 
 public class TitlePanel extends JPanel {
 
-    private static final String TITLE_PATH = "interface/title.png"; // <- your PNG path
+    private static final String TITLE_PATH = "interface/title.png"; // <- PNG path
     private static final int TITLE_WIDTH = 1100; // <- title size
     private static final int TOP_OFFSET = 170; // space above the title; smaller = title higher
 
@@ -74,7 +74,7 @@ public class TitlePanel extends JPanel {
         return fallback;
     }
 
-    /** Circular play button drawn with Graphics2D, with a hover color. */
+    // Circular play button drawn with Graphics2D, with a hover color.
     private static class PlayButton extends JComponent {
         private boolean hover;
 

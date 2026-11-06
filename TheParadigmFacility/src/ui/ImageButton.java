@@ -13,10 +13,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.JComponent;
 import util.Assets;
 
-/**
- * A button drawn from a picture. Dim normally, bright and slightly larger on
- * hover.
- */
+// A button drawn from a picture. Dim normally, bright and slightly larger on hover.
 public class ImageButton extends JComponent {
 
     private BufferedImage image;

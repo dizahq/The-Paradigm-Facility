@@ -14,7 +14,8 @@ import java.util.regex.Matcher;
  * Lines of text measured and drawn with one font, line by line (code is never
  * re-flowed).
  * A run of underscores is drawn as a blank box. Its width is fixed per question
- * (wide enough for the correct answer), so nothing jumps when the answer is revealed.
+ * (wide enough for the correct answer), so nothing jumps when the answer is
+ * revealed.
  */
 public final class CodeBlock {
 
@@ -45,9 +46,10 @@ public final class CodeBlock {
         this.width = widest;
     }
 
-    /** The biggest font size (from maxSize down to minSize) at which the lines fit in w x h. */
+    // The biggest font size (from maxSize down to minSize) at which the lines fit
+    // in w x h.
     public static CodeBlock fit(Component owner, IntFunction<Font> fontOf, List<String> lines, String blankFill,
-                                int maxSize, int minSize, int w, int h) {
+            int maxSize, int minSize, int w, int h) {
         CodeBlock block = null;
         for (int size = maxSize; size >= minSize; size--) {
             Font font = fontOf.apply(size);
@@ -71,7 +73,7 @@ public final class CodeBlock {
         return lines.size();
     }
 
-    /** fill: text shown inside the blank (null while it is still empty). */
+    // Fill: text shown inside the blank (null while it is still empty).
     public void paint(Graphics2D g, int x, int y, Color color, String fill, Color fillColor) {
         g.setFont(font);
         int firstBaseline = y + (lineHeight - fm.getHeight()) / 2 + fm.getAscent();
@@ -80,7 +82,8 @@ public final class CodeBlock {
         }
     }
 
-    /** Draws one line (or only measures it when g is null) and returns its right edge. */
+    // Draws one line (or only measures it when g is null) and returns its right
+    // edge.
     private int drawLine(Graphics2D g, String line, int startX, int baseline, Color color, String fill,
             Color fillColor) {
         Matcher blank = QuestionContent.BLANK.matcher(line);
@@ -119,7 +122,7 @@ public final class CodeBlock {
         }
     }
 
-    /** Word-wraps text to the given pixel width. Words wider than the width are cut. */
+    // Word-wraps text to the given pixel width. Words wider than the width are cut.
     static List<String> wrap(String text, FontMetrics fm, int width) {
         List<String> out = new ArrayList<>();
         for (String paragraph : text.split("\n", -1)) {
