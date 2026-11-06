@@ -8,3 +8,5 @@ replay_pid*.log
 .idea
 /out
 scoreboard.csv
+build/
+dist/
