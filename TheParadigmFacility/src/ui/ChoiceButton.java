@@ -5,6 +5,7 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -28,6 +29,7 @@ final class ChoiceButton extends JComponent {
 
     private static final int PADDING_X = 22;
     private static final int PADDING_Y = 8;
+    private static final int LABEL_W = 44; 
 
     private static final Color BG = new Color(0x08281B);
     private static final Color HOVER_BG = new Color(0x103A29);
@@ -35,12 +37,14 @@ final class ChoiceButton extends JComponent {
     private static final Color WRONG_BG = new Color(0x9E2020);
     private static final Color EDGE = new Color(0xDDE3DD);
 
+    private final String letter;
     private Answer answer;
     private State state = State.NORMAL;
     private boolean hover;
     private TextFit.Fit fit;
 
-    ChoiceButton(Consumer<ChoiceButton> onChoose) {
+    ChoiceButton(String letter, Consumer<ChoiceButton> onChoose) {
+        this.letter = letter;
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
 
         addMouseListener(new MouseAdapter() {
@@ -70,7 +74,7 @@ final class ChoiceButton extends JComponent {
         answer = newAnswer;
         state = State.NORMAL;
         fit = TextFit.fit(this, newAnswer.getAnswer(), false, 28, 14, 1.3,
-                WIDTH - 2 * PADDING_X, HEIGHT - 2 * PADDING_Y);
+                WIDTH - 2 * PADDING_X - LABEL_W, HEIGHT - 2 * PADDING_Y);
         setEnabled(true);
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         repaint();
@@ -112,9 +116,14 @@ final class ChoiceButton extends JComponent {
         g2.setStroke(new BasicStroke(1.5f));
         g2.drawRoundRect(1, 1, getWidth() - 3, getHeight() - 3, 12, 12);
 
+        g2.setFont(Theme.bold(30));
+        g2.setColor(Theme.ACCENT);
+        FontMetrics lm = g2.getFontMetrics();
+        g2.drawString(letter + ".", PADDING_X, (getHeight() - lm.getHeight()) / 2 + lm.getAscent());
+        
         if (fit != null) {
-            TextFit.draw(g2, fit, Color.WHITE, PADDING_X, PADDING_Y,
-                    getWidth() - 2 * PADDING_X, getHeight() - 2 * PADDING_Y, true);
+            TextFit.draw(g2, fit, Color.WHITE, PADDING_X + LABEL_W, PADDING_Y,
+                    getWidth() - 2 * PADDING_X - LABEL_W, getHeight() - 2 * PADDING_Y, true);
         }
         g2.dispose();
     }
