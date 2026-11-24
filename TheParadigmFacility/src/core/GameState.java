@@ -162,7 +162,7 @@ public class GameState {
     }
 
     public boolean isVictory() {
-        return isDayCleared() && day.number() == Workday.ALL.size();
+        return isDayCleared() && day.number() == 2;
     }
 
     public String playerName() {
