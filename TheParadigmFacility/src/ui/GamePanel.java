@@ -251,6 +251,7 @@ public class GamePanel extends JPanel {
         List<String> texts = answers.stream().map(GamePanel::textOf).toList();
 
         content = QuestionContent.of(question.getQuestion(), texts);
+        layoutAnswers();
         revealed = false;
         correctText = answers.stream().filter(Answer::isCorrect).map(a -> QuestionContent.normalize(textOf(a)))
                 .findFirst().orElse(null);
@@ -279,7 +280,6 @@ public class GamePanel extends JPanel {
 
     private void showCodeQuestion(List<Answer> answers, List<String> texts) {
         boolean codeInQuestion = content.kind() == Kind.CODE_QUESTION;
-        layoutAnswers(); // the boxes need their final size before the text is laid out
 
         promptText.set(this, content.prompt(), true, PROMPT_FONT, 1.4, promptBox.width, promptBox.height);
         for (int i = 0; i < codeChoices.length; i++) {

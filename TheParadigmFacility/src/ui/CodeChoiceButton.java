@@ -162,35 +162,9 @@ public final class CodeChoiceButton extends JComponent {
         g2.drawString(letter + ".", PAD_X, (getHeight() - lm.getHeight()) / 2 + lm.getAscent());
         
         if (block != null) {
-<<<<<<< HEAD
-            int viewW = availW();
-            int viewH = availH();
-            boolean scrollV = block.height() > viewH;
-            boolean scrollH = block.width() > viewW;
-
-            // scrolled or long: start at the top. Short and fitting: one or two lines sit in the middle
-            int y = scrollV ? PAD_Y - offsetY
-                    : block.lineCount() > 2 ? PAD_Y : (getHeight() - block.height()) / 2;
-            int x = PAD_X - offsetX;
-
-            var oldClip = g2.getClip();
-            g2.clipRect(PAD_X, PAD_Y, viewW, viewH);
-            block.paint(g2, x, y, mono ? CodeBlock.TEXT : Color.WHITE, null, null);
-            g2.setClip(oldClip);
-
-            if (scrollV) {
-                TextScroll.drawBar(g2, true, getWidth() - BAR_INSET, PAD_Y, viewH,
-                        block.height(), viewH, offsetY);
-            }
-            if (scrollH) {
-                TextScroll.drawBar(g2, false, PAD_X, getHeight() - BAR_INSET, viewW,
-                        block.width(), viewW, offsetX);
-            }
-=======
             // code with several lines starts at the top, one or two lines sit in the middle
             int y = block.lineCount() > 2 ? PAD_Y : (getHeight() - block.height()) / 2;
             block.paint(g2, PAD_X + LABEL_W, y, mono ? CodeBlock.TEXT : Color.WHITE, null, null);
->>>>>>> 29866d0b6547c4036568e70bc9b8d099657362d0
         }
         g2.dispose();
     }
