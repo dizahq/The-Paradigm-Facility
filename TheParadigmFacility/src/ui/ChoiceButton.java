@@ -29,7 +29,7 @@ final class ChoiceButton extends JComponent {
 
     private static final int PADDING_X = 22;
     private static final int PADDING_Y = 8;
-    private static final int ANSWER_FONT = 22;
+    private static final int ANSWER_FONT = Theme.CONTENT_SIZE;
     private static final int LABEL_W = 44;
 
     private static final Color BG = new Color(0x08281B);

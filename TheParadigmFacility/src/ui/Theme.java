@@ -6,6 +6,9 @@ import java.awt.Color;
 import java.awt.Font;
 
 public final class Theme {
+    /** Standard readable size for question answers and code content. */
+    public static final int CONTENT_SIZE = 22;
+
     // Backgrounds
     public static final Color BACKDROP = new Color(0, 0, 0, 160); // dim layer behind popups
     public static final Color TITLEBAR = new Color(0x4A4A4A);
