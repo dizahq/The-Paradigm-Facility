@@ -164,9 +164,9 @@ public class GamePanel extends JPanel {
         pauseButton = new ImageButton(PAUSE_BTN, PAUSE_SIZE, this::pauseClicked);
         add(pauseButton);
         for (int i = 0; i < choices.length; i++) {
-            choices[i] = new ChoiceButton(clicked -> onAnswerPicked(clicked.answer()));
+            choices[i] = new ChoiceButton(String.valueOf((char) ('a' + i)), clicked -> onAnswerPicked(clicked.answer()));
             add(choices[i]);
-            codeChoices[i] = new CodeChoiceButton(clicked -> onAnswerPicked(clicked.answer()));
+            codeChoices[i] = new CodeChoiceButton(String.valueOf((char) ('a' + i)), clicked -> onAnswerPicked(clicked.answer()));
             add(codeChoices[i]);
         }
 

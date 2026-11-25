@@ -32,12 +32,14 @@ public final class CodeChoiceButton extends JComponent {
     private static final Color LINE = new Color(135, 143, 140);
     private static final int PAD_X = 14;
     private static final int PAD_Y = 10;
+    private static final int LABEL_W = 34;
     private static final int ARC = 18;
     private static final int BAR_INSET = 9; // scrollbars sit inside the padding
 
     private static final int SIZE_STACKED = 20; // short answers beside the code (wrap = true)
     private static final int SIZE_GRID = 18; // code boxes in the 2x2 grid
 
+    private final String letter;
     private final Consumer<CodeChoiceButton> onClick;
 
     private Answer answer;
@@ -51,7 +53,8 @@ public final class CodeChoiceButton extends JComponent {
     private int offsetX;
     private int offsetY;
 
-    public CodeChoiceButton(Consumer<CodeChoiceButton> onClick) {
+    public CodeChoiceButton(String letter, Consumer<CodeChoiceButton> onClick) {
+        this.letter = letter;
         this.onClick = onClick;
         setOpaque(false);
         setFocusable(false);
@@ -126,7 +129,7 @@ public final class CodeChoiceButton extends JComponent {
     }
 
     private int availW() {
-        return getWidth() - 2 * PAD_X;
+        return getWidth() - 2 * PAD_X - LABEL_W;
     }
 
     private int availH() {
@@ -153,7 +156,13 @@ public final class CodeChoiceButton extends JComponent {
         g2.setColor(state == State.NORMAL ? LINE : Color.WHITE);
         g2.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, ARC, ARC);
 
+        g2.setFont(Theme.bold(22));
+        g2.setColor(Theme.ACCENT);
+        FontMetrics lm = g2.getFontMetrics();
+        g2.drawString(letter + ".", PAD_X, (getHeight() - lm.getHeight()) / 2 + lm.getAscent());
+        
         if (block != null) {
+<<<<<<< HEAD
             int viewW = availW();
             int viewH = availH();
             boolean scrollV = block.height() > viewH;
@@ -177,6 +186,11 @@ public final class CodeChoiceButton extends JComponent {
                 TextScroll.drawBar(g2, false, PAD_X, getHeight() - BAR_INSET, viewW,
                         block.width(), viewW, offsetX);
             }
+=======
+            // code with several lines starts at the top, one or two lines sit in the middle
+            int y = block.lineCount() > 2 ? PAD_Y : (getHeight() - block.height()) / 2;
+            block.paint(g2, PAD_X + LABEL_W, y, mono ? CodeBlock.TEXT : Color.WHITE, null, null);
+>>>>>>> 29866d0b6547c4036568e70bc9b8d099657362d0
         }
         g2.dispose();
     }
