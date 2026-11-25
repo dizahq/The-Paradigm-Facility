@@ -101,8 +101,8 @@ public class GamePanel extends JPanel {
     private static final int CODE_GRID_GAP = 16;
 
     // The code panel still shrinks its code to fit (never below the minimum)
-    private static final int CODE_MAX = 22;
-    private static final int CODE_MIN = 11;
+    private static final int CODE_MAX = CodeFont.CONTENT_SIZE;
+    private static final int CODE_MIN = 18;
 
     private static final Color BAR_FILL = new Color(30, 90, 65, 102);
     private static final Color BAR_LINE = new Color(135, 143, 140);
@@ -509,9 +509,9 @@ public class GamePanel extends JPanel {
         g2.drawString("OUTPUT", r.x + 14, r.y + 19);
 
         String output = content.expectedOutput();
-        Font font = CodeFont.get(22);
+        Font font = CodeFont.get(CodeFont.CONTENT_SIZE);
         FontMetrics fm = getFontMetrics(font);
-        for (int size = 22; size > 11 && fm.stringWidth(output) > r.width - 28; size--) {
+        for (int size = CodeFont.CONTENT_SIZE; size > 18 && fm.stringWidth(output) > r.width - 28; size--) {
             font = CodeFont.get(size);
             fm = getFontMetrics(font);
         }

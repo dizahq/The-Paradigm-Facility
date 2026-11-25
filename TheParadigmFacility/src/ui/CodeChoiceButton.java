@@ -38,8 +38,8 @@ public final class CodeChoiceButton extends JComponent {
     private static final int BAR_INSET = 9; // scrollbars sit inside the padding
     private static final int SCROLL_STEP = 40; // NEW: pixels per mouse wheel notch
 
-    private static final int SIZE_STACKED = 20; // short answers beside the code (wrap = true)
-    private static final int SIZE_GRID = 18; // code boxes in the 2x2 grid
+    private static final int SIZE_STACKED = CodeFont.CONTENT_SIZE; // short answers beside the code (wrap = true)
+    private static final int SIZE_GRID = CodeFont.CONTENT_SIZE; // code boxes in the 2x2 grid
 
     private final String letter;
     private final Consumer<CodeChoiceButton> onClick;
@@ -178,7 +178,7 @@ public final class CodeChoiceButton extends JComponent {
         g2.setColor(state == State.NORMAL ? LINE : Color.WHITE);
         g2.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, ARC, ARC);
 
-        g2.setFont(Theme.bold(22));
+        g2.setFont(Theme.bold(Theme.CONTENT_SIZE));
         g2.setColor(Theme.ACCENT);
         FontMetrics lm = g2.getFontMetrics();
         g2.drawString(letter + ".", PAD_X, (getHeight() - lm.getHeight()) / 2 + lm.getAscent());

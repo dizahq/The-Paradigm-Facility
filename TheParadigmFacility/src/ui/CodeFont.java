@@ -9,6 +9,9 @@ import java.util.Set;
 /** The monospaced font used for every code snippet and code answer. */
 public final class CodeFont {
 
+    /** Standard readable size for code and code answers. */
+    public static final int CONTENT_SIZE = Theme.CONTENT_SIZE;
+
     /** First installed family wins. Bundle one with the game if you need the same look everywhere. */
     private static final String[] PREFERRED = {
             "JetBrains Mono", "Cascadia Mono", "Consolas", "Menlo", "DejaVu Sans Mono" };
