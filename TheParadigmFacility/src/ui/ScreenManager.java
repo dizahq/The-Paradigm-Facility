@@ -5,6 +5,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import javax.swing.JComponent;
 import javax.swing.JLayeredPane;
+import javax.swing.BorderFactory;
+import java.awt.Color;
 
 public class ScreenManager extends JLayeredPane {
 
@@ -14,6 +16,9 @@ public class ScreenManager extends JLayeredPane {
 
     public ScreenManager() {
         add(background, DEFAULT_LAYER);
+
+        // White border around the entire game screen
+        setBorder(BorderFactory.createLineBorder(Color.WHITE, 3));
     }
 
     public void show(JComponent panel) {
@@ -74,12 +79,19 @@ public class ScreenManager extends JLayeredPane {
 
     @Override
     public void doLayout() {
-        background.setBounds(0, 0, getWidth(), getHeight());
+        int x = getInsets().left;
+        int y = getInsets().top;
+        int width = getWidth() - getInsets().left - getInsets().right;
+        int height = getHeight() - getInsets().top - getInsets().bottom;
+
+        background.setBounds(x, y, width, height);
+
         if (current != null) {
-            current.setBounds(0, 0, getWidth(), getHeight());
+            current.setBounds(x, y, width, height);
         }
+
         if (overlay != null) {
-            overlay.setBounds(0, 0, getWidth(), getHeight());
+            overlay.setBounds(x, y, width, height);
         }
     }
 

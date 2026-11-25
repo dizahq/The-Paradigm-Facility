@@ -23,7 +23,7 @@ public class MainMenuPanel extends JPanel {
 
     private static final int TITLE_WIDTH = 1000;
     private static final int BUTTON_WIDTH = 400; // width of every button
-    private static final int TITLE_GAP = 80; // space between title and first button
+    private static final int TITLE_GAP = 100; // space between title and first button
     private static final int BUTTON_GAP = 10; // space between buttons
 
     public MainMenuPanel(Runnable onStart, Runnable onOptions, Runnable onQuit) {

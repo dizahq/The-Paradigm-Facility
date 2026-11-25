@@ -1,6 +1,8 @@
 package ui;
 
 import audio.SoundManager;
+import util.Assets;
+
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -39,7 +41,7 @@ public class WorkdaySelectPanel extends JPanel {
 
     private static final String RETURN_BTN = "interface/returnBtn2.png";
     private static final String LEADERBOARD_BTN = "interface/leaderboardbtn.png";
-    private static final int RETURN_BTN_WIDTH = 165;
+    private static final int RETURN_BTN_WIDTH = 200;
     private static final int LEADERBOARD_BTN_WIDTH = 200;
 
     private static final int CARD_WIDTH = 975;
@@ -74,7 +76,7 @@ public class WorkdaySelectPanel extends JPanel {
     }
 
     private JPanel buildHeader(List<Item> items, Runnable onReturn, Runnable onLeaderboard) {
-        JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT, 17, 0));
         buttons.setOpaque(false);
         buttons.add(new ImageButton(RETURN_BTN, RETURN_BTN_WIDTH, onReturn));
         buttons.add(new ImageButton(LEADERBOARD_BTN, LEADERBOARD_BTN_WIDTH, onLeaderboard));

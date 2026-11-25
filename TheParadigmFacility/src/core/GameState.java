@@ -2,12 +2,19 @@ package core;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class GameState {
 
     public static final int MAX_BUGS = 3;
     public static final int STREAK_FOR_REWARD = 5;
+
+    // The question order of the most recent game, per workday. Static because
+    // every new playthrough (and every retry) creates or reuses a GameState.
+    private static final Map<Integer, List<Question>> LAST_ORDER = new HashMap<>();
 
     public enum Result {
         CORRECT, STREAK_REWARD, WRONG, TIMEOUT
@@ -28,6 +35,7 @@ public class GameState {
     private List<Answer> answers = List.of(); // shuffled once per question
     private int index; // position of the current question
     private int correctToday;
+    private int lastCorrectIndex = -1; // position of the correct answer on the previous question
 
     public GameState(String playerName, QuestionBank bank) {
         this.playerName = playerName;
@@ -48,11 +56,14 @@ public class GameState {
         if (day != null && !isGameOver() && !isDayCleared()) {
             throw new IllegalStateException("Workday " + number + " is already in progress");
         }
-        List<Question> list = bank.getQuestions(number);
+        // a copy, so the bank's own list stays untouched
+        List<Question> list = new ArrayList<>(bank.getQuestions(number));
         if (list.isEmpty()) {
             throw new IllegalStateException("No questions found for workday " + number);
         }
-        Collections.shuffle(list);
+        // no question in the same position as in the previous game of this workday
+        shuffleAwayFrom(list, LAST_ORDER.get(number));
+        LAST_ORDER.put(number, new ArrayList<>(list));
 
         if (isGameOver()) {
             score = scoreAtDayStart;
@@ -64,6 +75,7 @@ public class GameState {
         correctToday = 0;
         bugs = 0;
         streak = 0;
+        lastCorrectIndex = -1;
         prepareAnswers();
     }
 
@@ -144,9 +156,68 @@ public class GameState {
         if (index < questions.size()) {
             answers = new ArrayList<>(questions.get(index).getAnswers());
             Collections.shuffle(answers);
+            avoidRepeatedPosition();
         } else {
             answers = List.of();
         }
+    }
+
+    // The correct answer never appears in the same position as on the previous
+    // question. If the shuffle repeats the position, the correct answer swaps
+    // places with a randomly chosen other answer.
+    private void avoidRepeatedPosition() {
+        int pos = -1;
+        for (int i = 0; i < answers.size(); i++) {
+            if (answers.get(i).isCorrect()) {
+                pos = i;
+                break;
+            }
+        }
+        if (pos < 0) {
+            return; // no correct answer found, nothing to arrange
+        }
+
+        if (pos == lastCorrectIndex && answers.size() > 1) {
+            int other = ThreadLocalRandom.current().nextInt(answers.size() - 1);
+            if (other >= pos) {
+                other++; // skip the current position
+            }
+            Collections.swap(answers, pos, other);
+            pos = other;
+        }
+        lastCorrectIndex = pos;
+    }
+
+    // Shuffles the list so that no question is in the same position as in the
+    // previous order. Reshuffling works almost every time (about 1 shuffle in 3
+    // qualifies). If it somehow never does, the previous order is rotated by a
+    // random amount, which always moves every question.
+    private static void shuffleAwayFrom(List<Question> list, List<Question> previous) {
+        Collections.shuffle(list);
+        int n = list.size();
+        if (previous == null || previous.size() != n || n < 2) {
+            return; // first game of this workday, or the question file changed
+        }
+
+        for (int attempt = 0; attempt < 200 && samePlace(list, previous); attempt++) {
+            Collections.shuffle(list);
+        }
+
+        if (samePlace(list, previous)) {
+            int shift = 1 + ThreadLocalRandom.current().nextInt(n - 1);
+            for (int i = 0; i < n; i++) {
+                list.set(i, previous.get((i + shift) % n));
+            }
+        }
+    }
+
+    private static boolean samePlace(List<Question> a, List<Question> b) {
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i) == b.get(i)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // State

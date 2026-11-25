@@ -15,11 +15,9 @@ import java.util.function.Consumer;
 import javax.swing.JComponent;
 
 /**
- * An answer button that can show code: monospaced, line breaks kept, any size.
- * ChoiceButton keeps handling plain-text answers. Same flow: show(), mark(),
- * lock().
- * The colors below are a guess at the ChoiceButton look. Match them if they
- * differ.
+ * An answer button that can show code: monospaced, line breaks kept.
+ * Content bigger than the button scrolls (mouse wheel, Shift + wheel for sideways).
+ * ChoiceButton keeps handling plain-text answers. Same flow: show(), mark(), lock().
  */
 public final class CodeChoiceButton extends JComponent {
 
@@ -35,6 +33,10 @@ public final class CodeChoiceButton extends JComponent {
     private static final int PAD_X = 14;
     private static final int PAD_Y = 10;
     private static final int ARC = 18;
+    private static final int BAR_INSET = 9; // scrollbars sit inside the padding
+
+    private static final int SIZE_STACKED = 20; // short answers beside the code (wrap = true)
+    private static final int SIZE_GRID = 18; // code boxes in the 2x2 grid
 
     private final Consumer<CodeChoiceButton> onClick;
 
@@ -46,6 +48,8 @@ public final class CodeChoiceButton extends JComponent {
     private boolean hovered;
     private boolean locked;
     private CodeBlock block;
+    private int offsetX;
+    private int offsetY;
 
     public CodeChoiceButton(Consumer<CodeChoiceButton> onClick) {
         this.onClick = onClick;
@@ -75,8 +79,7 @@ public final class CodeChoiceButton extends JComponent {
         return answer;
     }
 
-    // Shows a new answer. The font size is set afterwards with bestSize() /
-    // setFontSize().
+    // Shows a new answer at a fixed font size. The bounds must be set before this call.
     public void show(Answer answer, String text, boolean mono, boolean wrap) {
         this.answer = answer;
         this.text = text;
@@ -85,7 +88,9 @@ public final class CodeChoiceButton extends JComponent {
         this.state = State.NORMAL;
         this.locked = false;
         this.hovered = false;
-        this.block = null;
+        this.offsetX = 0;
+        this.offsetY = 0;
+        this.block = build(wrap ? SIZE_STACKED : SIZE_GRID);
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         repaint();
     }
@@ -103,19 +108,13 @@ public final class CodeChoiceButton extends JComponent {
         repaint();
     }
 
-    // The biggest size in [min, max] at which the answer fits the current bounds.
-    public int bestSize(int max, int min) {
-        for (int size = max; size > min; size--) {
-            CodeBlock candidate = build(size);
-            if (candidate.width() <= availW() && candidate.height() <= availH()) {
-                return size;
-            }
+    // Scrolls the content (called for mouse wheel turns).
+    public void scrollText(int dx, int dy) {
+        if (block == null) {
+            return;
         }
-        return min;
-    }
-
-    public void setFontSize(int size) {
-        block = build(size);
+        offsetX = Math.max(0, Math.min(Math.max(0, block.width() - availW()), offsetX + dx));
+        offsetY = Math.max(0, Math.min(Math.max(0, block.height() - availH()), offsetY + dy));
         repaint();
     }
 
@@ -155,9 +154,29 @@ public final class CodeChoiceButton extends JComponent {
         g2.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, ARC, ARC);
 
         if (block != null) {
-            // code with several lines starts at the top, one or two lines sit in the middle
-            int y = block.lineCount() > 2 ? PAD_Y : (getHeight() - block.height()) / 2;
-            block.paint(g2, PAD_X, y, mono ? CodeBlock.TEXT : Color.WHITE, null, null);
+            int viewW = availW();
+            int viewH = availH();
+            boolean scrollV = block.height() > viewH;
+            boolean scrollH = block.width() > viewW;
+
+            // scrolled or long: start at the top. Short and fitting: one or two lines sit in the middle
+            int y = scrollV ? PAD_Y - offsetY
+                    : block.lineCount() > 2 ? PAD_Y : (getHeight() - block.height()) / 2;
+            int x = PAD_X - offsetX;
+
+            var oldClip = g2.getClip();
+            g2.clipRect(PAD_X, PAD_Y, viewW, viewH);
+            block.paint(g2, x, y, mono ? CodeBlock.TEXT : Color.WHITE, null, null);
+            g2.setClip(oldClip);
+
+            if (scrollV) {
+                TextScroll.drawBar(g2, true, getWidth() - BAR_INSET, PAD_Y, viewH,
+                        block.height(), viewH, offsetY);
+            }
+            if (scrollH) {
+                TextScroll.drawBar(g2, false, PAD_X, getHeight() - BAR_INSET, viewW,
+                        block.width(), viewW, offsetX);
+            }
         }
         g2.dispose();
     }

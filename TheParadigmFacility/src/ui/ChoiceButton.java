@@ -15,7 +15,7 @@ import javax.swing.JComponent;
 
 /**
  * One answer button of the game screen. After an answer it shows green
- * (correct) or red (wrong).
+ * (correct) or red (wrong). Long answers scroll with the mouse wheel.
  */
 final class ChoiceButton extends JComponent {
 
@@ -28,6 +28,7 @@ final class ChoiceButton extends JComponent {
 
     private static final int PADDING_X = 22;
     private static final int PADDING_Y = 8;
+    private static final int ANSWER_FONT = 22; // fixed size, no more shrinking
 
     private static final Color BG = new Color(0x08281B);
     private static final Color HOVER_BG = new Color(0x103A29);
@@ -35,10 +36,11 @@ final class ChoiceButton extends JComponent {
     private static final Color WRONG_BG = new Color(0x9E2020);
     private static final Color EDGE = new Color(0xDDE3DD);
 
+    private final TextScroll text = new TextScroll();
     private Answer answer;
     private State state = State.NORMAL;
     private boolean hover;
-    private TextFit.Fit fit;
+    private boolean hasText;
 
     ChoiceButton(Consumer<ChoiceButton> onChoose) {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
@@ -69,8 +71,9 @@ final class ChoiceButton extends JComponent {
     void show(Answer newAnswer) {
         answer = newAnswer;
         state = State.NORMAL;
-        fit = TextFit.fit(this, newAnswer.getAnswer(), false, 28, 14, 1.3,
+        text.set(this, newAnswer.getAnswer(), false, ANSWER_FONT, 1.3,
                 WIDTH - 2 * PADDING_X, HEIGHT - 2 * PADDING_Y);
+        hasText = true;
         setEnabled(true);
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         repaint();
@@ -95,6 +98,12 @@ final class ChoiceButton extends JComponent {
         repaint();
     }
 
+    // Scrolls the text (called for mouse wheel turns). dx is ignored: answers wrap.
+    void scrollText(int dx, int dy) {
+        text.scrollBy(dy);
+        repaint();
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g.create();
@@ -112,8 +121,8 @@ final class ChoiceButton extends JComponent {
         g2.setStroke(new BasicStroke(1.5f));
         g2.drawRoundRect(1, 1, getWidth() - 3, getHeight() - 3, 12, 12);
 
-        if (fit != null) {
-            TextFit.draw(g2, fit, Color.WHITE, PADDING_X, PADDING_Y,
+        if (hasText) {
+            text.paint(g2, Color.WHITE, PADDING_X, PADDING_Y,
                     getWidth() - 2 * PADDING_X, getHeight() - 2 * PADDING_Y, true);
         }
         g2.dispose();

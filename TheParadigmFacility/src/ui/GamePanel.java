@@ -9,6 +9,7 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.font.TextAttribute;
@@ -35,6 +36,9 @@ import util.Assets;
  * SIMPLE - question on top, 2x2 grid of answers.
  * CODE_QUESTION - prompt, code panel on the left, answers stacked on the right.
  * CODE_CHOICES - prompt and expected output on top, 2x2 grid of code boxes.
+ *
+ * Question and answer texts use a fixed font size. Text that does not fit its
+ * box scrolls with the mouse wheel (Shift + wheel for sideways scrolling in code).
  */
 @SuppressWarnings("serial")
 public class GamePanel extends JPanel {
@@ -50,6 +54,11 @@ public class GamePanel extends JPanel {
     private static final int GLOW_RADIUS = 6;
     private static final int RESULT_MS = 1000; // how long the result of an answer stays on screen
     private static final int CODE_EXTRA_SECONDS = 30; // extra reading time for questions with code
+
+    // Fixed font sizes (the text scrolls when it does not fit)
+    private static final int QUESTION_FONT = 30;
+    private static final int PROMPT_FONT = 24;
+    private static final int WHEEL_STEP = 24; // pixels per mouse wheel notch
 
     // Positions are in pixels of the 1280x720 window
     private static final int BAR_HEIGHT = 116;
@@ -91,12 +100,9 @@ public class GamePanel extends JPanel {
     private static final int CODE_GRID_Y = 297;
     private static final int CODE_GRID_GAP = 16;
 
-    // Font sizes in pixels: the biggest size that fits is used, never below the
-    // minimum
+    // The code panel still shrinks its code to fit (never below the minimum)
     private static final int CODE_MAX = 22;
     private static final int CODE_MIN = 11;
-    private static final int CHOICE_CODE_MAX = 20;
-    private static final int CHOICE_CODE_MIN = 9;
 
     private static final Color BAR_FILL = new Color(30, 90, 65, 102);
     private static final Color BAR_LINE = new Color(135, 143, 140);
@@ -127,8 +133,8 @@ public class GamePanel extends JPanel {
     private boolean paused;
     private double secondsLeft;
     private QuestionContent content;
-    private TextFit.Fit questionFit; // SIMPLE: the whole question
-    private TextFit.Fit promptFit; // code layouts: the first line
+    private final TextScroll questionText = new TextScroll(); // SIMPLE: the whole question
+    private final TextScroll promptText = new TextScroll(); // code layouts: the first line
     private final Rectangle promptBox = new Rectangle();
     private final Rectangle codePanel = new Rectangle(); // CODE_QUESTION
     private final Rectangle outputChip = new Rectangle(); // CODE_CHOICES, empty without expected output
@@ -167,6 +173,40 @@ public class GamePanel extends JPanel {
         countdown = new CountdownTimer(this::onTick, this::onTimeUp);
         resultTimer = new Timer(RESULT_MS, e -> nextQuestion());
         resultTimer.setRepeats(false);
+
+        // Mouse wheel scrolls the text under the pointer. Wheel events that no child handles
+        // reach this panel, so one listener covers the question and every answer button.
+        addMouseWheelListener(e -> {
+            int amount = (int) Math.round(e.getPreciseWheelRotation() * WHEEL_STEP);
+            int dx = e.isShiftDown() ? amount : 0;
+            int dy = e.isShiftDown() ? 0 : amount;
+            Point p = e.getPoint();
+
+            if (content.kind() == Kind.SIMPLE) {
+                if (new Rectangle(QUESTION_X, QUESTION_Y, QUESTION_W, QUESTION_H).contains(p)) {
+                    questionText.scrollBy(amount);
+                    repaint();
+                    return;
+                }
+            } else if (promptBox.contains(p)) {
+                promptText.scrollBy(amount);
+                repaint();
+                return;
+            }
+
+            for (ChoiceButton b : choices) {
+                if (b.isVisible() && b.getBounds().contains(p)) {
+                    b.scrollText(dx, dy);
+                    return;
+                }
+            }
+            for (CodeChoiceButton b : codeChoices) {
+                if (b.isVisible() && b.getBounds().contains(p)) {
+                    b.scrollText(dx, dy);
+                    return;
+                }
+            }
+        });
 
         showQuestion();
     }
@@ -222,7 +262,7 @@ public class GamePanel extends JPanel {
         }
 
         if (simple) {
-            questionFit = TextFit.fit(this, question.getQuestion(), true, 34, 18, 1.65, QUESTION_W, QUESTION_H);
+            questionText.set(this, question.getQuestion(), true, QUESTION_FONT, 1.5, QUESTION_W, QUESTION_H);
             for (int i = 0; i < choices.length; i++) {
                 choices[i].show(answers.get(i));
             }
@@ -239,24 +279,13 @@ public class GamePanel extends JPanel {
 
     private void showCodeQuestion(List<Answer> answers, List<String> texts) {
         boolean codeInQuestion = content.kind() == Kind.CODE_QUESTION;
-        layoutAnswers(); // the boxes need their final size before the fonts are fitted
+        layoutAnswers(); // the boxes need their final size before the text is laid out
 
-        promptFit = TextFit.fit(this, content.prompt(), true, 26, 16, 1.4, promptBox.width, promptBox.height);
+        promptText.set(this, content.prompt(), true, PROMPT_FONT, 1.4, promptBox.width, promptBox.height);
         for (int i = 0; i < codeChoices.length; i++) {
             // short answers may wrap, code answers keep their lines
             codeChoices[i].show(answers.get(i), QuestionContent.normalize(texts.get(i)), content.monoAnswers(),
                     codeInQuestion);
-        }
-
-        // one font size for all four answers
-        int max = codeInQuestion ? CODE_MAX : CHOICE_CODE_MAX;
-        int min = codeInQuestion ? CODE_MIN : CHOICE_CODE_MIN;
-        int size = max;
-        for (CodeChoiceButton button : codeChoices) {
-            size = Math.min(size, button.bestSize(max, min));
-        }
-        for (CodeChoiceButton button : codeChoices) {
-            button.setFontSize(size);
         }
 
         codeBlock = null;
@@ -431,8 +460,7 @@ public class GamePanel extends JPanel {
         g2.setColor(LABEL_GRAY);
         g2.drawString(levelLabel, LABEL_X, LABEL_BASELINE);
         switch (content.kind()) {
-            case SIMPLE -> TextFit.draw(g2, questionFit, Color.WHITE, QUESTION_X, QUESTION_Y, QUESTION_W, QUESTION_H,
-                    false);
+            case SIMPLE -> questionText.paint(g2, Color.WHITE, QUESTION_X, QUESTION_Y, QUESTION_W, QUESTION_H, false);
             case CODE_QUESTION -> {
                 drawPrompt(g2);
                 drawCodePanel(g2);
@@ -447,7 +475,7 @@ public class GamePanel extends JPanel {
     }
 
     private void drawPrompt(Graphics2D g2) {
-        TextFit.draw(g2, promptFit, Color.WHITE, promptBox.x, promptBox.y, promptBox.width, promptBox.height, false);
+        promptText.paint(g2, Color.WHITE, promptBox.x, promptBox.y, promptBox.width, promptBox.height, false);
     }
 
     /**
