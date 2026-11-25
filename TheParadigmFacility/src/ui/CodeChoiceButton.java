@@ -8,6 +8,7 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.Shape; // NEW
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
@@ -35,6 +36,7 @@ public final class CodeChoiceButton extends JComponent {
     private static final int LABEL_W = 34;
     private static final int ARC = 18;
     private static final int BAR_INSET = 9; // scrollbars sit inside the padding
+    private static final int SCROLL_STEP = 40; // NEW: pixels per mouse wheel notch
 
     private static final int SIZE_STACKED = 20; // short answers beside the code (wrap = true)
     private static final int SIZE_GRID = 18; // code boxes in the 2x2 grid
@@ -74,6 +76,18 @@ public final class CodeChoiceButton extends JComponent {
                 if (!locked && contains(e.getPoint())) {
                     CodeChoiceButton.this.onClick.accept(CodeChoiceButton.this);
                 }
+            }
+        });
+
+        // NEW: the wheel scrolls up/down; Shift + wheel scrolls sideways. If the content
+        // only overflows in one direction, the wheel scrolls that direction.
+        addMouseWheelListener(e -> {
+            int pixels = (int) Math.round(e.getPreciseWheelRotation() * SCROLL_STEP);
+            boolean sideways = e.isShiftDown() ? overflowsX() : (!overflowsY() && overflowsX());
+            if (sideways) {
+                scrollText(pixels, 0);
+            } else {
+                scrollText(0, pixels);
             }
         });
     }
@@ -121,6 +135,14 @@ public final class CodeChoiceButton extends JComponent {
         repaint();
     }
 
+    private boolean overflowsX() {
+        return block != null && block.width() > availW();
+    }
+
+    private boolean overflowsY() {
+        return block != null && block.height() > availH();
+    }
+
     private CodeBlock build(int size) {
         Font font = mono ? CodeFont.get(size) : Theme.bold(size);
         FontMetrics fm = getFontMetrics(font);
@@ -160,11 +182,29 @@ public final class CodeChoiceButton extends JComponent {
         g2.setColor(Theme.ACCENT);
         FontMetrics lm = g2.getFontMetrics();
         g2.drawString(letter + ".", PAD_X, (getHeight() - lm.getHeight()) / 2 + lm.getAscent());
-        
+
         if (block != null) {
-            // code with several lines starts at the top, one or two lines sit in the middle
-            int y = block.lineCount() > 2 ? PAD_Y : (getHeight() - block.height()) / 2;
-            block.paint(g2, PAD_X + LABEL_W, y, mono ? CodeBlock.TEXT : Color.WHITE, null, null);
+            boolean scrollX = overflowsX();
+            boolean scrollY = overflowsY();
+            int x = PAD_X + LABEL_W;
+            // code with several lines (or anything that scrolls) starts at the top,
+            // one or two lines sit in the middle
+            int y = scrollY || block.lineCount() > 2 ? PAD_Y : (getHeight() - block.height()) / 2;
+
+            // text is cut at the edges of the content area, so it never covers the letter
+            Shape oldClip = g2.getClip();
+            g2.clipRect(x, PAD_Y, availW(), availH());
+            block.paint(g2, x - offsetX, y - offsetY, mono ? CodeBlock.TEXT : Color.WHITE, null, null);
+            g2.setClip(oldClip);
+
+            if (scrollY) {
+                TextScroll.drawBar(g2, true, getWidth() - BAR_INSET, PAD_Y, availH(), block.height(), availH(),
+                        offsetY);
+            }
+            if (scrollX) {
+                TextScroll.drawBar(g2, false, x, getHeight() - BAR_INSET, availW(), block.width(), availW(),
+                        offsetX);
+            }
         }
         g2.dispose();
     }
