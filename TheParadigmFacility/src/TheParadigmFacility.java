@@ -117,7 +117,13 @@ public class TheParadigmFacility {
                 int total = questionBank.getQuestions(day).size();
                 int correct = game.correctIn(day);
                 int percent = total == 0 ? 0 : correct * 100 / total;
-                int overall = game.clearedDays() * 100 / Workday.ALL.size();
+                int overallCorrect = 0;
+                int overallTotal = 0;
+                for (Workday workday : Workday.ALL) {
+                    overallCorrect += game.correctIn(workday.number());
+                    overallTotal += questionBank.getQuestions(workday.number()).size();
+                }
+                int overall = overallTotal == 0 ? 0 : overallCorrect * 100 / overallTotal;
 
                 screens.show(new DayClearedPanel(
                         day, percent, game.score(), correct, total, overall,
