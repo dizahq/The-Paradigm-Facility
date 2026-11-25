@@ -103,6 +103,8 @@ public class GamePanel extends JPanel {
     // The code panel still shrinks its code to fit (never below the minimum)
     private static final int CODE_MAX = 22;
     private static final int CODE_MIN = 11;
+    private static final int CODE_PANEL_MIN = 16; // the code panel scrolls below this instead of shrinking
+    private static final int SCROLL_STEP = 40;    // pixels per mouse wheel notch
 
     private static final Color BAR_FILL = new Color(30, 90, 65, 102);
     private static final Color BAR_LINE = new Color(135, 143, 140);
@@ -160,6 +162,15 @@ public class GamePanel extends JPanel {
 
         setOpaque(false);
         setLayout(null); // children are placed in doLayout()
+
+        addMouseWheelListener(e -> {
+            if (content != null && content.kind() == Kind.CODE_QUESTION && codeBlock != null
+                    && codeBlock.canScroll() && codePanel.contains(e.getPoint())) {
+                int pixels = (int) Math.round(e.getPreciseWheelRotation() * SCROLL_STEP);
+                codeBlock.scrollBy(pixels, e.isShiftDown());
+                repaint(codePanel);
+            }
+        });
 
         pauseButton = new ImageButton(PAUSE_BTN, PAUSE_SIZE, this::pauseClicked);
         add(pauseButton);
@@ -290,8 +301,8 @@ public class GamePanel extends JPanel {
 
         codeBlock = null;
         if (codeInQuestion) {
-            codeBlock = CodeBlock.fit(this, CodeFont::get, content.code(), content.hasBlank() ? correctText : null,
-                    CODE_MAX, CODE_MIN, codePanel.width - 2 * PANEL_PAD_X, codePanel.height - 2 * PANEL_PAD_Y);
+            codeBlock = CodeBlock.fitScrolling(this, CodeFont::get, content.code(), content.hasBlank() ? correctText : null,
+                    CODE_MAX, CODE_PANEL_MIN, codePanel.width - 2 * PANEL_PAD_X, codePanel.height - 2 * PANEL_PAD_Y);
         }
     }
 
